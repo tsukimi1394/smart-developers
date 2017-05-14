@@ -1,0 +1,32 @@
+{
+  "name": "smart-developers",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsukimi1394/smart-developers.git"
+  },
+  "author": "Daria Ganchukova (umi194@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsukimi1394/smart-developers/issues"
+  },
+  "homepage": "https://github.com/tsukimi1394/smart-developers#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.0.1",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "lodash": "^4.17.4"
+  }
+}

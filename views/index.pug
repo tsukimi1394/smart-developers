@@ -1,0 +1,232 @@
+doctype html
+html(lang="en")
+	head
+		title= "Card"
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600", rel="stylesheet")
+		link(rel="stylesheet", type="text/css", href="css/normalize.css")
+		link(rel="stylesheet", type= "text/css", href="css/style.css")
+	body
+		header(class="header")
+			div(class="header-logo")
+				img(src="images/logo-min.png", alt="One Club Luxury Shopping Club", class="logo-img")
+			div(class="switcher")
+				a(href="#", class="switcher__item icon icon--clock")
+					span Акции
+				a(href="#", class="switcher__item")
+					span Каталог
+			div(class="contact-search")
+				div(class="contact")
+					div(class="phone icon icon--phone icon--contact")
+						a(href="tel: +380443590899", class="contact__link") +380 44 359-08-99
+						span Пн-Вс: 9:00-21:00
+					div(class="login icon icon--avatar icon--contact")
+						a(href="#", class="contact__link") Войти
+					div(class="basket icon icon--shopping-cart icon--contact")
+						a(href="#", class="contact__link") Корзина
+				div(class="search")
+					input(type="search", placeholder="Поиск...", class="search__input")
+					div(class="search-icon")
+			nav(class="main-menu")
+				a(href="#", class="main-menu__item") Женщинам
+				a(href="#", class="main-menu__item") Мужчинам
+				a(href="#", class="main-menu__item") Детям
+				a(href="#", class="main-menu__item") Косметика
+				a(href="#", class="main-menu__item") Для дома
+				a(href="#", class="main-menu__item") Бренды
+		main(class="main")
+			nav(class="breadcrumbs")
+				a(href="#", class="breadcrumbs__item") Главная страница
+				span /
+				a(href="#", class="breadcrumbs__item") Каталог
+				span /
+				a(href="#", class="breadcrumbs__item") Категория 1
+				span /
+				span(class="breadcrumbs__item") Costa Patch Pocket Denim Top
+			section(class="product")
+				div(class="time-left icon icon--clock")
+					span(class="time-left__text") До конца распродажи
+					span(class="time-left__time") 3 дня, 15:37:01
+				div(class="photo")
+					img(src="images/photo.jpg", alt="photo")
+				div(class="description")
+					h1(class="product__title") Current Elliott
+					h2(class="product__subtitle") Costa Patch Pocket Denim Top
+					div(class="price")
+						span(class="price--old") 30 000 грн
+						span(class="price--new") 15 000 грн
+					div(class="color")
+						span(class="color__text") Цвет: 
+						span(class="color__name") Синий
+						div(class="colors")
+							div(class="color__pic color--1")
+							div(class="color__pic color--2 active")
+							div(class="color__pic color--3")
+							div(class="color__pic color--4")
+							div(class="color__pic color--5")
+					div(class="size")
+						div(class="size__info")
+							span(class="size__text") Размер:
+							a(href="#", class="size__table") Таблица размеров
+						div(class="sizes")
+							div(class="size__pic") XS
+							div(class="size__pic active") S
+							div(class="size__pic disabled") M
+							div(class="size__pic disabled") L
+							div(class="size__pic disabled") XL
+						a(href="#", class="size__fit icon icon--hanger") 
+							span Примерить онлайн
+					div(class="quantity")
+						span(class="quantity__text") Количество:
+						div(class="quantity__count")
+							div(class="quantity__count-less")
+							div(class="quantity__count-number") 1
+							div(class="quantity__count-more")
+						div(class="like icon icon--heart") 
+							span В избранное 
+						div(class="add-to-cart") 
+							span(class="add-to-cart__text") Добавить в корзину
+							div(class="quantity__left") Осталось в наличии: 
+								span(class="quantity__left-number") 1 шт.
+								| Спешите купить сейчас!
+					div(class="make-order")
+						div(class="call icon icon--phone")
+							span(class="call__text") Оформить заказ по телефону
+							a(href="tel: +380954589846", class="call__number") +38 095 458-98-46
+							span(class="call__number-text") или
+							a(href="tel: +380443590899", class="call__number") +38 044 359-08-99
+						div(class="location icon icon--location-pin")
+							a(href="#", class="location__text") Наличие в бутиках ONE CLUB
+					div(class="details")
+						h3(class="details__title") Описание и детали
+						p(class="details__text")
+							span(class="details__item") Состав:
+							span(class="details__item-value") 100% трикотаж
+							span(class="details__item") Сезон:
+							span(class="details__item-value") демисезон
+							span(class="details__item") Детали:
+							span(class="details__item-value") Облегающая модель выполнена из гладкого трикотажа.
+						p(class="details__text")
+							span(class="details__code") Код товара:
+							span(class="details__code-number") 1234-5678-8765-4321
+					div(class="details")
+						h3(class="details__title") Измерения
+						p(class="details__text")
+							span(class="details__item") Размер вещи на фото:
+							span(class="details__item-value") S
+						p(class="details__text")
+							span(class="details__text-item") Обхват груди: 85 см
+							span(class="details__text-item") Обхват талии: 61 см
+							span(class="details__text-item") Обхват бедер: 89 см
+							span(class="details__text-item") Рост: 175 см
+						p(class="details__text")
+							span(class="details__text--important") Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, 
+								a(href="#") таблицей размеров
+								|,или обратитесь к нашему консультанту
+					div(class="details")
+						h3(class="details__title") Доставка и возврат
+						p(class="details__text")
+							span(class="details__item") Ожидаемая дата доставки:
+							span(class="details__item-value") 21.09.2016 - 23.09.2016
+						p(class="details__text details__text--important") Бесплатная доставка при заказе от 2000 грн, а также при оплате банковской картой.
+						p(class="details__text details__text--important") Вы можете выбрать любой удобный способ доставки:
+						p(class="details__text")
+							span(class="details__text-item") 1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) - бесплатно.
+							span(class="details__text-item") 2. Курьером по Киеву.
+							span(class="details__text-item") 3. Сервисом доставки "Нова пошта" по всей Украине.
+						p(class="details__text details__text--important") Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.
+					div(class="social")
+						span(class="social__text") Поделиться
+						div(class="social__item icon icon--facebook")
+						div(class="social__item icon icon--vk")
+						div(class="social__item icon icon--google-plus")
+						div(class="social__item icon icon--twitter")
+			section(class="similar-goods")
+				h2(class="similar-goods__title") Похожие товары
+				div(class="item")
+					div(class="item__img")
+						img(src="", alt="item-img", class="item__img-image")
+					h3(class="item__title") Tanya Taylor
+					h4(class="item__subtitle") Andy Striped Mini Skirt
+					div(class="item__price")
+						span(class="price--old") 30 000 грн
+						span(class="price--new") 15 000 грн
+				div(class="item")
+					div(class="item__img")
+						img(src="", alt="item-img", class="item__img-image")
+					h3(class="item__title") Tanya Taylor
+					h4(class="item__subtitle") Andy Striped Mini Skirt
+					div(class="item__price")
+						span(class="price--old") 30 000 грн
+						span(class="price--new") 15 000 грн
+				div(class="item")
+					div(class="item__img")
+						img(src="", alt="item-img", class="item__img-image")
+					h3(class="item__title") Tanya Taylor
+					h4(class="item__subtitle") Andy Striped Mini Skirt
+					div(class="item__price")
+						span(class="price--old") 30 000 грн
+						span(class="price--new") 15 000 грн
+				div(class="item")
+					div(class="item__img")
+						img(src="", alt="item-img", class="item__img-image")
+					h3(class="item__title") Tanya Taylor
+					h4(class="item__subtitle") Andy Striped Mini Skirt
+					div(class="item__price")
+						span(class="price--old") 30 000 грн
+						span(class="price--new") 15 000 грн
+			section(class="see-other")
+				span(class="see-other__text") Смотрите также:
+				a(href="#", class="see-other__link") Одежда
+				a(href="#", class="see-other__link") Трикотаж
+				a(href="#", class="see-other__link") Шелк
+				a(href="#", class="see-other__link") Все товары бренда Philipp Plein
+			section(class="benefits")
+				div(class="benefits__item")
+					h3(class="benefits__item-title") Ценность
+					p(class="benefits__item-text") Мы предлагаем подлинные качественные товары люксовых брендов по доступным ценам
+				div(class="benefits__item")
+					h3(class="benefits__item-title") Доставка
+					p(class="benefits__item-text") Вы можете примерить вещи в одном из наших
+						a(href="#") бутиков
+						| или заказать доставку по любому удобному адресу.
+				div(class="benefits__item")
+					h3(class="benefits__item-title") Помощь
+					p(class="benefits__item-text") Время работы службы поддержки: ежедневно с 10:00 до 21:00. +38 044 359-08-99, +38 095 458-98-46
+				div(class="to-top")
+		footer(class="footer")
+			nav(class="footer__main-menu")
+				span(class="footer__main-menu-item") Каталог
+				a(href="#", class="footer__main-menu-item") Женщинам
+				a(href="#", class="footer__main-menu-item") Мужчинам
+				a(href="#", class="footer__main-menu-item") Детям
+				a(href="#", class="footer__main-menu-item") Для дома
+				a(href="#", class="footer__main-menu-item") Бренды
+			nav(class="footer__buyer-menu")
+				span(class="footer__buyer-menu-item") Покупателям
+				a(href="#", class="footer__buyer-menu-item") Оплата
+				a(href="#", class="footer__buyer-menu-item") Возврат
+				a(href="#", class="footer__buyer-menu-item") Доставка
+				a(href="#", class="footer__buyer-menu-item") Оферта
+				a(href="#", class="footer__buyer-menu-item") Поддержка
+			nav(class="footer__about-menu")
+				span(class="footer__about-menu-item") О нас
+				a(href="#", class="footer__about-menu-item") О проекте
+				a(href="#", class="footer__about-menu-item") Вакансии
+				a(href="#", class="footer__about-menu-item") Партнерам
+				a(href="#", class="footer__about-menu-item") Контакты
+				a(href="#", class="footer__about-menu-item") FAQ
+			nav(class="copy")
+				div(class="footer-logo")
+					img(src="", alt="logo", class="logo-img")
+				span(class="copy-text") &copy; 2016 ONE CLUB 2.0
+				span(class="copy-text") All Right reserved
+				div(class="footer-social")
+					div(class="footer-social__item icon icon--facebook")
+					div(class="footer-social__item icon icon--instagram")
+					div(class="footer-social__item icon icon--twitter")
+					div(class="footer-social__item icon icon--pinterest")
+				div(class="credit")
+					div(class="visa")
+					div(class="master-card")
+					div(class="liqpay")
