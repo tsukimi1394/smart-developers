@@ -5,6 +5,10 @@
 	padding: 10px;
 	padding-left: 48px;
 	background-color: #e6e6e6;
+	@include respond-to(tablets) {
+		right: 20px;
+		top: 14px;
+	}
 	&__text {
 		display: block;
 		font-family: 'HelveticaNeue', Arial, sans-serif;
@@ -43,6 +47,18 @@
 		font-weight: 200;
 		color: #000;
 		margin: 0;
+		@include respond-to(tablets) {
+			padding-right: 90px;
+		}
+	}
+}
+
+.photo {
+	background: url('../images/photo-min.jpg') no-repeat;
+	width: 2000px;
+	height: 655px;
+	@include respond-to(tablets) {
+		background: url('../images/photo-tab-min.jpg') no-repeat;
 	}
 }
 
@@ -54,9 +70,18 @@
 		text-decoration: line-through;
 		color: #999;
 		margin-right: 15px;
+		@include respond-to(tablets) {
+			margin: 0;
+			display: block;
+			font-size: 14px;
+		}
 	}
 	&--new {
 		color: #f68235;
+		@include respond-to(tablets) {
+			display: block;
+			font-size: 24px;
+		}
 	}
 }
 
@@ -64,6 +89,9 @@
 	border-top: 1px solid #dedede;
 	padding: 14px 0;
 	font-size: 14px;
+	@include respond-to(tablets) {
+		font-size: 12px;
+	}
 	&__text {
 		font-weight: 600;
 		display: inline-block;
@@ -100,6 +128,9 @@
 	border-top: 1px solid #dedede;
 	padding: 14px 0;
 	font-size: 14px;
+	@include respond-to(tablets) {
+		font-size: 12px;
+	}
 	&__info {
 		display: flex;
 		justify-content: space-between;
@@ -120,6 +151,9 @@
 		color: #000;
 		text-align: center;
 		padding: 8px;
+		@include respond-to(tablets) {
+			padding: 9px;
+		}
 		&.active {
 			border: 2px solid #f68235;
 		}
@@ -135,6 +169,9 @@
 		span {
 			font-family: 'OpenSans', sans-serif;
 			font-size: 14px;
+			@include respond-to(tablets) {
+				font-size: 12px;
+			}
 		}
 		&.icon--hanger {
 			position: relative;
@@ -152,6 +189,12 @@
 				transform: translateY(-50%);
 				padding: 5px;
 				text-align: center;
+				@include respond-to(tablets) {
+					font-size: 10px;
+					width: 12px;
+					height: 12px;
+					padding: 3px;
+				}
 			}
 		}
 	}
@@ -172,6 +215,7 @@
 			height: 2px;
 			background-color: #000;
 			margin-right: 8px;
+			margin-bottom: 4px;
 		}
 		&-number {
 			border: 1px solid #dedede;
@@ -181,6 +225,11 @@
 			font-family: 'OpenSans', sans-serif;
 			font-weight: 600;
 			display: inline-block;
+			@include respond-to(tablets) {
+				padding: 9px;
+				width: 35px;
+				height: 35px;
+			}
 		}
 		&-more {
 			display: inline-block;
@@ -189,6 +238,7 @@
 			height: 2px;
 			background-color: #000;
 			position: relative;
+			margin-bottom: 4px;
 			&::before {
 				content: "";
 				position: absolute;
@@ -230,6 +280,9 @@
 	margin-top: 14px;
 	margin-bottom: 14px;
 	vertical-align: bottom;
+	@include respond-to(tablets) {
+		padding: 18px;
+	}
 	&.icon--heart {
 		position: relative;
 		&::before {
@@ -239,12 +292,19 @@
 			left: 28px;
 			top: 50%;
 			transform: translateY(-50%);
+			@include respond-to(tablets) {
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 	}
 	span {
 		text-transform: uppercase;
 		color: #000;
 		font-family: 'HelveticaNeue', Arial, sans-serif;
+		@include respond-to(tablets) {
+			display: none;
+		}
 	}
 }
 
@@ -259,6 +319,10 @@
 	vertical-align: bottom;
 	position: relative;
 	margin-bottom: 14px;
+	@include respond-to(tablets) {
+		padding-left: 15px;
+		margin-left: 0;
+	}
 	&__text {
 		text-transform: uppercase;
 		color: #fff;
@@ -266,6 +330,10 @@
 		background-position: 0 9px;
 		padding: 12px 25px;
 		display: inline-block;
+		@include respond-to(tablets) {
+			padding: 12px 15px;
+			padding-left: 20px;
+		}
 	}
 }
 

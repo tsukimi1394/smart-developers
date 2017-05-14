@@ -10,4 +10,7 @@ html {
 .main {
 	padding: 20px 120px;
 	position: relative;
+	@include respond-to(tablets) {
+		padding: 27px 20px;
+	}
 }
