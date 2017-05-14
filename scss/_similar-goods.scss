@@ -1,0 +1,47 @@
+.similar-goods {
+	border-top: 1px solid #dedede;
+	&__title {
+		text-align: center;
+		font-size: 21px;
+		font-weight: 300;
+	}
+	&__block {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.item {
+	margin-bottom: 26px;
+	&__img {
+		width: 205px;
+		height: 273px;
+		margin-bottom: 10px;
+		&-image {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__title {
+		margin: 0;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	&__subtitle {
+		margin: 0;
+		font-weight: 200;
+		font-size: 14px;
+	}
+	&__price {
+		margin-top: 13px;
+		font-size: 15px;
+		&--old {
+			text-decoration: line-through;
+			color: #999;
+			margin-right: 5px;
+		}
+		&--new {
+			color: #f68235;
+		}
+	}
+}

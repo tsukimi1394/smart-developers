@@ -1,0 +1,16 @@
+.see-other {
+	border-top: 1px solid #dedede;
+	padding: 50px 0;
+	text-align: center;
+	&__text {
+		color: #000;
+		font-weight: 600;
+		margin-right: 20px;
+	}
+	&__link {
+		color: #999;
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}

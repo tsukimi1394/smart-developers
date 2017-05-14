@@ -1,0 +1,49 @@
+.benefits {
+	border-top: 1px solid #dedede;
+	padding: 25px 0;
+	display: flex;
+	&__item {
+		text-align: center;
+		flex: 1;
+		&:not(:last-child) {
+			border-right: 1px solid #dedede;
+		}
+		&-title {
+			font-size: 17px;
+		}
+		&-text {
+			font-size: 14px;
+			padding: 0 70px;
+		}
+		&-link {
+			color: #000;
+			margin: 5px;
+		}
+		span {
+			display: block;
+			margin: 0 -15px;
+		}
+	}
+}
+
+.to-top {
+	position: absolute;
+	bottom: 60px;
+	right: 50px;
+	width: 59px;
+	height: 59px;
+	background-color: #dedede;
+	border: 1px solid #ccc;
+	display: block;
+	&::after {
+		content: "";
+		border-top: 3px solid #000;
+		border-right: 3px solid #000;
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%) rotate(-45deg);
+	}
+}

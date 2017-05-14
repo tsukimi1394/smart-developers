@@ -1,0 +1,92 @@
+.footer {
+	background-color: #000;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 50px;
+	font-family: 'OpenSans', sans-serif;
+	&__main-menu {
+		font-size: 14px;
+		&-item {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:first-child {
+				font-weight: 600;
+			}
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&__buyer-menu, &__about-menu {
+		font-size: 13px;
+		&-item {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			&:first-child {
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&-logo {
+		width: 240px;
+		height: 37px;
+		float: right;
+		margin-bottom: 20px;
+	}
+	&-social-credit {
+		display: flex;
+		flex-direction: column;
+		align-content: flex-end;
+	}
+	&-social {
+		margin-top: 20px;
+		display: flex;
+		justify-content: flex-end;
+		&__item {
+			border: 1px solid #626262;
+			color: #626262;
+			padding: 8px;
+			font-size: 15px;
+			text-decoration: none;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+.copy {
+	text-align: right;
+	&-text {
+		clear: both;
+		text-align: right;
+		display: block;
+		color: #626262;
+		font-size: 13px;
+	}
+}
+
+.credit {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 48px;
+	&__item {
+		width: 37px;
+		height: 24px;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&-img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
