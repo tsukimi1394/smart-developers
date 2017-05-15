@@ -40,6 +40,8 @@
 		background-color: #f68235;
 	}
 	&.is-open {
+		position: fixed;
+		top: 41px;
 		& ~ .main-menu {
 			display: block;
 			color: #fff;

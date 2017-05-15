@@ -156,6 +156,11 @@ html {
   background-color: #f68235;
 }
 
+.menu-icon.is-open {
+  position: fixed;
+  top: 41px;
+}
+
 .menu-icon.is-open ~ .main-menu {
   display: block;
   color: #fff;
