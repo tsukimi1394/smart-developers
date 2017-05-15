@@ -7,13 +7,11 @@
 		font-weight: 400;
 	}
 	&__subtitle {
-		font-size: 18px;
-		font-weight: 200;
+		font-size: 14px;
+		font-weight: 300;
 		color: #000;
 		margin: 0;
-		@include respond-to(tablets) {
-			padding-right: 90px;
-		}
+		padding-right: 140px;
 	}
 }
 
@@ -22,35 +20,39 @@
 }
 
 .price {
-	margin-top: 15px;
-	font-size: 25px;
-	margin-bottom: 30px;
-	&--old {
-		text-decoration: line-through;
-		color: #999;
-		margin-right: 15px;
-		@include respond-to(tablets) {
-			margin: 0;
+	margin-top: 23px;
+	background-color: #ededed;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	&__number {
+		&.price--old {
+			text-decoration: line-through;
+			color: #999;
 			display: block;
 			font-size: 14px;
 		}
-	}
-	&--new {
-		color: #f68235;
-		@include respond-to(tablets) {
+		&.price--new {
+			color: #f68235;
 			display: block;
 			font-size: 24px;
 		}
 	}
+	&__sale {
+		width: 45px;
+		height: 45px;
+		border-radius: 100%;
+		color: #fff;
+		background-color: #828282;
+		font-size: 14px;
+		text-align: center;
+		padding: 14px 5px;
+	}
 }
 
 .color {
-	border-top: 1px solid #dedede;
-	padding: 14px 0;
-	font-size: 14px;
-	@include respond-to(tablets) {
-		font-size: 12px;
-	}
+	padding: 23px 0;
+	font-size: 12px;
 	&__text {
 		font-weight: 600;
 		display: inline-block;
@@ -85,11 +87,8 @@
 
 .size {
 	border-top: 1px solid #dedede;
-	padding: 14px 0;
-	font-size: 14px;
-	@include respond-to(tablets) {
-		font-size: 12px;
-	}
+	padding: 23px 0;
+	font-size: 12px;
 	&__info {
 		display: flex;
 		justify-content: space-between;
@@ -127,33 +126,24 @@
 		display: inline-block;
 		span {
 			font-family: 'OpenSans', sans-serif;
-			font-size: 14px;
-			@include respond-to(tablets) {
-				font-size: 12px;
-			}
+			font-size: 12px;
 		}
 		&.icon--hanger {
 			position: relative;
 			&::before {
 				position: absolute;
-				font-size: 13px;
+				font-size: 10px;
 				background-color: #487eba;
-				width: 14px;
-				height: 14px;
+				width: 12px;
+				height: 12px;
 				border-radius: 100%;
 				color: #fff;
 				left: 100%;
 				margin-left: 10px;
 				top: 50%;
 				transform: translateY(-50%);
-				padding: 5px;
+				padding: 3px;
 				text-align: center;
-				@include respond-to(tablets) {
-					font-size: 10px;
-					width: 12px;
-					height: 12px;
-					padding: 3px;
-				}
 			}
 		}
 	}
@@ -161,8 +151,8 @@
 
 .quantity {
 	border-top: 1px solid #dedede;
-	padding: 14px 0;
-	font-size: 14px;
+	padding: 23px 0;
+	font-size: 12px;
 	&__text {
 		font-weight: 600;
 	}
@@ -178,17 +168,14 @@
 		}
 		&-number {
 			border: 1px solid #dedede;
-			padding: 8px 24px;
+			padding: 9px;
 			text-align: center;
 			color: #000;
 			font-family: 'OpenSans', sans-serif;
 			font-weight: 600;
 			display: inline-block;
-			@include respond-to(tablets) {
-				padding: 9px;
-				width: 35px;
-				height: 35px;
-			}
+			width: 35px;
+			height: 35px;
 		}
 		&-more {
 			display: inline-block;
@@ -217,11 +204,9 @@
 		background-color: #eaeaea;
 		padding: 7px;
 		text-align: center;
-		@include respond-to(tablets) {
-			font-size: 12px;
-			width: 90%;
-			left: 10%;
-		}
+		font-size: 12px;
+		width: 90%;
+		left: 10%;
 		&-number {
 			margin-right: 5px;
 		}
@@ -229,13 +214,10 @@
 			content: "";
 			position: absolute;
 			top: 100%;
-			left: 50%;
+			left: 75%;
 			transform: translateX(-50%);
 			border: 11px solid transparent;
 			border-top: 11px solid #eaeaea;
-			@include respond-to(tablets) {
-				left: 75%;
-			}
 		}
 	}
 }
@@ -243,57 +225,37 @@
 .like {
 	border: 1px solid #dedede;
 	display: inline-block;
-	padding: 10px 30px;
-	padding-left: 50px;
+	padding: 18px;
 	font-size: 12px;
 	font-weight: 200;
 	margin-top: 14px;
 	margin-bottom: 14px;
 	vertical-align: bottom;
-	@include respond-to(tablets) {
-		padding: 18px;
-	}
 	&.icon--heart {
 		position: relative;
 		&::before {
 			font-size: 13px;
 			color: #000;
 			position: absolute;
-			left: 28px;
+			left: 50%;
 			top: 50%;
-			transform: translateY(-50%);
-			@include respond-to(tablets) {
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
-	}
-	span {
-		text-transform: uppercase;
-		color: #000;
-		font-family: 'HelveticaNeue', Arial, sans-serif;
-		@include respond-to(tablets) {
-			display: none;
+			transform: translate(-50%, -50%);
 		}
 	}
 }
 
 .add-to-cart {
 	display: inline-block;
-	padding-left: 30px;
+	padding-left: 15px;
 	font-size: 13px;
 	font-weight: 200;
 	margin-top: 14px;
-	margin-left: 22px;
+	margin-left: 0;
 	background-color: #f68235;
 	vertical-align: bottom;
 	position: relative;
 	margin-bottom: 14px;
-	@include respond-to(tablets) {
-		padding-left: 15px;
-		margin-left: 0;
-		float: right;
-	}
+	float: right;
 	&__text {
 		text-transform: uppercase;
 		color: #fff;
@@ -316,11 +278,8 @@
 
 .make-order {
 	border-top: 1px solid #dedede;
-	padding: 14px 0;
-	font-size: 14px;
-	@include respond-to(tablets) {
-		font-size: 12px;
-	}
+	padding: 23px 0;
+	font-size: 12px;
 }
 
 .call {
@@ -343,21 +302,16 @@
 		margin-bottom: 10px;
 	}
 	&__number {
-		&:nth-child(2) {
-			padding-left: 25px;
-		}
+		display: block;
 		color: #999;
-		margin-left: 10px;
-		margin-right: 10px;
+		padding-left: 30px;
+		margin-bottom: 10px;
 		font-family: 'HelveticaNeue', Arial, sans-serif;
-		&-text {
-			color: #999;
-			font-family: 'HelveticaNeue', Arial, sans-serif;
-		}
 	}
 }
 
 .location {
+	margin-top: 15px;
 	&.icon--location-pin {
 		position: relative;
 		&::before {
@@ -384,13 +338,9 @@
 	&__title {
 		margin: 0;
 		font-weight: 300;
-		font-size: 25px;
-		margin-bottom: 25px;
+		font-size: 18px;
+		margin-bottom: 18px;
 		position: relative;
-		@include respond-to(tablets) {
-			font-size: 18px;
-			margin-bottom: 18px;
-		}
 		&::after {
 			position: absolute;
 			top: 50%;
@@ -404,22 +354,15 @@
 	}
 	&__item {
 		padding-right: 45px;
-		font-size: 14px;
-		@include respond-to(tablets) {
-			font-size: 12px;
-		}
+		font-size: 12px;
 		&-title {
 			font-weight: 600;
 			margin-right: 5px;
 		}
 	}
 	&__code {
-		margin-top: 25px;
-		font-size: 14px;
-		@include respond-to(tablets) {
-			font-size: 12px;
-			margin-top: 14px;
-		}
+		margin-top: 14px;
+		font-size: 12px;
 		&-title {
 			font-weight: 600;
 			margin-right: 5px;
@@ -433,11 +376,7 @@
 	}
 	&__text {
 		margin: 0;
-		font-size: 14px;
-		@include respond-to(tablets) {
-			font-size: 12px;
-			margin: 0;
-		}
+		font-size: 12px;
 		&.details__text--important {
 			font-weight: 600;
 			padding-right: 35px;
@@ -450,24 +389,5 @@
 			display: block;
 			padding-right: 30px;
 		}
-	}
-}
-
-.social {
-	border-top: 1px solid #dedede;
-	padding: 24px 0;
-	display: flex;
-	justify-content: flex-end;
-	@include respond-to(tablets) {
-		justify-content: space-between;
-	}
-	&__text {
-		font-size: 14px;
-		font-weight: 600;
-	}
-	&__item {
-		margin-left: 20px;
-		color: #3a3a3a;
-		text-decoration: none;
 	}
 }

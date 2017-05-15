@@ -49,8 +49,10 @@ html(lang="en")
 					h1(class="product__title") Current Elliott
 					h2(class="product__subtitle") Costa Patch Pocket Denim Top
 					div(class="price")
-						span(class="price--old") 30 000 грн
-						span(class="price--new") 15 000 грн
+						div(class="price__number")
+							span(class="price__number price--old") 30 000 грн
+							span(class="price__number price--new") 15 000 грн
+						div(class="price__sale") -50%
 					div(class="color")
 						span(class="color__text") Цвет: 
 						span(class="color__name") Синий
@@ -79,7 +81,6 @@ html(lang="en")
 							div(class="quantity__count-number") 1
 							div(class="quantity__count-more")
 						div(class="like icon icon--heart") 
-							span В избранное 
 						div(class="add-to-cart") 
 							span(class="add-to-cart__text") Добавить в корзину
 							div(class="quantity__left") Осталось в наличии: 
@@ -89,7 +90,6 @@ html(lang="en")
 						div(class="call icon icon--phone")
 							span(class="call__text") Оформить заказ по телефону
 							a(href="tel: +380954589846", class="call__number") +38 095 458-98-46
-							span(class="call__number-text") или
 							a(href="tel: +380443590899", class="call__number") +38 044 359-08-99
 						div(class="location icon icon--location-pin")
 							a(href="#", class="location__text") Наличие в бутиках ONE CLUB
@@ -132,13 +132,6 @@ html(lang="en")
 							span(class="details__text-item") 2. Курьером по Киеву.
 							span(class="details__text-item") 3. Сервисом доставки "Нова пошта" по всей Украине.
 						p(class="details__text details__text--important") Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.
-					div(class="social")
-						span(class="social__text") Поделиться
-						div(class="social-links")
-							a(href="#", class="social__item icon icon--facebook")
-							a(href="#", class="social__item icon icon--vk")
-							a(href="#", class="social__item icon icon--google-plus")
-							a(href="#", class="social__item icon icon--twitter")
 			section(class="similar-goods")
 				h2(class="similar-goods__title") Похожие товары
 				div(class="similar-goods__block")
@@ -178,6 +171,13 @@ html(lang="en")
 						div(class="item__price")
 							span(class="item__price price--old") 30 000 грн
 							span(class="item__price price--new") 15 000 грн
+				div(class="social")
+					span(class="social__text") Поделиться
+					div(class="social-links")
+						a(href="#", class="social__item icon icon--facebook")
+						a(href="#", class="social__item icon icon--vk")
+						a(href="#", class="social__item icon icon--google-plus")
+						a(href="#", class="social__item icon icon--twitter")
 			section(class="see-other")
 				span(class="see-other__text") Смотрите также:
 				a(href="#", class="see-other__link") Одежда
