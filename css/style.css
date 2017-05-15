@@ -121,6 +121,10 @@ html {
   width: 325px;
 }
 
+.header .go-to-mobile {
+  display: none;
+}
+
 .logo-img {
   width: 100%;
   height: auto;
@@ -1126,6 +1130,25 @@ html {
 .credit__item-img {
   width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 425px) {
+  .header .go-to-mobile {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f68235;
+    text-align: center;
+    padding: 150px 60px;
+  }
+
+  .header .mob-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 72px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {

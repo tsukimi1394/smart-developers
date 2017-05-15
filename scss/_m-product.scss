@@ -1,10 +1,10 @@
 .product {
 	margin-top: 30px;
 	&__title {
-		font-size: 25px;
-		color: #f68235;
+		font-size: 18px;
+		color: #000;
 		margin: 0;
-		font-weight: 300;
+		font-weight: 400;
 	}
 	&__subtitle {
 		font-size: 18px;
@@ -19,10 +19,6 @@
 
 .photo {
 	margin-bottom: 20px;
-}
-
-.description {
-	width: 40%;
 }
 
 .price {
