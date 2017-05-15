@@ -2,33 +2,32 @@
 <html lang="en">
   <head>
     <title>Card</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mob-style.css">
   </head>
   <body>
     <header class="header">
-      <div class="header-logo" id="logo"><img class="logo-img" src="images/logo-min.png" alt="One Club Luxury Shopping Club"></div>
-      <div class="switcher"><a class="switcher__item icon icon--clock" href="#"><span>Акции</span></a><a class="switcher__item" href="#"><span>Каталог</span></a></div>
-      <div class="contact-search">
-        <div class="contact">
-          <div class="phone icon icon--phone icon--contact"><a class="contact__link" href="tel: +380443590899">+380 44 359-08-99</a><span>Пн-Вс: 9:00-21:00</span></div>
-          <div class="login icon icon--avatar icon--contact"><a class="contact__link" href="#">Войти</a></div>
-          <div class="basket icon icon--shopping-cart icon--contact"><a class="contact__link" href="#">Корзина</a></div>
-        </div>
-        <div class="search">
-          <input class="search__input" type="search" placeholder="Поиск...">
-          <div class="search-icon"></div>
-        </div>
-      </div>
-      <nav class="main-menu"><a class="main-menu__item" href="#">Женщинам</a><a class="main-menu__item" href="#">Мужчинам</a><a class="main-menu__item" href="#">Детям</a><a class="main-menu__item" href="#">Косметика</a><a class="main-menu__item" href="#">Для дома</a><a class="main-menu__item" href="#">Бренды</a></nav>
+      <nav role="navigation">
+        <div class="menu-icon" data-toggle-menu></div>
+        <ul class="main-menu">
+          <li><a class="main-menu__item" href="#">Женщинам</a></li>
+          <li><a class="main-menu__item" href="#">Мужчинам</a></li>
+          <li><a class="main-menu__item" href="#">Детям</a></li>
+          <li><a class="main-menu__item" href="#">Косметика</a></li>
+          <li><a class="main-menu__item" href="#">Для дома</a></li>
+          <li><a class="main-menu__item" href="#">Бренды</a></li>
+        </ul>
+      </nav>
+      <div class="header-logo" id="logo"><img class="logo-img" src="images/m-logo-min.png" alt="One Club Luxury Shopping Club"></div>
+      <div class="shop"><a href="#"><img class="shop-img" src="images/mob-shop-bag.png" alt="go shop"></a></div>
     </header>
+    <div class="switcher"><a class="switcher__item icon icon--clock" href="#"><span>Акции</span></a><a class="switcher__item" href="#"><span>Каталог</span></a></div>
     <main class="main">
       <nav class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная страница</a><span>/</span><a class="breadcrumbs__item" href="#">Каталог</a><span>/</span><a class="breadcrumbs__item" href="#">Категория 1</a><span>/</span><span class="breadcrumbs__item">Costa Patch Pocket Denim Top</span></nav>
       <section class="product" id="product">
-        <div class="time-left icon icon--clock"><span class="time-left__text">До конца распродажи</span><span class="time-left__time">3 дня, 15:37:01</span></div>
-        <div class="photo"></div>
+        <div class="photo"><img src="images/mob-photo-min.jpg"></div>
         <div class="description">
           <h1 class="product__title">Current Elliott</h1>
           <h2 class="product__subtitle">Costa Patch Pocket Denim Top</h2>

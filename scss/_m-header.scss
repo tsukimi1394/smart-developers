@@ -1,0 +1,112 @@
+.header {
+	background-color: $header-background-color;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 20px;
+	flex-flow: wrap;
+	&-logo {
+		width: 168x;
+	}
+}
+
+.main-menu {
+	display: none;
+}
+
+.menu-icon {
+	width: 23px;
+	height: 3px;
+	background-color: #f68235;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 23px;
+		height: 3px;
+		top: -8px;
+		left: 0;
+		background-color: #f68235;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 23px;
+		height: 3px;
+		top: 8px;
+		left: 0;
+		background-color: #f68235;
+	}
+	&.is-open {
+		& ~ .main-menu {
+			display: block;
+			color: #fff;
+			list-style: none;
+			padding: 0;
+			background-color: #f68235;
+			width: 280px;
+			li {
+				display: block;
+				padding: 20px;
+			}
+			a {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.logo-img {
+	width: 100%;
+	height: auto;
+}
+
+.switcher {
+	margin-top: -10px;
+	&__item {
+		display: inline-block;
+		background-color: #e5e5e5;
+		padding: 10px;
+		font-weight: 300;
+		vertical-align: bottom;
+		text-decoration: none;
+		color: #000;
+		padding-right: 35px;
+		width: 50%;
+		text-align: center;
+		&:last-child {
+			position: relative;
+			padding: 15px 30px;
+			background-color: #f68235;
+			color: #fff;
+			&::before {
+				content: "";
+				position: absolute;
+				right: 100%;
+				top: 0;
+				width: 0; 
+				height: 0; 
+				border-bottom: 48px solid #f68235; 
+				border-left: 27px solid transparent;
+			}
+		}
+		span {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+	.icon--clock {
+		position: relative;
+		padding-left: 55px;
+		&::before {
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			left: 16px;
+		}
+	}
+}

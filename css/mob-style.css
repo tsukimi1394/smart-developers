@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "svg-icons";
+  src: url("../fonts/svg-icons.eot");
+  src: url("../fonts/svg-icons.?#iefix") format("embedded-opentype"), url("../fonts/svg-icons.woff") format("woff"), url("../fonts/svg-icons.ttf") format("truetype"), url("../fonts/svg-icons.#svg-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "svg-icons";
+}
+
+.icon:before {
+  /* Some common icon stuff */
+}
+
+.icon.icon--avatar:before {
+  content: "";
+}
+
+.icon.icon--clock:before {
+  content: "";
+}
+
+.icon.icon--facebook:before {
+  content: "";
+}
+
+.icon.icon--google-plus:before {
+  content: "";
+}
+
+.icon.icon--hanger:before {
+  content: "";
+}
+
+.icon.icon--heart:before {
+  content: "";
+}
+
+.icon.icon--instagram:before {
+  content: "";
+}
+
+.icon.icon--location-pin:before {
+  content: "";
+}
+
+.icon.icon--phone:before {
+  content: "";
+}
+
+.icon.icon--pinterest:before {
+  content: "";
+}
+
+.icon.icon--shopping-cart:before {
+  content: "";
+}
+
+.icon.icon--twitter:before {
+  content: "";
+}
+
+.icon.icon--vk:before {
+  content: "";
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helveticaneue_light-webfont.woff") format("woff"), url("../fonts/helveticaneue_light-webfont.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helveticaneue_medium-webfont.woff") format("woff"), url("../fonts/helveticaneue_medium-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helveticaneue_thin-webfont.woff") format("woff"), url("../fonts/helveticaneue_thin-webfont.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'HelveticaNeue', Arial, sans-serif;
+  font-weight: 300;
+  max-width: 620px;
+}
+
+.main {
+  padding: 20px;
+  position: relative;
+}
+
+.header {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 30px 20px;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.header-logo {
+  width: 168x;
+}
+
+.main-menu {
+  display: none;
+}
+
+.menu-icon {
+  width: 23px;
+  height: 3px;
+  background-color: #f68235;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-icon::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 3px;
+  top: -8px;
+  left: 0;
+  background-color: #f68235;
+}
+
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 3px;
+  top: 8px;
+  left: 0;
+  background-color: #f68235;
+}
+
+.menu-icon.is-open ~ .main-menu {
+  display: block;
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  background-color: #f68235;
+  width: 280px;
+}
+
+.menu-icon.is-open ~ .main-menu li {
+  display: block;
+  padding: 20px;
+}
+
+.menu-icon.is-open ~ .main-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+}
+
+.switcher {
+  margin-top: -10px;
+}
+
+.switcher__item {
+  display: inline-block;
+  background-color: #e5e5e5;
+  padding: 10px;
+  font-weight: 300;
+  vertical-align: bottom;
+  text-decoration: none;
+  color: #000;
+  padding-right: 35px;
+  width: 50%;
+  text-align: center;
+}
+
+.switcher__item:last-child {
+  position: relative;
+  padding: 15px 30px;
+  background-color: #f68235;
+  color: #fff;
+}
+
+.switcher__item:last-child::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 48px solid #f68235;
+  border-left: 27px solid transparent;
+}
+
+.switcher__item span {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.switcher .icon--clock {
+  position: relative;
+  padding-left: 55px;
+}
+
+.switcher .icon--clock::before {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  left: 16px;
+}
+
+.breadcrumbs {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.breadcrumbs__item {
+  text-decoration: none;
+  color: #f68235;
+  padding: 3px;
+}
+
+.breadcrumbs__item:last-child {
+  color: #000;
+}
+/*# sourceMappingURL=mob-style.css.map */

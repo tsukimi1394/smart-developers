@@ -1,0 +1,12 @@
+.breadcrumbs {
+	font-weight: 300;
+	font-size: 12px;
+	&__item {
+		text-decoration: none;
+		color: #f68235;
+		padding: 3px;
+		&:last-child {
+			color: #000;
+		}
+	}
+}
