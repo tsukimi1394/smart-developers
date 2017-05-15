@@ -109,6 +109,10 @@
 		&.active {
 			border: 2px solid #f68235;
 		}
+		&:hover {
+			border: 2px solid #fff;
+			cursor: pointer;
+		}
 	}
 	&--1 {
 		background-color: #636363;
@@ -144,6 +148,9 @@
 	}
 	&__table {
 		color: #999;
+		&:hover {
+			color: #000;
+		}
 	}
 	&__pic {
 		width: 35px;
@@ -163,12 +170,20 @@
 		&.disabled {
 			color: #6d6d6d;
 			background-color: #dedede;
+			pointer-events: none;
+		}
+		&:hover {
+			border: 2px solid #000;
+			cursor: pointer;
 		}
 	}
 	&__fit {
 		margin-top: 15px;
 		color: #999;
 		display: inline-block;
+		&:hover {
+			color: #000;
+		}
 		span {
 			font-family: 'OpenSans', sans-serif;
 			font-size: 14px;
@@ -214,20 +229,30 @@
 		margin-top: 10px;
 		&-less {
 			display: inline-block;
-			width: 8px;
-			height: 2px;
-			background-color: #000;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%);
+				width: 9px;
+				height: 2px;
+				background-color: #000;
+			}
 			margin-right: 8px;
 			margin-bottom: 4px;
+			cursor: pointer;
 		}
 		&-number {
 			border: 1px solid #dedede;
-			padding: 8px 24px;
 			text-align: center;
 			color: #000;
 			font-family: 'OpenSans', sans-serif;
 			font-weight: 600;
 			display: inline-block;
+			outline: none;
+			width: 76px;
+			height: 35px;
 			@include respond-to(tablets) {
 				padding: 9px;
 				width: 35px;
@@ -237,19 +262,26 @@
 		&-more {
 			display: inline-block;
 			margin-left: 8px;
-			width: 8px;
-			height: 2px;
-			background-color: #000;
+			&::before {
+				position: absolute;
+				content: "";
+				top: 50%;
+				transform: translate(-50%);
+				width: 9px;
+				height: 2px;
+				background-color: #000;
+			}
 			position: relative;
 			margin-bottom: 4px;
-			&::before {
+			cursor: pointer;
+			&::after {
 				content: "";
 				position: absolute;
 				width: 2px;
-				height: 8px;
-				top: 50%;
+				height: 10px;
+				top: -4px;
 				left: 50%;
-				transform: translate(-50%, -50%);
+				transform: translateX(-50%);
 				background-color: #000;
 			}
 		}
@@ -294,8 +326,12 @@
 	margin-top: 14px;
 	margin-bottom: 14px;
 	vertical-align: bottom;
+	text-decoration: none;
 	@include respond-to(tablets) {
 		padding: 18px;
+	}
+	&:hover {
+		border-color: #000;
 	}
 	&.icon--heart {
 		position: relative;
@@ -333,10 +369,17 @@
 	vertical-align: bottom;
 	position: relative;
 	margin-bottom: 14px;
+	text-decoration: none;
 	@include respond-to(tablets) {
 		padding-left: 15px;
 		margin-left: 0;
 		float: right;
+	}
+	&:hover {
+		border-radius: 10px;
+	}
+	&:active {
+		background-color: #ef590e;
 	}
 	&__text {
 		text-transform: uppercase;
@@ -398,6 +441,9 @@
 			color: #999;
 			font-family: 'HelveticaNeue', Arial, sans-serif;
 		}
+		&:hover {
+			color: #000;
+		}
 	}
 }
 
@@ -425,12 +471,20 @@
 .details {
 	border-top: 1px solid #dedede;
 	padding: 20px 0;
+	&.close {
+		div, p {
+			display: none;
+		}
+	}
 	&__title {
 		margin: 0;
 		font-weight: 300;
 		font-size: 25px;
 		margin-bottom: 25px;
 		position: relative;
+		&:hover {
+			cursor: pointer;
+		}
 		@include respond-to(tablets) {
 			font-size: 18px;
 			margin-bottom: 18px;
@@ -513,5 +567,12 @@
 		margin-left: 20px;
 		color: #3a3a3a;
 		text-decoration: none;
+		padding: 5px;
+		border: 1px solid transparent;
+		&:hover {
+			border: 1px solid #3a3a3a;
+			border-radius: 100%;
+			padding: 5px;
+		}
 	}
 }

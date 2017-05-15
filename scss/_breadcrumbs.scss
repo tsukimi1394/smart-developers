@@ -8,5 +8,10 @@
 		&:last-child {
 			color: #000;
 		}
+		&:not(:last-child) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }

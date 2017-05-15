@@ -36,33 +36,30 @@
           <div class="price"><span class="price--old">30 000 грн</span><span class="price--new">15 000 грн</span></div>
           <div class="color"><span class="color__text">Цвет: </span><span class="color__name">Синий</span>
             <div class="colors">
-              <div class="color__pic color--1"></div>
-              <div class="color__pic color--2 active"></div>
-              <div class="color__pic color--3"></div>
-              <div class="color__pic color--4"></div>
-              <div class="color__pic color--5"></div>
+              <div class="color__pic color--1" data-toggle-color></div>
+              <div class="color__pic color--2 active" data-toggle-color></div>
+              <div class="color__pic color--3" data-toggle-color></div>
+              <div class="color__pic color--4" data-toggle-color></div>
+              <div class="color__pic color--5" data-toggle-color></div>
             </div>
           </div>
           <div class="size">
             <div class="size__info"><span class="size__text">Размер:</span><a class="size__table" href="#">Таблица размеров</a></div>
             <div class="sizes">
-              <div class="size__pic">XS</div>
-              <div class="size__pic active">S</div>
-              <div class="size__pic disabled">M</div>
-              <div class="size__pic disabled">L</div>
-              <div class="size__pic disabled">XL</div>
+              <div class="size__pic" data-toggle-size>XS</div>
+              <div class="size__pic active" data-toggle-size>S</div>
+              <div class="size__pic disabled" data-toggle-size>M</div>
+              <div class="size__pic disabled" data-toggle-size>L</div>
+              <div class="size__pic disabled" data-toggle-size>XL</div>
             </div><a class="size__fit icon icon--hanger" href="#"> <span>Примерить онлайн</span></a>
           </div>
           <div class="quantity"><span class="quantity__text">Количество:</span>
             <div class="quantity__count">
               <div class="quantity__count-less"></div>
-              <div class="quantity__count-number">1</div>
+              <input class="quantity__count-number" type="text" value="1">
               <div class="quantity__count-more"></div>
-            </div>
-            <div class="like icon icon--heart"> <span>В избранное </span></div>
-            <div class="add-to-cart"> <span class="add-to-cart__text">Добавить в корзину</span>
-              <div class="quantity__left">Осталось в наличии: <span class="quantity__left-number">1 шт.</span>Спешите купить сейчас!</div>
-            </div>
+            </div><a class="like icon icon--heart" href="#"> <span>В избранное </span></a><a class="add-to-cart" href="#"> <span class="add-to-cart__text">Добавить в корзину</span>
+              <div class="quantity__left">Осталось в наличии: <span class="quantity__left-number">1 шт.</span>Спешите купить сейчас!</div></a>
           </div>
           <div class="make-order">
             <div class="call icon icon--phone"><span class="call__text">Оформить заказ по телефону</span><a class="call__number" href="tel: +380954589846">+38 095 458-98-46</a><span class="call__number-text">или</span><a class="call__number" href="tel: +380443590899">+38 044 359-08-99</a></div>
@@ -149,7 +146,7 @@
       <nav class="footer__buyer-menu"><span class="footer__buyer-menu-item">Покупателям</span><a class="footer__buyer-menu-item" href="#">Оплата</a><a class="footer__buyer-menu-item" href="#">Возврат</a><a class="footer__buyer-menu-item" href="#">Доставка</a><a class="footer__buyer-menu-item" href="#">Оферта</a><a class="footer__buyer-menu-item" href="#">Поддержка</a></nav>
       <nav class="footer__about-menu"><span class="footer__about-menu-item">О нас</span><a class="footer__about-menu-item" href="#">О проекте</a><a class="footer__about-menu-item" href="#">Вакансии</a><a class="footer__about-menu-item" href="#">Партнерам</a><a class="footer__about-menu-item" href="#">Контакты</a><a class="footer__about-menu-item" href="#">FAQ</a></nav>
       <div class="copy">
-        <div class="footer-logo"><img class="logo-img" src="images/logo-footer-min.png" alt="logo"></div><span class="copy-text">&copy; 2016 ONE CLUB 2.0</span><span class="copy-text">All Right reserved</span>
+        <div class="footer-logo"><a href="#"><img class="logo-img" src="images/logo-footer-min.png" alt="logo"></a></div><span class="copy-text">&copy; 2016 ONE CLUB 2.0</span><span class="copy-text">All Right reserved</span>
         <div class="footer-social-credit">
           <div class="footer-social"><a class="footer-social__item icon icon--facebook" href="#"></a><a class="footer-social__item icon icon--instagram" href="#"></a><a class="footer-social__item icon icon--twitter" href="#"></a><a class="footer-social__item icon icon--pinterest" href="#"></a></div>
           <div class="credit">
