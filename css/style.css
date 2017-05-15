@@ -407,8 +407,11 @@ html {
 
 .photo {
   background: url("../images/photo-min.jpg") no-repeat;
-  width: 2000px;
-  height: 655px;
+  width: 60%;
+}
+
+.description {
+  width: 40%;
 }
 
 .price {
@@ -611,6 +614,10 @@ html {
   text-align: center;
 }
 
+.quantity__left-number {
+  margin-right: 5px;
+}
+
 .quantity__left::after {
   content: "";
   position: absolute;
@@ -709,12 +716,10 @@ html {
   color: #000;
   padding-left: 30px;
   font-family: 'HelveticaNeue', Arial, sans-serif;
-  font-size: 14px;
   margin-bottom: 10px;
 }
 
 .call__number {
-  font-size: 14px;
   color: #999;
   margin-left: 10px;
   margin-right: 10px;
@@ -728,7 +733,6 @@ html {
 .call__number-text {
   color: #999;
   font-family: 'HelveticaNeue', Arial, sans-serif;
-  font-size: 14px;
 }
 
 .location.icon--location-pin {
@@ -750,7 +754,6 @@ html {
   color: #000;
   padding-left: 30px;
   font-family: 'HelveticaNeue', Arial, sans-serif;
-  font-size: 14px;
   margin-bottom: 10px;
 }
 
@@ -781,6 +784,7 @@ html {
 
 .details__item {
   padding-right: 45px;
+  font-size: 14px;
 }
 
 .details__item-title {
@@ -790,6 +794,7 @@ html {
 
 .details__code {
   margin-top: 25px;
+  font-size: 14px;
 }
 
 .details__code-title {
@@ -807,12 +812,13 @@ html {
 
 .details__text {
   margin: 0;
-  margin-top: 20px;
+  font-size: 14px;
 }
 
 .details__text.details__text--important {
   font-weight: 600;
   padding-right: 35px;
+  margin-top: 20px;
 }
 
 .details__text.details__text--important a {
@@ -1210,6 +1216,16 @@ html {
     height: 35px;
   }
 
+  .quantity__left {
+    font-size: 12px;
+    width: 90%;
+    left: 10%;
+  }
+
+  .quantity__left::after {
+    left: 75%;
+  }
+
   .like {
     padding: 18px;
   }
@@ -1227,11 +1243,41 @@ html {
   .add-to-cart {
     padding-left: 15px;
     margin-left: 0;
+    float: right;
   }
 
   .add-to-cart__text {
     padding: 12px 15px;
     padding-left: 20px;
+  }
+
+  .make-order {
+    font-size: 12px;
+  }
+
+  .details__title {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .details__item {
+    font-size: 12px;
+  }
+
+  .details__code {
+    font-size: 12px;
+    margin-top: 14px;
+  }
+
+  .details__text {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .social {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 /*# sourceMappingURL=style.css.map */
