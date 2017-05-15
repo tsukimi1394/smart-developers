@@ -1,0 +1,16 @@
+.see-other {
+	border-top: 1px solid #dedede;
+	padding: 20px 0;
+	font-size: 12px;
+	&__text {
+		color: #000;
+		font-weight: 600;
+		display: block;
+		margin-bottom: 20px;
+	}
+	&__link {
+		color: #999;
+		display: block;
+		line-height: 24px;
+	}
+}
