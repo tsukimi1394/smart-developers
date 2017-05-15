@@ -63,6 +63,9 @@
 			a {
 				text-decoration: none;
 				color: #fff;
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -86,6 +89,9 @@
 		padding-right: 35px;
 		width: 50%;
 		text-align: center;
+		&:hover {
+			text-decoration: underline;
+		}
 		&:last-child {
 			position: relative;
 			padding: 15px 30px;

@@ -58,31 +58,31 @@ html(lang="en")
 						span(class="color__text") Цвет: 
 						span(class="color__name") Синий
 						div(class="colors")
-							div(class="color__pic color--1")
-							div(class="color__pic color--2 active")
-							div(class="color__pic color--3")
-							div(class="color__pic color--4")
-							div(class="color__pic color--5")
+							div(class="color__pic color--1", data-toggle-color)
+							div(class="color__pic color--2 active", data-toggle-color)
+							div(class="color__pic color--3", data-toggle-color)
+							div(class="color__pic color--4", data-toggle-color)
+							div(class="color__pic color--5", data-toggle-color)
 					div(class="size")
 						div(class="size__info")
 							span(class="size__text") Размер:
 							a(href="#", class="size__table") Таблица размеров
 						div(class="sizes")
-							div(class="size__pic") XS
-							div(class="size__pic active") S
-							div(class="size__pic disabled") M
-							div(class="size__pic disabled") L
-							div(class="size__pic disabled") XL
+							div(class="size__pic", data-toggle-size) XS
+							div(class="size__pic active", data-toggle-size) S
+							div(class="size__pic disabled", data-toggle-size) M
+							div(class="size__pic disabled", data-toggle-size) L
+							div(class="size__pic disabled", data-toggle-size) XL
 						a(href="#", class="size__fit icon icon--hanger") 
 							span Примерить онлайн
 					div(class="quantity")
 						span(class="quantity__text") Количество:
 						div(class="quantity__count")
 							div(class="quantity__count-less")
-							div(class="quantity__count-number") 1
+							input(type="text", value="1", class="quantity__count-number")
 							div(class="quantity__count-more")
-						div(class="like icon icon--heart") 
-						div(class="add-to-cart") 
+						a(href="#", class="like icon icon--heart") 
+						a(href="#", class="add-to-cart") 
 							span(class="add-to-cart__text") Добавить в корзину
 							div(class="quantity__left") Осталось в наличии: 
 								span(class="quantity__left-number") 1 шт.
@@ -204,4 +204,4 @@ html(lang="en")
 					div(class="credit__item")
 						img(src="images/liqpay-min.png", alt="liqpay", class="credit__liqpay-img")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-		script(src="js/main.js")
+		script(src="js/main-mob.js")

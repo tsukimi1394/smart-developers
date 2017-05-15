@@ -37,33 +37,30 @@
           </div>
           <div class="color"><span class="color__text">Цвет: </span><span class="color__name">Синий</span>
             <div class="colors">
-              <div class="color__pic color--1"></div>
-              <div class="color__pic color--2 active"></div>
-              <div class="color__pic color--3"></div>
-              <div class="color__pic color--4"></div>
-              <div class="color__pic color--5"></div>
+              <div class="color__pic color--1" data-toggle-color></div>
+              <div class="color__pic color--2 active" data-toggle-color></div>
+              <div class="color__pic color--3" data-toggle-color></div>
+              <div class="color__pic color--4" data-toggle-color></div>
+              <div class="color__pic color--5" data-toggle-color></div>
             </div>
           </div>
           <div class="size">
             <div class="size__info"><span class="size__text">Размер:</span><a class="size__table" href="#">Таблица размеров</a></div>
             <div class="sizes">
-              <div class="size__pic">XS</div>
-              <div class="size__pic active">S</div>
-              <div class="size__pic disabled">M</div>
-              <div class="size__pic disabled">L</div>
-              <div class="size__pic disabled">XL</div>
+              <div class="size__pic" data-toggle-size>XS</div>
+              <div class="size__pic active" data-toggle-size>S</div>
+              <div class="size__pic disabled" data-toggle-size>M</div>
+              <div class="size__pic disabled" data-toggle-size>L</div>
+              <div class="size__pic disabled" data-toggle-size>XL</div>
             </div><a class="size__fit icon icon--hanger" href="#"> <span>Примерить онлайн</span></a>
           </div>
           <div class="quantity"><span class="quantity__text">Количество:</span>
             <div class="quantity__count">
               <div class="quantity__count-less"></div>
-              <div class="quantity__count-number">1</div>
+              <input class="quantity__count-number" type="text" value="1">
               <div class="quantity__count-more"></div>
-            </div>
-            <div class="like icon icon--heart"> </div>
-            <div class="add-to-cart"> <span class="add-to-cart__text">Добавить в корзину</span>
-              <div class="quantity__left">Осталось в наличии: <span class="quantity__left-number">1 шт.</span>Спешите купить сейчас!</div>
-            </div>
+            </div><a class="like icon icon--heart" href="#"> </a><a class="add-to-cart" href="#"> <span class="add-to-cart__text">Добавить в корзину</span>
+              <div class="quantity__left">Осталось в наличии: <span class="quantity__left-number">1 шт.</span>Спешите купить сейчас!</div></a>
           </div>
           <div class="make-order">
             <div class="call icon icon--phone"><span class="call__text">Оформить заказ по телефону</span><a class="call__number" href="tel: +380954589846">+38 095 458-98-46</a><a class="call__number" href="tel: +380443590899">+38 044 359-08-99</a></div>
@@ -143,6 +140,6 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main-mob.js"></script>
   </body>
 </html>
