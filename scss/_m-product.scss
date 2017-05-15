@@ -1,5 +1,5 @@
 .product {
-	margin-top: 20px;
+	margin-top: 30px;
 	&__title {
 		font-size: 25px;
 		color: #f68235;
@@ -18,11 +18,7 @@
 }
 
 .photo {
-	background: url('../images/photo-min.jpg') no-repeat;
-	width: 60%;
-	@include respond-to(tablets) {
-		background: url('../images/photo-tab-min.jpg') no-repeat;
-	}
+	margin-bottom: 20px;
 }
 
 .description {

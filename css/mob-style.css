@@ -237,7 +237,6 @@ html {
 .breadcrumbs {
   font-weight: 300;
   font-size: 12px;
-  margin-bottom: 30px;
 }
 
 .breadcrumbs__item {
@@ -251,7 +250,7 @@ html {
 }
 
 .product {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .product__title {
@@ -269,8 +268,7 @@ html {
 }
 
 .photo {
-  background: url("../images/photo-min.jpg") no-repeat;
-  width: 60%;
+  margin-bottom: 20px;
 }
 
 .description {
@@ -718,10 +716,6 @@ html {
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .product__subtitle {
     padding-right: 90px;
-  }
-
-  .photo {
-    background: url("../images/photo-tab-min.jpg") no-repeat;
   }
 
   .price--old {
