@@ -10,10 +10,17 @@
 		}
 		&-title {
 			font-size: 17px;
+			@include respond-to(tablets) {
+				font-size: 14px;
+			}
 		}
 		&-text {
 			font-size: 14px;
 			padding: 0 70px;
+			@include respond-to(tablets) {
+				padding: 0 35px;
+				font-size: 10px;
+			}
 		}
 		&-link {
 			color: #000;
@@ -35,6 +42,9 @@
 	background-color: #dedede;
 	border: 1px solid #ccc;
 	display: block;
+	@include respond-to(tablets) {
+		display: none;
+	}
 	&::after {
 		content: "";
 		border-top: 3px solid #000;

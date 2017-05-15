@@ -903,13 +903,13 @@ html {
   font-size: 15px;
 }
 
-.item__price--old {
+.item__price.price--old {
   text-decoration: line-through;
   color: #999;
   margin-right: 5px;
 }
 
-.item__price--new {
+.item__price.price--new {
   color: #f68235;
 }
 
@@ -917,6 +917,7 @@ html {
   border-top: 1px solid #dedede;
   padding: 50px 0;
   text-align: center;
+  font-size: 14px;
 }
 
 .see-other__text {
@@ -1278,6 +1279,50 @@ html {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+
+  .item__img {
+    width: 149px;
+    height: 223px;
+  }
+
+  .item__title {
+    font-size: 12px;
+  }
+
+  .item__subtitle {
+    font-size: 10px;
+  }
+
+  .item__price {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
+  .item__price.price--old {
+    display: inline-block;
+  }
+
+  .item__price.price--new {
+    display: inline-block;
+  }
+
+  .see-other {
+    padding: 35px 0;
+    font-size: 12px;
+  }
+
+  .benefits__item-title {
+    font-size: 14px;
+  }
+
+  .benefits__item-text {
+    padding: 0 35px;
+    font-size: 10px;
+  }
+
+  .to-top {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

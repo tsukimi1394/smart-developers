@@ -17,6 +17,10 @@
 		width: 205px;
 		height: 273px;
 		margin-bottom: 10px;
+		@include respond-to(tablets) {
+			width: 149px;
+			height: 223px;
+		}
 		&-image {
 			width: 100%;
 			height: auto;
@@ -26,22 +30,38 @@
 		margin: 0;
 		font-size: 14px;
 		font-weight: 400;
+		@include respond-to(tablets) {
+			font-size: 12px;
+		}
 	}
 	&__subtitle {
 		margin: 0;
 		font-weight: 200;
 		font-size: 14px;
+		@include respond-to(tablets) {
+			font-size: 10px;
+		}
 	}
 	&__price {
 		margin-top: 13px;
 		font-size: 15px;
-		&--old {
+		@include respond-to(tablets) {
+			font-size: 10px;
+			margin-top: 5px;
+		}
+		&.price--old {
 			text-decoration: line-through;
 			color: #999;
 			margin-right: 5px;
+			@include respond-to(tablets) {
+				display: inline-block;
+			}
 		}
-		&--new {
+		&.price--new {
 			color: #f68235;
+			@include respond-to(tablets) {
+				display: inline-block;
+			}
 		}
 	}
 }
