@@ -24,8 +24,7 @@ html(lang="en")
 					li
 						a(href="#", class="main-menu__item") Бренды
 			div(class="header-logo", id="logo")
-				a(href="#")
-					img(src="images/m-logo-min.png", alt="One Club Luxury Shopping Club", class="logo-img")
+				a(href="#") One Club
 			div(class="shop")
 				a(href="#")
 					img(src="images/mob-shop-bag.png", alt="go shop", class="shop-img")
@@ -44,11 +43,11 @@ html(lang="en")
 				span /
 				span(class="breadcrumbs__item") Costa Patch Pocket Denim Top
 			section(class="product", id="product")
-				div(class="photo")
-					img(src="images/mob-photo-min.jpg")
+				a(href="http://placehold.it", class="photo")
+					img(src="http://placehold.it/260x374")
 				div(class="description")
 					h1(class="product__title") Current Elliott
-					h2(class="product__subtitle") Costa Patch Pocket Denim Top
+						span(class="product__subtitle") Costa Patch Pocket Denim Top
 					div(class="price")
 						div(class="price__number")
 							span(class="price__number price--old") 30 000 грн
@@ -79,7 +78,7 @@ html(lang="en")
 						span(class="quantity__text") Количество:
 						div(class="quantity__count")
 							div(class="quantity__count-less")
-							input(type="text", value="1", class="quantity__count-number")
+							input(type="tel", value="1", class="quantity__count-number")
 							div(class="quantity__count-more")
 						a(href="#", class="like icon icon--heart") 
 						a(href="#", class="add-to-cart") 
@@ -95,46 +94,52 @@ html(lang="en")
 						div(class="location icon icon--location-pin")
 							a(href="#", class="location__text") Наличие в бутиках ONE CLUB
 					div(class="details")
-						h3(class="details__title") Описание и детали
-						div(class="details__item")
-							span(class="details__item-title") Состав:
-							span(class="details__item-value") 100% трикотаж
-						div(class="details__item")
-							span(class="details__item-title") Сезон:
-							span(class="details__item-value") демисезон
-						div(class="details__item")
-							span(class="details__item-title") Детали:
-							span(class="details__item-value") Облегающая модель выполнена из гладкого трико-тажа.
-						div(class="details__code")
-							span(class="details__code-title") Код товара:
-							span(class="details__code-number") 1234-5678-8765-4321
+						h3(class="details__title icon icon--minus") 
+							span Описание и детали
+						dl(class="details__item")
+							dt(class="details__item-title") Состав:
+							dd(class="details__item-value") 100% трикотаж
+							dt(class="details__item-title") Сезон:
+							dd(class="details__item-value") демисезон
+							dt(class="details__item-title") Детали:
+							dd(class="details__item-value") Облегающая модель выполнена из гладкого трико-тажа.
+						dl(class="details__code")
+							dt(class="details__code-title") Код товара:
+							dd(class="details__code-number") 1234-5678-8765-4321
 					div(class="details")
-						h3(class="details__title") Измерения
+						h3(class="details__title icon icon--minus") 
+							span Измерения
 						div(class="details__item")
-							span(class="details__item-title") Размер вещи на фото:
-							span(class="details__item-value") S
+							b Размер вещи на фото:
+							| S
 						div(class="details__info")
 							p(class="details__text") Обхват груди: 85 см
 							p(class="details__text") Обхват талии: 61 см
 							p(class="details__text") Обхват бедер: 89 см
 							p(class="details__text") Рост: 175 см
-						p(class="details__text details__text--important") Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, 
+						p(class="details__text") 
+							b Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, 
 								a(href="#") таблицей размеров
 								|, или обратитесь к нашему консультанту
 					div(class="details")
-						h3(class="details__title") Доставка и возврат
+						h3(class="details__title icon icon--minus") 
+							span Доставка и возврат
 						div(class="details__item")
-							span(class="details__item-title") Ожидаемая дата доставки:
-							span(class="details__item-value") 21.09.2016 - 23.09.2016
-						p(class="details__text details__text--important") Бесплатная доставка при заказе от 2000 грн, а также при оплате банковской картой.
-						p(class="details__text details__text--important") Вы можете выбрать любой удобный способ доставки:
+							b Ожидаемая дата доставки:
+							| 21.09.2016 - 23.09.2016
+						p(class="details__text") 
+							b Бесплатная доставка при заказе от 2000 грн, а также при оплате банковской картой.
+						p(class="details__text") 
+							b Вы можете выбрать любой удобный способ доставки:
 						p(class="details__text")
 							span(class="details__text-item") 1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) - бесплатно.
 							span(class="details__text-item") 2. Курьером по Киеву.
 							span(class="details__text-item") 3. Сервисом доставки "Нова пошта" по всей Украине.
-						p(class="details__text details__text--important") Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.
+						p(class="details__text") 
+							b Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.
 			section(class="similar-goods")
-				h2(class="similar-goods__title") Похожие товары
+				h2(class="similar-goods__title icon icon--minus") 
+					span Похожие товары
 				div(class="similar-goods__block")
 					div(class="item")
 						div(class="item__img")
@@ -179,15 +184,15 @@ html(lang="en")
 						a(href="#", class="social__item icon icon--vk")
 						a(href="#", class="social__item icon icon--google-plus")
 						a(href="#", class="social__item icon icon--twitter")
-			section(class="see-other")
-				span(class="see-other__text") Смотрите также:
-				a(href="#", class="see-other__link") Одежда
-				a(href="#", class="see-other__link") Трикотаж
-				a(href="#", class="see-other__link") Шелк
-				a(href="#", class="see-other__link") Все товары бренда Philipp Plein
+			section(class="recommendation")
+				span(class="recommendation__text") Смотрите также:
+				a(href="#", class="recommendation__link") Одежда
+				a(href="#", class="recommendation__link") Трикотаж
+				a(href="#", class="recommendation__link") Шелк
+				a(href="#", class="recommendation__link") Все товары бренда Philipp Plein
 		footer(class="footer")
 			div(class="footer-logo")
-				img(src="images/logo-footer-min.png", alt="logo", class="logo-img")
+				a(href="#") One Club
 			span(class="copy-text") &copy; 2016 ONE CLUB 2.0
 			span(class="copy-text") All Right reserved
 			div(class="footer-social-credit")
@@ -197,11 +202,6 @@ html(lang="en")
 					a(href="#", class="footer-social__item icon icon--twitter")
 					a(href="#", class="footer-social__item icon icon--pinterest")
 				div(class="credit")
-					div(class="credit__item")
-						img(src="images/visa-min.png", alt="visa", class="credit__visa-img")
-					div(class="credit__item")
-						img(src="images/master-card-min.png", alt="master-card", class="credit__master-card-img")
-					div(class="credit__item")
-						img(src="images/liqpay-min.png", alt="liqpay", class="credit__liqpay-img")
+					img(src="images/credit-min.png", alt="credit", class="credit__img")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="js/main-mob.js")

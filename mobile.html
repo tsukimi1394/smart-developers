@@ -20,17 +20,15 @@
           <li><a class="main-menu__item" href="#">Бренды</a></li>
         </ul>
       </nav>
-      <div class="header-logo" id="logo"><a href="#"><img class="logo-img" src="images/m-logo-min.png" alt="One Club Luxury Shopping Club"></a></div>
+      <div class="header-logo" id="logo"><a href="#">One Club</a></div>
       <div class="shop"><a href="#"><img class="shop-img" src="images/mob-shop-bag.png" alt="go shop"></a></div>
     </header>
     <div class="switcher"><a class="switcher__item icon icon--clock" href="#"><span>Акции</span></a><a class="switcher__item" href="#"><span>Каталог</span></a></div>
     <main class="main">
       <nav class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная страница</a><span>/</span><a class="breadcrumbs__item" href="#">Каталог</a><span>/</span><a class="breadcrumbs__item" href="#">Категория 1</a><span>/</span><span class="breadcrumbs__item">Costa Patch Pocket Denim Top</span></nav>
-      <section class="product" id="product">
-        <div class="photo"><img src="images/mob-photo-min.jpg"></div>
+      <section class="product" id="product"><a class="photo" href="http://placehold.it"><img src="http://placehold.it/260x374"></a>
         <div class="description">
-          <h1 class="product__title">Current Elliott</h1>
-          <h2 class="product__subtitle">Costa Patch Pocket Denim Top</h2>
+          <h1 class="product__title">Current Elliott<span class="product__subtitle">Costa Patch Pocket Denim Top</span></h1>
           <div class="price">
             <div class="price__number"><span class="price__number price--old">30 000 грн</span><span class="price__number price--new">15 000 грн</span></div>
             <div class="price__sale">-50%</div>
@@ -57,7 +55,7 @@
           <div class="quantity"><span class="quantity__text">Количество:</span>
             <div class="quantity__count">
               <div class="quantity__count-less"></div>
-              <input class="quantity__count-number" type="text" value="1">
+              <input class="quantity__count-number" type="tel" value="1">
               <div class="quantity__count-more"></div>
             </div><a class="like icon icon--heart" href="#"> </a><a class="add-to-cart" href="#"> <span class="add-to-cart__text">Добавить в корзину</span>
               <div class="quantity__left">Осталось в наличии: <span class="quantity__left-number">1 шт.</span>Спешите купить сейчас!</div></a>
@@ -67,35 +65,43 @@
             <div class="location icon icon--location-pin"><a class="location__text" href="#">Наличие в бутиках ONE CLUB</a></div>
           </div>
           <div class="details">
-            <h3 class="details__title">Описание и детали</h3>
-            <div class="details__item"><span class="details__item-title">Состав:</span><span class="details__item-value">100% трикотаж</span></div>
-            <div class="details__item"><span class="details__item-title">Сезон:</span><span class="details__item-value">демисезон</span></div>
-            <div class="details__item"><span class="details__item-title">Детали:</span><span class="details__item-value">Облегающая модель выполнена из гладкого трико-тажа.</span></div>
-            <div class="details__code"><span class="details__code-title">Код товара:</span><span class="details__code-number">1234-5678-8765-4321</span></div>
+            <h3 class="details__title icon icon--minus"> <span>Описание и детали</span></h3>
+            <dl class="details__item">
+              <dt class="details__item-title">Состав:</dt>
+              <dd class="details__item-value">100% трикотаж</dd>
+              <dt class="details__item-title">Сезон:</dt>
+              <dd class="details__item-value">демисезон</dd>
+              <dt class="details__item-title">Детали:</dt>
+              <dd class="details__item-value">Облегающая модель выполнена из гладкого трико-тажа.</dd>
+            </dl>
+            <dl class="details__code">
+              <dt class="details__code-title">Код товара:</dt>
+              <dd class="details__code-number">1234-5678-8765-4321</dd>
+            </dl>
           </div>
           <div class="details">
-            <h3 class="details__title">Измерения</h3>
-            <div class="details__item"><span class="details__item-title">Размер вещи на фото:</span><span class="details__item-value">S</span></div>
+            <h3 class="details__title icon icon--minus"> <span>Измерения</span></h3>
+            <div class="details__item"><b>Размер вещи на фото:</b>S</div>
             <div class="details__info">
               <p class="details__text">Обхват груди: 85 см</p>
               <p class="details__text">Обхват талии: 61 см</p>
               <p class="details__text">Обхват бедер: 89 см</p>
               <p class="details__text">Рост: 175 см</p>
             </div>
-            <p class="details__text details__text--important">Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <a href="#">таблицей размеров</a>, или обратитесь к нашему консультанту</p>
+            <p class="details__text"> <b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <a href="#">таблицей размеров</a>, или обратитесь к нашему консультанту</b></p>
           </div>
           <div class="details">
-            <h3 class="details__title">Доставка и возврат</h3>
-            <div class="details__item"><span class="details__item-title">Ожидаемая дата доставки:</span><span class="details__item-value">21.09.2016 - 23.09.2016</span></div>
-            <p class="details__text details__text--important">Бесплатная доставка при заказе от 2000 грн, а также при оплате банковской картой.</p>
-            <p class="details__text details__text--important">Вы можете выбрать любой удобный способ доставки:</p>
+            <h3 class="details__title icon icon--minus"> <span>Доставка и возврат</span></h3>
+            <div class="details__item"><b>Ожидаемая дата доставки:</b>21.09.2016 - 23.09.2016</div>
+            <p class="details__text"> <b>Бесплатная доставка при заказе от 2000 грн, а также при оплате банковской картой.</b></p>
+            <p class="details__text"> <b>Вы можете выбрать любой удобный способ доставки:</b></p>
             <p class="details__text"><span class="details__text-item">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) - бесплатно.</span><span class="details__text-item">2. Курьером по Киеву.</span><span class="details__text-item">3. Сервисом доставки "Нова пошта" по всей Украине.</span></p>
-            <p class="details__text details__text--important">Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.</p>
+            <p class="details__text"> <b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.</b></p>
           </div>
         </div>
       </section>
       <section class="similar-goods">
-        <h2 class="similar-goods__title">Похожие товары</h2>
+        <h2 class="similar-goods__title icon icon--minus"> <span>Похожие товары</span></h2>
         <div class="similar-goods__block">
           <div class="item">
             <div class="item__img"><a href="#"><img class="item__img-image" src="images/item1-min.jpg" alt="item-img"></a></div>
@@ -126,17 +132,13 @@
           <div class="social-links"><a class="social__item icon icon--facebook" href="#"></a><a class="social__item icon icon--vk" href="#"></a><a class="social__item icon icon--google-plus" href="#"></a><a class="social__item icon icon--twitter" href="#"></a></div>
         </div>
       </section>
-      <section class="see-other"><span class="see-other__text">Смотрите также:</span><a class="see-other__link" href="#">Одежда</a><a class="see-other__link" href="#">Трикотаж</a><a class="see-other__link" href="#">Шелк</a><a class="see-other__link" href="#">Все товары бренда Philipp Plein</a></section>
+      <section class="recommendation"><span class="recommendation__text">Смотрите также:</span><a class="recommendation__link" href="#">Одежда</a><a class="recommendation__link" href="#">Трикотаж</a><a class="recommendation__link" href="#">Шелк</a><a class="recommendation__link" href="#">Все товары бренда Philipp Plein</a></section>
     </main>
     <footer class="footer">
-      <div class="footer-logo"><img class="logo-img" src="images/logo-footer-min.png" alt="logo"></div><span class="copy-text">&copy; 2016 ONE CLUB 2.0</span><span class="copy-text">All Right reserved</span>
+      <div class="footer-logo"><a href="#">One Club</a></div><span class="copy-text">&copy; 2016 ONE CLUB 2.0</span><span class="copy-text">All Right reserved</span>
       <div class="footer-social-credit">
         <div class="footer-social"><a class="footer-social__item icon icon--facebook" href="#"></a><a class="footer-social__item icon icon--instagram" href="#"></a><a class="footer-social__item icon icon--twitter" href="#"></a><a class="footer-social__item icon icon--pinterest" href="#"></a></div>
-        <div class="credit">
-          <div class="credit__item"><img class="credit__visa-img" src="images/visa-min.png" alt="visa"></div>
-          <div class="credit__item"><img class="credit__master-card-img" src="images/master-card-min.png" alt="master-card"></div>
-          <div class="credit__item"><img class="credit__liqpay-img" src="images/liqpay-min.png" alt="liqpay"></div>
-        </div>
+        <div class="credit"><img class="credit__img" src="images/credit-min.png" alt="credit"></div>
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -11,6 +11,12 @@
 		height: 25px;
 		margin: 0 auto;
 		margin-bottom: 20px;
+		background: url('../images/logo-mob-footer-min.png') no-repeat;
+		a {
+			font-size: 13px;
+			color: transparent;
+			letter-spacing: 36px;
+		}
 	}
 	&-social-credit {
 		display: flex;

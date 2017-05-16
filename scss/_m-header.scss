@@ -5,7 +5,13 @@
 	padding: 30px 20px;
 	flex-flow: wrap;
 	&-logo {
-		width: 168x;
+		width: 168px;
+		background: url(../images/m-logo-min.png) no-repeat;
+		a {
+			color: transparent;
+			font-size: 10px;
+			letter-spacing: 37px;
+		}
 	}
 }
 

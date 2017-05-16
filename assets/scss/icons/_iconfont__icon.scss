@@ -58,6 +58,11 @@ $global-font-icon: 'svg-icons';
      content: $icon-location-pin;
    }
  }
+ &.icon--minus {
+   &:before {
+     content: $icon-minus;
+   }
+ }
  &.icon--phone {
    &:before {
      content: $icon-phone;
@@ -66,6 +71,11 @@ $global-font-icon: 'svg-icons';
  &.icon--pinterest {
    &:before {
      content: $icon-pinterest;
+   }
+ }
+ &.icon--plus {
+   &:before {
+     content: $icon-plus;
    }
  }
  &.icon--shopping-cart {
