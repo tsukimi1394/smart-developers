@@ -47,6 +47,7 @@
 		font-weight: 200;
 		color: #000;
 		margin: 0;
+		display: block;
 		@include respond-to(tablets) {
 			padding-right: 90px;
 		}
@@ -54,11 +55,8 @@
 }
 
 .photo {
-	background: url('../images/photo-min.jpg') no-repeat;
 	width: 60%;
-	@include respond-to(tablets) {
-		background: url('../images/photo-tab-min.jpg') no-repeat;
-	}
+	display: block;
 }
 
 .description {
@@ -115,19 +113,19 @@
 		}
 	}
 	&--1 {
-		background-color: #636363;
+		background: url(../images/color1-min.png) no-repeat;
 	}
 	&--2 {
-		background-color: #0a0c44;
+		background: url(../images/color2-min.png) no-repeat;
 	}
 	&--3 {
-		background-color: #ffc66d;
+		background: url(../images/color3-min.png) no-repeat;
 	}
 	&--4 {
-		background-color: #b30016;
+		background: url(../images/color4-min.png) no-repeat;
 	}
 	&--5 {
-		background-color: #abc850;
+		background: url(../images/color5-min.png) no-repeat;
 	}
 }
 
@@ -364,7 +362,7 @@
 	font-size: 13px;
 	font-weight: 200;
 	margin-top: 14px;
-	margin-left: 22px;
+	margin-left: 19px;
 	background-color: #f68235;
 	vertical-align: bottom;
 	position: relative;
@@ -376,10 +374,10 @@
 		float: right;
 	}
 	&:hover {
-		border-radius: 10px;
-	}
-	&:active {
 		background-color: #ef590e;
+	}
+	&:visited {
+		color: #000;
 	}
 	&__text {
 		text-transform: uppercase;
@@ -472,7 +470,12 @@
 	border-top: 1px solid #dedede;
 	padding: 20px 0;
 	&.close {
-		div, p {
+		.details__item, 
+		.details__item-title, 
+		.details__item-value,
+		.details__code,
+		.details__info,
+		.details__text {
 			display: none;
 		}
 	}
@@ -501,13 +504,23 @@
 		}
 	}
 	&__item {
-		padding-right: 45px;
 		font-size: 14px;
 		@include respond-to(tablets) {
 			font-size: 12px;
 		}
 		&-title {
 			font-weight: 600;
+			margin-right: 5px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		&-value {
+			display: inline-block;
+			width: 80%;
+			margin: 0;
+		}
+		b {
+			font-weight: bold;
 			margin-right: 5px;
 		}
 	}
@@ -521,9 +534,14 @@
 		&-title {
 			font-weight: 600;
 			margin-right: 5px;
+			display: inline-block;
+			vertical-align: top;
 		}
 		&-number {
 			color: #a7a7a7;
+			display: inline-block;
+			width: 75%;
+			margin: 0;
 		}
 	}
 	&__info {
@@ -536,9 +554,9 @@
 			font-size: 12px;
 			margin: 0;
 		}
-		&.details__text--important {
-			font-weight: 600;
-			padding-right: 35px;
+		b {
+			font-weight: bold;
+			display: inline-block;
 			margin-top: 20px;
 			a {
 				color: #000;

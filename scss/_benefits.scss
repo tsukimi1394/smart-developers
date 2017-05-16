@@ -16,19 +16,19 @@
 		}
 		&-text {
 			font-size: 14px;
-			padding: 0 70px;
+			padding: 0 55px;
 			@include respond-to(tablets) {
 				padding: 0 35px;
 				font-size: 10px;
 			}
 		}
 		&-link {
+			display: inline-block;
+			margin: 0 5px;
 			color: #000;
-			margin: 5px;
-		}
-		span {
-			display: block;
-			margin: 0 -15px;
+			&[href^="tel:"] {
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -39,21 +39,9 @@
 	right: 50px;
 	width: 59px;
 	height: 59px;
-	background-color: #dedede;
-	border: 1px solid #ccc;
+	background: url(../images/to-top-min.png) no-repeat;
 	display: block;
 	@include respond-to(tablets) {
 		display: none;
-	}
-	&::after {
-		content: "";
-		border-top: 3px solid #000;
-		border-right: 3px solid #000;
-		width: 10px;
-		height: 10px;
-		position: absolute;
-		top: 45%;
-		left: 50%;
-		transform: translate(-50%) rotate(-45deg);
 	}
 }

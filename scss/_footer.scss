@@ -49,6 +49,12 @@
 		height: 37px;
 		float: right;
 		margin-bottom: 20px;
+		background: url('../images/logo-footer-min.png') no-repeat;
+		a {
+			font-size: 36px;
+			color: transparent;
+			letter-spacing: 42px;
+		}
 	}
 	&-social-credit {
 		display: flex;
@@ -89,18 +95,11 @@
 
 .credit {
 	margin-top: 10px;
-	display: flex;
-	justify-content: flex-start;
 	margin-left: 48px;
-	&__item {
-		width: 37px;
-		height: 24px;
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
-		&-img {
-			width: 100%;
-			height: auto;
-		}
+	width: 131px;
+	height: 24px;
+	&__img {
+		width: 100%;
+		height: auto;
 	}
 }
