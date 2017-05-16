@@ -24,56 +24,60 @@
   content: "";
 }
 
-.icon.icon--facebook:before {
+.icon.icon--close:before {
   content: "";
 }
 
-.icon.icon--google-plus:before {
+.icon.icon--facebook:before {
   content: "";
 }
 
-.icon.icon--hanger:before {
+.icon.icon--google-plus:before {
   content: "";
 }
 
-.icon.icon--heart:before {
+.icon.icon--hanger:before {
   content: "";
 }
 
-.icon.icon--instagram:before {
+.icon.icon--heart:before {
   content: "";
 }
 
-.icon.icon--location-pin:before {
+.icon.icon--instagram:before {
   content: "";
 }
 
-.icon.icon--minus:before {
+.icon.icon--location-pin:before {
   content: "";
 }
 
-.icon.icon--phone:before {
+.icon.icon--minus:before {
   content: "";
 }
 
-.icon.icon--pinterest:before {
+.icon.icon--phone:before {
   content: "";
 }
 
-.icon.icon--plus:before {
+.icon.icon--pinterest:before {
   content: "";
 }
 
-.icon.icon--shopping-cart:before {
+.icon.icon--plus:before {
   content: "";
 }
 
-.icon.icon--twitter:before {
+.icon.icon--shopping-cart:before {
   content: "";
 }
 
-.icon.icon--vk:before {
+.icon.icon--twitter:before {
   content: "";
+}
+
+.icon.icon--vk:before {
+  content: "";
 }
 
 @font-face {

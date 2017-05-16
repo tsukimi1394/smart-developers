@@ -104,7 +104,7 @@ html(lang="en")
 							span(class="call__number-text") или
 							a(href="tel: +380443590899", class="call__number") +38 044 359-08-99
 						div(class="location icon icon--location-pin")
-							a(href="#", class="location__text") Наличие в бутиках ONE CLUB
+							a(href="javascript:PopUpShow()", class="location__text") Наличие в бутиках ONE CLUB
 					div(class="details")
 						h3(class="details__title icon icon--minus") 
 							span Описание и детали
@@ -217,6 +217,38 @@ html(lang="en")
 						a(href="tel: +380443590899", class="benefits__item-link") +38 044 359-08-99,
 						a(href="tel: +380954589846", class="benefits__item-link") +38 095 458-98-46
 			a(href="#logo", class="to-top")
+		div(class="location-popup")
+			div(class="location-popup__content")
+				div(class="popup__header")
+					span(class="popup__title") Наличие товара в бутиках One Club
+					a(href="javascript:PopUpHide()", class="popup-close icon icon--close")
+				div(class="popup__main")
+					span(class="popup__main-title") Платье
+						b Current Elliot,
+						| размер S
+					div(class="popup__main-locations")
+						div(class="popup__main-locations-item")
+							span(class="location-title") ТЦ ГЛОБУС (3 линия, 2 этаж)
+							span(class="location-text") г. Киев, ул. Институтская, 2
+							span(class="location-text") Тел.: 
+								a(href="tel: +380445996999") +380 44 599-69-99
+							span(class="location-text") Время работы: 10:00 - 22:00
+							a(href="#", class="location-link") Показать на карте
+						div(class="popup__main-locations-item")
+							span(class="location-title") ТЦ МАНУФАКТУРА
+							span(class="location-text") Обуховское шоссе-2, 2
+							span(class="location-text") с. Ходосеевка, Киевская область
+							span(class="location-text") Тел.:
+								a(href="tel: +380442009898") +380 44 200-98-98
+							span(class="location-text") Время работы: 10:00 - 21:00
+							a(href="#", class="location-link") Показать на карте
+						div(class="popup__main-locations-item")
+							span(class="location-title") ТРЦ АТМОСФЕРА
+							span(class="location-text") г. Киев, Столичное шоссе, 103
+							span(class="location-text") Тел.:
+								a(href="tel: +380443934707") +380 44 393-47-07
+							span(class="location-text") Время работы: 10:00 - 21:00
+							a(href="#", class="location-link") Показать на карте
 		footer(class="footer")
 			nav(class="footer__main-menu")
 				span(class="footer__main-menu-item") Каталог

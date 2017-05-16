@@ -28,6 +28,11 @@ $global-font-icon: 'svg-icons';
      content: $icon-clock;
    }
  }
+ &.icon--close {
+   &:before {
+     content: $icon-close;
+   }
+ }
  &.icon--facebook {
    &:before {
      content: $icon-facebook;
