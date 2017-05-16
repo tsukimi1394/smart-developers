@@ -49,8 +49,19 @@ html(lang="en")
 				div(class="time-left icon icon--clock")
 					span(class="time-left__text") До конца распродажи
 					span(class="time-left__time") 3 дня, 15:37:01
-				a(href="http://placehold.it", class="photo")
-					img(src="http://placehold.it/446x655")
+				div(class="photo")
+					div(class="photo__nav")
+						div(class="prev")
+						a(href="#", class="photo__nav-item active")
+							img(src="images/photo1-min.jpg", alt="photo1", class="photo__nav-item-jpg")
+						a(href="#", class="photo__nav-item")
+							img(src="images/photo2-min.jpg", alt="photo2", class="photo__nav-item-jpg")
+						a(href="#", class="photo__nav-item")
+							img(src="images/photo3-min.jpg", alt="photo3", class="photo__nav-item-jpg")
+						a(href="#", class="photo__nav-item")
+							img(src="images/photo4-min.jpg", alt="photo4", class="photo__nav-item-jpg")
+						div(class="next")
+					div(class="photo__view")
 				div(class="description")
 					h1(class="product__title") Current Elliott
 						span(class="product__subtitle") Costa Patch Pocket Denim Top

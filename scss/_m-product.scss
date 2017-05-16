@@ -18,7 +18,34 @@
 
 .photo {
 	margin-bottom: 20px;
-	display: block;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	&__view {
+		order: 1;
+		width: 260px;
+		height: 347px;
+		background: url('../images/photo-view-mob-min.jpg') no-repeat;
+		margin-bottom: 24px;
+	}
+	&__nav {
+		display: flex;
+		justify-content: center;
+		order: 2;
+		&-item {
+			width: 7px;
+			height: 7px;
+			border-radius: 100%;
+			background-color: #dedede;
+			display: block;
+			&.active {
+				background-color: #f68235;
+			}
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
 }
 
 .price {

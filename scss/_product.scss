@@ -56,7 +56,109 @@
 
 .photo {
 	width: 60%;
-	display: block;
+	display: flex;
+	justify-content: space-between;
+	@include respond-to(tablets) {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	&__view {
+		width: 481px;
+		height: 641px;
+		background: url('../images/photo-view-min.jpg') no-repeat;
+		@include respond-to(tablets) {
+			order: 1;
+			width: 414px;
+			height: 553px;
+			background: url('../images/photo-view-tab-min.jpg') no-repeat;
+		}
+	}
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		@include respond-to(tablets) {
+			order: 2;
+			flex-direction: row;
+			margin-top: 24px;
+			height: 91px;
+			.prev {
+				height: 1px;
+				width: 16px;
+				margin: 50px 30px;
+				&::before {
+					left: 1px;
+					top: -5px;
+					transform: rotate(-135deg);
+				}
+			}
+			.next {
+				height: 1px;
+				width: 16px;
+				margin: 50px 30px;
+				&::before {
+					left: 1px;
+					top: -5px;
+					transform: rotate(45deg);
+				}
+			}
+		}
+		.prev {
+			position: relative;
+			width: 1px;
+			height: 16px;
+			background-color: #d0d0d0;
+			margin: 0 auto;
+			margin-bottom: 5px;
+			&::before {
+				content: '';
+				position: absolute;
+				left: -5px;
+				top: 1px;
+				width: 10px;
+				height: 10px;
+				border-top: 1px solid #d0d0d0;
+				border-right: 1px solid #d0d0d0;
+				transform: rotate(-45deg);
+			}
+		}
+		&-item {
+			margin: 10px auto;
+			border: 2px solid transparent;
+			width: 62px;
+			height: 91px;
+			display: block;
+			&-jpg {
+				width: 100%;
+				height: auto;
+			}
+			&.active {
+				border: 2px solid #f68235;
+			}
+			&:hover {
+				cursor: pointer;
+				border: 2px solid #999;
+			}
+		}
+		.next {
+			position: relative;
+			width: 1px;
+			height: 16px;
+			background-color: #f68235;
+			margin: 0 auto;
+			margin-bottom: 5px;
+			&::before {
+				content: '';
+				position: absolute;
+				left: -5px;
+				top: 1px;
+				width: 10px;
+				height: 10px;
+				border-top: 1px solid #f68235;
+				border-right: 1px solid #f68235;
+				transform: rotate(135deg);
+			}
+		}
+	}
 }
 
 .description {

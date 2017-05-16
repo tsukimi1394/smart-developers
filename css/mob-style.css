@@ -311,7 +311,54 @@ html {
 
 .photo {
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.photo__view {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  width: 260px;
+  height: 347px;
+  background: url("../images/photo-view-mob-min.jpg") no-repeat;
+  margin-bottom: 24px;
+}
+
+.photo__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.photo__nav-item {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #dedede;
   display: block;
+}
+
+.photo__nav-item.active {
+  background-color: #f68235;
+}
+
+.photo__nav-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .price {

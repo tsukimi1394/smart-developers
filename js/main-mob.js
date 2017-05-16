@@ -36,3 +36,8 @@ $('.details__title').on("click", function(){
 $('.similar-goods__title').on("click", function(){
 	$(this).toggleClass("icon--plus");
 });
+
+$('.photo__nav-item').on("click", function(){
+	$('.photo__nav-item').removeClass("active");
+	$(this).addClass("active");
+});
