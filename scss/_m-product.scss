@@ -233,13 +233,13 @@
 	&__left {
 		position: absolute;
 		top: -54px;
-		left: 0;
 		background-color: #eaeaea;
 		padding: 7px;
 		text-align: center;
 		font-size: 12px;
 		width: 90%;
 		left: 10%;
+		color: #000;
 		&-number {
 			margin-right: 5px;
 		}
@@ -382,16 +382,6 @@
 .details {
 	border-top: 1px solid #dedede;
 	padding: 20px 0;
-	/*&.close {
-		.details__item, 
-		.details__item-title, 
-		.details__item-value,
-		.details__code,
-		.details__info,
-		.details__text {
-			display: none;
-		}
-	}*/
 	&__title {
 		margin: 0;
 		font-weight: 300;
