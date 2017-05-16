@@ -291,6 +291,7 @@
 		background-color: #eaeaea;
 		padding: 7px;
 		text-align: center;
+		color: #000;
 		@include respond-to(tablets) {
 			font-size: 12px;
 			width: 90%;
