@@ -471,7 +471,11 @@ html {
 .photo__view {
   width: 481px;
   height: 641px;
-  background: url("../images/photo-view-min.jpg") no-repeat;
+}
+
+.photo__view-img {
+  width: 100%;
+  height: 100%;
 }
 
 .photo__nav {
@@ -514,13 +518,29 @@ html {
   display: block;
 }
 
-.photo__nav-item-jpg {
-  width: 100%;
-  height: auto;
+.photo__nav-item.nav-item--1 {
+  background: url("../images/photo1-min.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.photo__nav-item.nav-item--2 {
+  background: url("../images/photo2-min.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.photo__nav-item.nav-item--3 {
+  background: url("../images/photo3-min.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.photo__nav-item.nav-item--4 {
+  background: url("../images/photo4-min.jpg") no-repeat;
+  background-size: 100%;
 }
 
 .photo__nav-item.active {
   border: 2px solid #f68235;
+  background-size: 100%;
 }
 
 .photo__nav-item:hover {
@@ -541,7 +561,7 @@ html {
   content: '';
   position: absolute;
   left: -5px;
-  top: 1px;
+  top: 3px;
   width: 10px;
   height: 10px;
   border-top: 1px solid #f68235;
@@ -1446,7 +1466,6 @@ html {
     order: 1;
     width: 414px;
     height: 553px;
-    background: url("../images/photo-view-tab-min.jpg") no-repeat;
   }
 
   .photo__nav {
@@ -1481,7 +1500,7 @@ html {
   }
 
   .photo__nav .next::before {
-    left: 1px;
+    left: 3px;
     top: -5px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);

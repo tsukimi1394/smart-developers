@@ -41,3 +41,7 @@ $('.photo__nav-item').on("click", function(){
 	$('.photo__nav-item').removeClass("active");
 	$(this).addClass("active");
 });
+
+function l_image (a) {
+    document.example_img.src=a
+}
