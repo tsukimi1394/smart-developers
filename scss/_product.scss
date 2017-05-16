@@ -469,16 +469,6 @@
 .details {
 	border-top: 1px solid #dedede;
 	padding: 20px 0;
-	&.close {
-		.details__item, 
-		.details__item-title, 
-		.details__item-value,
-		.details__code,
-		.details__info,
-		.details__text {
-			display: none;
-		}
-	}
 	&__title {
 		margin: 0;
 		font-weight: 300;
@@ -492,15 +482,22 @@
 			font-size: 18px;
 			margin-bottom: 18px;
 		}
-		&::after {
+		&.icon--plus {
+			& ~ .details__item, 
+			& ~ .details__code, 
+			& ~ .details__info,
+			& ~ .details__text {
+				display: none;
+			}
+		}
+		&::before {
 			position: absolute;
+			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
-			right: 0;
-			content: "";
-			width: 16px;
-			height: 2px;
-			background-color: #000;
+		}
+		span {
+			font-family: 'HelveticaNeue', Arial, sans-serif;
 		}
 	}
 	&__item {
