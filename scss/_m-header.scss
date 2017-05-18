@@ -1,11 +1,13 @@
 .header {
-	background-color: $header-background-color;
 	display: flex;
+	flex-flow: wrap;
 	justify-content: space-between;
 	padding: 30px 20px;
-	flex-flow: wrap;
+
+	background-color: $header-background-color;
 	&-logo {
 		width: 168px;
+
 		background: url(../images/m-logo-min.png) no-repeat;
 		a {
 			color: transparent;
@@ -20,55 +22,67 @@
 }
 
 .menu-icon {
+	position: relative;
+	z-index: 1000;
+
+	display: inline-block;
 	width: 23px;
 	height: 3px;
-	background-color: #f68235;
-	display: inline-block;
-	position: relative;
+
+	background-color: $menu-icon-color;
+
 	cursor: pointer;
-	z-index: 1000;
 	&::before {
 		content: "";
+
 		position: absolute;
-		width: 23px;
-		height: 3px;
 		top: -8px;
 		left: 0;
-		background-color: #f68235;
+
+		width: 23px;
+		height: 3px;
+
+		background-color: $menu-icon-color;
 	}
 	&::after {
 		content: "";
+
 		position: absolute;
-		width: 23px;
-		height: 3px;
 		top: 8px;
 		left: 0;
-		background-color: #f68235;
+
+		width: 23px;
+		height: 3px;
+
+		background-color: $menu-icon-color;
 	}
 	&.is-open {
 		position: fixed;
 		top: 41px;
 		& ~ .main-menu {
-			display: block;
-			color: #fff;
-			list-style: none;
-			padding: 0;
-			background-color: rgba(0,0,0,.9);
 			position: fixed;
 			top: -16px;
-			left: 0;
-			bottom: -16px;
 			right: 0;
-			padding-left: 60px;
-			padding-top: 15px;
+			bottom: -16px;
+			left: 0;
 			z-index: 100;
+
+			display: block;
+			padding: 0;
+			padding-top: 15px;
+			padding-left: 60px;
+
+			background-color: rgba(0,0,0,.9);
+
+			color: $menu-item-color;
+			list-style: none;
 			li {
 				display: block;
 				padding: 20px;
 			}
 			a {
+				color: $menu-item-color;
 				text-decoration: none;
-				color: #fff;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -86,49 +100,59 @@
 	margin-top: -10px;
 	&__item {
 		display: inline-block;
-		background-color: #e5e5e5;
-		padding: 10px;
-		font-weight: 300;
-		vertical-align: bottom;
-		text-decoration: none;
-		color: #000;
-		padding-right: 35px;
 		width: 50%;
+		padding: 10px;
+		padding-right: 35px;
+
+		background-color: $switcher-background-color;
+
+		color: $primary-text-color;
+		font-weight: 300;
 		text-align: center;
+		text-decoration: none;
+		vertical-align: bottom;
 		&:hover {
 			text-decoration: underline;
 		}
 		&:last-child {
 			position: relative;
+
 			padding: 15px 30px;
-			background-color: #f68235;
-			color: #fff;
+
+			background-color: $switcher-contrast-background-color;
+
+			color: $white;
 			&::before {
 				content: "";
+
 				position: absolute;
-				right: 100%;
 				top: 0;
-				width: 0; 
-				height: 0; 
-				border-bottom: 48px solid #f68235; 
+				right: 100%;
+
+				width: 0;
+				height: 0;
+				border-bottom: 48px solid $switcher-contrast-background-color;
 				border-left: 27px solid transparent;
 			}
 		}
 		span {
-			font-size: 14px;
+			font-size: $switcher-font-size;
 			text-transform: uppercase;
 		}
 	}
 	.icon--clock {
 		position: relative;
+
 		padding-left: 55px;
 		&::before {
-			font-size: 20px;
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
 			left: 0;
 			left: 16px;
+
+			font-size: $switcher-clock-size;
+
+			transform: translateY(-50%);
 		}
 	}
 }

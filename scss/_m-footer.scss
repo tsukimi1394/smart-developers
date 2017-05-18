@@ -1,20 +1,23 @@
 .footer {
-	background-color: #000;
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
-	text-align: center;
+	justify-content: space-between;
 	padding: 25px;
-	font-family: 'OpenSans', sans-serif;
+
+	background-color: $footer-background-color;
+
+	font-family: $font-stack-OpenSans;
+	text-align: center;
 	&-logo {
 		width: 164px;
 		height: 25px;
 		margin: 0 auto;
 		margin-bottom: 20px;
+
 		background: url('../images/logo-mob-footer-min.png') no-repeat;
 		a {
-			font-size: 13px;
 			color: transparent;
+			font-size: 13px;
 			letter-spacing: 36px;
 		}
 	}
@@ -24,21 +27,23 @@
 		align-content: flex-end;
 	}
 	&-social {
-		margin-top: 5px;
 		display: flex;
 		justify-content: center;
+		margin-top: 5px;
 		&__item {
-			border: 1px solid #626262;
-			color: #626262;
 			padding: 8px;
-			font-size: 15px;
+			border: 1px solid $footer-social-item-color;
+
+			color: $footer-social-item-color;
+			font-size: $footer-social-font-size;
 			text-decoration: none;
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
 			&:hover {
-				border-color: #fff;
-				color: #fff;
+				border-color: $white;
+
+				color: $white;
 			}
 		}
 	}
@@ -46,16 +51,18 @@
 
 .copy-text {
 	clear: both;
+
 	display: block;
-	color: #626262;
-	font-size: 13px;
 	margin-bottom: 10px;
+
+	color: $footer-text-color;
+	font-size: $footer-text-font-size;
 }
 
 .credit {
-	margin-top: 20px;
 	display: flex;
 	justify-content: center;
+	margin-top: 20px;
 	&__item {
 		width: 37px;
 		height: 24px;
@@ -63,8 +70,7 @@
 			margin-right: 10px;
 		}
 		&-img {
-			width: 100%;
-			height: auto;
+			@include image-fit;
 		}
 	}
 }

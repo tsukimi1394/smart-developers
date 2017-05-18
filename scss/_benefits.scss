@@ -1,31 +1,37 @@
 .benefits {
-	border-top: 1px solid #dedede;
-	padding: 25px 0;
 	display: flex;
+	padding: 25px 0;
+	border-top: 1px solid $border-color;
 	&__item {
-		text-align: center;
 		flex: 1;
+
+		text-align: center;
 		&:not(:last-child) {
-			border-right: 1px solid #dedede;
+			border-right: 1px solid $border-color;
 		}
 		&-title {
-			font-size: 17px;
 			@include respond-to(tablets) {
-				font-size: 14px;
+				font-size: $benefits-title-font-size-tab;
 			}
+
+			font-size: $benefits-title-font-size;
 		}
 		&-text {
-			font-size: 14px;
-			padding: 0 55px;
 			@include respond-to(tablets) {
 				padding: 0 35px;
-				font-size: 10px;
+
+				font-size: $benefits-text-font-size-tab;
 			}
+
+			padding: 0 55px;
+
+			font-size: $benefits-text-font-size;
 		}
 		&-link {
 			display: inline-block;
 			margin: 0 5px;
-			color: #000;
+
+			color: $primary-text-color;
 			&[href^="tel:"] {
 				text-decoration: none;
 			}
@@ -34,14 +40,17 @@
 }
 
 .to-top {
-	position: absolute;
-	bottom: 60px;
-	right: 50px;
-	width: 59px;
-	height: 59px;
-	background: url(../images/to-top-min.png) no-repeat;
-	display: block;
 	@include respond-to(tablets) {
 		display: none;
 	}
+
+	position: absolute;
+	right: 50px;
+	bottom: 60px;
+
+	display: block;
+	width: 59px;
+	height: 59px;
+
+	background: url(../images/to-top-min.png) no-repeat;
 }

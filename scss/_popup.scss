@@ -1,61 +1,72 @@
 .location-popup {
+	position: fixed;
+	top: 0;
+
+	overflow: hidden;
 	min-width: 100%;
 	min-height: 100%;
+
 	background-color: rgba(0, 0, 0, 0.5);
-	overflow: hidden;
-	position: fixed;
-	top: 0px;
 	&__content {
-		margin: 100px auto;
 		width: 635px;
 		height: 358px;
+		margin: 100px auto;
 	}
 }
 
 .popup {
-	font-family: 'HelveticaNeue', Arial, sans-serif;
+	font-family: $font-stack-Helvetica;
 	&__header {
-		background-color: #dbdbdb;
-		padding: 12px 36px 10px;
 		position: relative;
-		font-size: 18px;
+
+		padding: 12px 36px 10px;
+
+		background-color: $popup-header-background-color;
+
+		font-size: $popup-header-font-size;
 	}
 	&__title {
+		font-size: $popup-header-font-size;
 		text-transform: uppercase;
-		font-size: 18px;
 	}
 	&-close {
-		text-decoration: none;
 		position: absolute;
 		top: 50%;
 		right: 7px;
-		color: #727272;
+
+		color: $close-icon-color;
+		text-decoration: none;
+
 		transform: translateY(-50%);
 	}
 	&__main {
 		padding: 0 37px;
 		padding-bottom: 58px;
-		background-color: #FFF;
+
+		background-color: $popup-main-background-color;
 		&-title {
-			padding: 40px 0;
-			text-align: center;
 			display: block;
-			font-size: 14px;
+			padding: 40px 0;
+
+			font-size: $popup-title-font-size;
+			text-align: center;
 			b {
 				margin: 5px;
 			}
 		}
 		&-locations {
-			border-top: 1px solid #dedede;
-			border-bottom: 1px solid #dedede;
 			display: flex;
 			justify-content: space-between;
+			border-top: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
 			&-item {
-				margin-top: 50px;
-				padding-bottom: 40px;
-				margin-bottom: 15px;
 				position: relative;
-				font-size: 13px;
+
+				margin-top: 50px;
+				margin-bottom: 15px;
+				padding-bottom: 40px;
+
+				font-size: $popup-content-font-size;
 			}
 		}
 	}
@@ -64,27 +75,31 @@
 .location {
 	&-title {
 		display: block;
-		text-align: center;
 		margin-bottom: 10px;
-		font-size: 14px;
+
+		font-size: $popup-title-font-size;
+		text-align: center;
 	}
 	&-text {
 		display: block;
+
 		text-align: center;
 		a {
+			color: $primary-text-color;
 			text-decoration: none;
-			color: #000;
 		}
 	}
 	&-link {
-		color: #000;
-		display: block;
-		text-align: center;
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		transform: translateX(-50%);
+
+		display: block;
+
+		color: $primary-text-color;
 		white-space: nowrap;
+		text-align: center;
+
+		transform: translateX(-50%);
 	}
 }
-

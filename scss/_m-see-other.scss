@@ -1,19 +1,22 @@
 .recommendation {
-	border-top: 1px solid #dedede;
 	padding: 20px 0;
-	font-size: 12px;
+	border-top: 1px solid $border-color;
+
+	font-size: $recommendation-font-siz-mob;
 	&__text {
-		color: #000;
-		font-weight: 600;
 		display: block;
 		margin-bottom: 20px;
+
+		color: $primary-text-color;
+		font-weight: 600;
 	}
 	&__link {
-		color: #999;
 		display: block;
+
+		color: $link-color;
 		line-height: 24px;
 		&:hover {
-			color: #000;
+			color: $primary-text-color;
 		}
 	}
 }

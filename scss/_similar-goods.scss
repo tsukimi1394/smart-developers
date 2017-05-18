@@ -1,9 +1,9 @@
 .similar-goods {
-	border-top: 1px solid #dedede;
+	border-top: 1px solid $border-color;
 	&__title {
-		text-align: center;
-		font-size: 21px;
 		font-weight: 300;
+		font-size: $similar-goods-title-font-size;
+		text-align: center;
 	}
 	&__block {
 		display: flex;
@@ -14,54 +14,64 @@
 .item {
 	margin-bottom: 26px;
 	&__img {
-		width: 205px;
-		height: 273px;
-		margin-bottom: 10px;
 		@include respond-to(tablets) {
 			width: 149px;
 			height: 223px;
 		}
+
+		width: 205px;
+		height: 273px;
+		margin-bottom: 10px;
 		&-image {
-			width: 100%;
-			height: auto;
+			@include image-fit;
 		}
 	}
 	&__title {
-		margin: 0;
-		font-size: 14px;
-		font-weight: 400;
 		@include respond-to(tablets) {
-			font-size: 12px;
+			font-size: $similar-good-title-font-size-tab;
 		}
+
+		margin: 0;
+
+		font-weight: 400;
+		font-size: $similar-good-title-font-size;
 	}
 	&__subtitle {
-		margin: 0;
-		font-weight: 200;
-		font-size: 14px;
 		@include respond-to(tablets) {
-			font-size: 10px;
+			font-size: $similar-good-subtitle-font-size-tab;
 		}
+
+		margin: 0;
+
+		font-weight: 200;
+		font-size: $similar-good-subtitle-font-size;
 	}
 	&__price {
-		margin-top: 13px;
-		font-size: 15px;
 		@include respond-to(tablets) {
-			font-size: 10px;
 			margin-top: 5px;
+
+			font-size: $similar-good-price-font-size-tab;
 		}
+
+		margin-top: 13px;
+
+		font-size: $similar-good-price-font-size;
 		&.price--old {
-			text-decoration: line-through;
-			color: #999;
-			margin-right: 5px;
 			@include respond-to(tablets) {
 				display: inline-block;
 			}
+
+			margin-right: 5px;
+
+			color: $old-price-color;
+			text-decoration: line-through;
 		}
 		&.price--new {
-			color: #f68235;
 			@include respond-to(tablets) {
 				display: inline-block;
 			}
+
+			color: $new-price-color;
 		}
 	}
 }

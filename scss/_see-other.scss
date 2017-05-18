@@ -1,24 +1,28 @@
 .recommendation {
-	border-top: 1px solid #dedede;
-	padding: 50px 0;
-	text-align: center;
-	font-size: 14px;
 	@include respond-to(tablets) {
 		padding: 35px 0;
-		font-size: 12px;
+
+		font-size: $recommendation-font-size-tab;
 	}
+
+	padding: 50px 0;
+	border-top: 1px solid $border-color;
+
+	font-size: $recommendation-font-size;
+	text-align: center;
 	&__text {
-		color: #000;
-		font-weight: 600;
 		margin-right: 20px;
+
+		color: $primary-text-color;
+		font-weight: 600;
 	}
 	&__link {
-		color: #999;
+		color: $link-color;
 		&:not(:last-child) {
 			margin-right: 20px;
 		}
 		&:hover {
-			color: #000;
+			color: $primary-text-color;
 		}
 	}
 }

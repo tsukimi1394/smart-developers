@@ -1,16 +1,19 @@
 .footer {
-	background-color: #000;
 	display: flex;
 	justify-content: space-between;
 	padding: 30px 50px;
-	font-family: 'OpenSans', sans-serif;
+
+	background-color: $footer-background-color;
+
+	font-family: $font-stack-OpenSans;
 	&__main-menu {
-		font-size: 14px;
+		font-size: $footer-main-menu-font-size;
 		&-item {
 			display: block;
-			color: #fff;
-			text-decoration: none;
+
+			color: $footer-menu-item-color;
 			text-transform: uppercase;
+			text-decoration: none;
 			&:first-child {
 				font-weight: 600;
 			}
@@ -24,11 +27,13 @@
 			}
 		}
 	}
-	&__buyer-menu, &__about-menu {
-		font-size: 13px;
+	&__buyer-menu,
+	&__about-menu {
+		font-size: $footer-submenu-font-size;
 		&-item {
 			display: block;
-			color: #fff;
+
+			color: $footer-menu-item-color;
 			text-decoration: none;
 			&:first-child {
 				font-weight: 600;
@@ -45,14 +50,16 @@
 		}
 	}
 	&-logo {
+		float: right;
+
 		width: 240px;
 		height: 37px;
-		float: right;
 		margin-bottom: 20px;
+
 		background: url('../images/logo-footer-min.png') no-repeat;
 		a {
-			font-size: 36px;
 			color: transparent;
+			font-size: 36px;
 			letter-spacing: 42px;
 		}
 	}
@@ -61,21 +68,23 @@
 		flex-direction: column;
 	}
 	&-social {
-		margin-top: 20px;
 		display: flex;
 		justify-content: flex-end;
+		margin-top: 20px;
 		&__item {
-			border: 1px solid #626262;
-			color: #626262;
 			padding: 8px;
-			font-size: 15px;
+			border: 1px solid $footer-social-item-color;
+
+			color: $footer-social-item-color;
+			font-size: $footer-social-font-size;
 			text-decoration: none;
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
 			&:hover {
-				border-color: #fff;
-				color: #fff;
+				border-color: $white;
+
+				color: $white;
 			}
 		}
 	}
@@ -85,20 +94,21 @@
 	text-align: right;
 	&-text {
 		clear: both;
-		text-align: right;
+
 		display: block;
-		color: #626262;
-		font-size: 13px;
+
+		color: $footer-text-color;
+		font-size: $footer-text-font-size;
+		text-align: right;
 	}
 }
 
 .credit {
-	margin-top: 10px;
-	margin-left: 48px;
 	width: 131px;
 	height: 24px;
+	margin-top: 10px;
+	margin-left: 48px;
 	&__img {
-		width: 100%;
-		height: auto;
+		@include image-fit;
 	}
 }

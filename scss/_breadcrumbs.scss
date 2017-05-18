@@ -1,12 +1,13 @@
 .breadcrumbs {
 	font-weight: 300;
-	font-size: 12px;
+	font-size: $breadcrumbs-font-size;
 	&__item {
-		text-decoration: none;
-		color: #f68235;
 		padding: 5px;
+
+		color: $breadcrums-link-color;
+		text-decoration: none;
 		&:last-child {
-			color: #000;
+			color: $breadcrums-item-color;
 		}
 		&:not(:last-child) {
 			&:hover {

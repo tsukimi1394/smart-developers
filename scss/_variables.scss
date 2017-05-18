@@ -1,1 +1,155 @@
 $header-background-color: #000;
+$footer-background-color: #000;
+$disabled-background-color: #dedede;
+$item-left-background-color: #eaeaea;
+$add-to-cart-background-color: #f68235;
+$popup-header-background-color: #dbdbdb;
+$popup-main-background-color: #fff;
+$price-background-color-mob: #ededed;
+$sale-background-color: #828282;
+$switcher-background-color: #e5e5e5;
+$switcher-contrast-background-color: #f68235;
+$border-color: #dedede;
+$pick-size-border-color: #ccc;
+$header-border-color: #606060;
+$old-price-color: #999;
+$new-price-color: #f68235;
+$primary-text-color: #000;
+$link-color: #999;
+$emphasize-text-color: #f68235;
+$disabled-text-color: #6d6d6d;
+$time-left-background-color: #e6e6e6;
+$clock-color1: #898989;
+$inactive-arrow-color: #d0d0d0;
+$active-arrow-color: #f68235;
+$active-item-color: #f68235;
+$hanger-background-color: #487eba;
+$hanger-color: #fff;
+$phone-color: #7c7c7c;
+$location-color: #7c7c7c;
+$item-code-color: #a7a7a7;
+$social-item-color: #3a3a3a;
+$footer-social-item-color: #626262;
+$footer-text-color: #626262;
+$footer-menu-item-color: #fff;
+$close-icon-color: #727272;
+$slider-dots-inactive-color: #dedede;
+$slider-dots-active-color: #f68235;
+$sale-color: #fff;
+$menu-icon-color: #f68235;
+$menu-item-color: #fff;
+$breadcrums-link-color: #f68235;
+$breadcrums-item-color: #000;
+$contact-icon-color: #f68235;
+$contact-text-color: #fff;
+$search-icon-color: #f68235;
+$white: #fff;
+$black: #000;
+$orange: #f68235;
+$dark-orange: #ef590e;
+
+$max-width-mob: 620px;
+$max-width: 1280px;
+
+$font-stack-Helvetica: 'HelveticaNeue', Arial, sans-serif;
+$font-stack-OpenSans: 'OpenSans', sans-serif;
+
+$similar-goods-title-font-size: 21px;
+$similar-goods-title-font-size-mob: 18px;
+$similar-good-title-font-size: 14px;
+$similar-good-title-font-size-tab: 12px;
+$similar-good-title-font-size-mob: 12px;
+$similar-good-subtitle-font-size: 14px;
+$similar-good-subtitle-font-size-tab: 10px;
+$similar-good-subtitle-font-size-mob: 10px;
+$similar-good-price-font-size: 15px;
+$similar-good-price-font-size-tab: 10px;
+$similar-good-price-font-size-mob: 10px;
+
+$recommendation-font-size: 14px;
+$recommendation-font-size-tab: 12px;
+$recommendation-font-siz-mob: 12px;
+
+$time-left-main-font-size: 12px;
+$time-left-time-font-size: 14px;
+$clock-size: 28px;
+
+$product-title-font-size: 25px;
+$product-title-font-size-tab: 18px;
+$product-title-font-size-mob: 18px;
+$product-subtitle-font-size: 18px;
+$product-subtitle-font-size-tab: 14px;
+$product-subtitle-font-size-mob: 14px;
+$product-price-font-size: 25px;
+$product-price-font-size-tab: 14px;
+$product-new-price-font-size-tab: 24px;
+$product-price-font-size-mob: 14px;
+$product-new-price-font-size-mob: 24px;
+$sale-font-size-mob: 14px;
+$pick-color-font-size: 14px;
+$pick-color-font-size-tab: 12px;
+$pick-color-font-size-mob: 12px;
+$pick-size-font-size: 14px;
+$pick-size-font-size-tab: 12px;
+$pick-size-font-size-mob: 12px;
+$product-size-fit-font-size: 14px;
+$product-size-fit-font-size-tab: 12px;
+$product-size-fit-font-size-mob: 12px;
+$hanger-size: 13px;
+$hanger-size-tab: 10px;
+$quantity-font-size: 14px;
+$quantity-font-size-mob: 12px;
+$quantity-left-font-size-tab: 12px;
+$quantity-left-font-size-mob: 12px;
+$like-font-size: 12px;
+$like-icon-size: 13px;
+$add-to-cart-font-size: 13px;
+$make-order-font-size: 14px;
+$make-order-font-size-tab: 12px;
+$make-order-font-size-mob: 12px;
+$phone-size: 22px;
+$location-size: 22px;
+$details-title-font-size: 25px;
+$details-title-font-size-tab: 18px;
+$details-title-font-size-mob: 18px;
+$details-item-font-size: 14px;
+$details-item-font-size-tab: 12px;
+$details-item-font-size-mob: 12px;
+$social-font-size: 14px;
+$social-font-size-tab: 12px;
+$social-font-size-mob: 12px;
+
+$popup-header-font-size: 18px;
+$popup-header-font-size-mob: 14px;
+$popup-title-font-size: 14px;
+$popup-content-font-size: 13px;
+$popup-close-size: 20px;
+
+$switcher-font-size: 14px;
+$switcher-clock-size: 20px;
+
+$footer-social-font-size: 15px;
+$footer-text-font-size: 13px;
+$footer-main-menu-font-size: 14px;
+$footer-submenu-font-size: 13px;
+
+$breadcrumbs-font-size: 12px;
+
+$contact-font-size: 15px;
+$contact-font-size-tab: 12px;
+$search-font-size: 12px;
+
+$menu-item-font-size: 14px;
+
+$benefits-title-font-size: 17px;
+$benefits-title-font-size-tab: 14px;
+$benefits-text-font-size: 14px;
+$benefits-text-font-size-tab: 10px;
+
+$pick-color-width: 35px;
+$pick-color-height: 35px;
+$pick-size-width: 35px;
+$pick-size-height: 35px;
+
+$sale-width-mob: 45px;
+$sale-height-mob: 45px;

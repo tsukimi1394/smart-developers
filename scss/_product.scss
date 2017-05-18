@@ -1,34 +1,41 @@
 .time-left {
+	@include respond-to(tablets) {
+		top: 14px;
+		right: 20px;
+	}
+
 	position: absolute;
 	top: 20px;
 	right: 120px;
+
 	padding: 10px;
 	padding-left: 48px;
-	background-color: #e6e6e6;
-	@include respond-to(tablets) {
-		right: 20px;
-		top: 14px;
-	}
+
+	background-color: $time-left-background-color;
 	&__text {
 		display: block;
-		font-family: 'HelveticaNeue', Arial, sans-serif;
-		font-size: 12px;
-		color: #000;
+
+		color: $primary-text-color;
+		font-family: $font-stack-Helvetica;
+		font-size: $time-left-main-font-size;
 	}
 	&__time {
 		display: block;
-		font-family: 'HelveticaNeue', Arial, sans-serif;
-		font-size: 14px;
-		color: #f68235;
+
+		color: $emphasize-text-color;
+		font-family: $font-stack-Helvetica;
+		font-size: $time-left-time-font-size;
 	}
 	&.icon--clock {
 		&::before {
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
-			font-size: 28px;
-			color: #898989;
 			left: 10px;
+
+			color: $clock-color1;
+			font-size: $clock-size;
+
+			transform: translateY(-50%);
 		}
 	}
 }
@@ -37,100 +44,116 @@
 	display: flex;
 	margin-top: 40px;
 	&__title {
-		font-size: 25px;
-		color: #f68235;
+		@include respond-to(tablets) {
+			font-size: $product-title-font-size-tab;
+		}
+
 		margin: 0;
+
+		color: $emphasize-text-color;
 		font-weight: 300;
+		font-size: $product-title-font-size;
 	}
 	&__subtitle {
-		font-size: 18px;
-		font-weight: 200;
-		color: #000;
-		margin: 0;
-		display: block;
 		@include respond-to(tablets) {
 			padding-right: 90px;
+
+			font-size: $product-subtitle-font-size-tab;
 		}
+
+		display: block;
+		margin: 0;
+
+		color: $primary-text-color;
+		font-weight: 200;
+		font-size: $product-subtitle-font-size;
 	}
 }
 
 .photo {
-	width: 60%;
-	display: flex;
-	justify-content: space-between;
 	@include respond-to(tablets) {
 		flex-direction: column;
 		justify-content: flex-start;
 	}
+
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
 	&__view {
-		width: 481px;
-		height: 641px;
-		//background: url('../images/photo-view-min.jpg') no-repeat;
 		@include respond-to(tablets) {
 			order: 1;
 			width: 414px;
 			height: 553px;
-			//background: url('../images/photo-view-tab-min.jpg') no-repeat;
 		}
+
+		width: 481px;
+		height: 641px;
 		&-img {
-			width: 100%;
-			height: 100%;
+			@include image-fit;
 		}
 	}
 	&__nav {
-		display: flex;
-		flex-direction: column;
 		@include respond-to(tablets) {
-			order: 2;
 			flex-direction: row;
-			margin-top: 24px;
+			order: 2;
 			height: 91px;
+			margin-top: 24px;
 			.prev {
-				height: 1px;
 				width: 16px;
+				height: 1px;
 				margin: 50px 30px;
 				&::before {
-					left: 1px;
 					top: -5px;
+					left: 1px;
+
 					transform: rotate(-135deg);
 				}
 			}
 			.next {
-				height: 1px;
 				width: 16px;
+				height: 1px;
 				margin: 50px 30px;
 				&::before {
-					left: 3px;
 					top: -5px;
+					left: 3px;
+
 					transform: rotate(45deg);
 				}
 			}
 		}
+
+		display: flex;
+		flex-direction: column;
 		.prev {
 			position: relative;
+
 			width: 1px;
 			height: 16px;
-			background-color: #d0d0d0;
 			margin: 0 auto;
 			margin-bottom: 5px;
+
+			background-color: $inactive-arrow-color;
 			&::before {
 				content: '';
+
 				position: absolute;
-				left: -5px;
 				top: 1px;
+				left: -5px;
+
 				width: 10px;
 				height: 10px;
-				border-top: 1px solid #d0d0d0;
-				border-right: 1px solid #d0d0d0;
+				border-top: 1px solid $inactive-arrow-color;
+				border-right: 1px solid $inactive-arrow-color;
+
 				transform: rotate(-45deg);
 			}
 		}
 		&-item {
-			margin: 10px auto;
-			border: 2px solid transparent;
+			display: block;
 			width: 62px;
 			height: 91px;
-			display: block;
+			margin: 10px auto;
+			border: 2px solid transparent;
 			&.nav-item--1 {
 				background: url('../images/photo1-min.jpg') no-repeat;
 				background-size: 100%;
@@ -148,30 +171,37 @@
 				background-size: 100%;
 			}
 			&.active {
-				border: 2px solid #f68235;
+				border: 2px solid $active-item-color;
+
 				background-size: 100%;
 			}
 			&:hover {
+				border: 2px solid $border-color;
+
 				cursor: pointer;
-				border: 2px solid #999;
 			}
 		}
 		.next {
 			position: relative;
+
 			width: 1px;
 			height: 16px;
-			background-color: #f68235;
 			margin: 0 auto;
 			margin-bottom: 5px;
+
+			background-color: $active-arrow-color;
 			&::before {
 				content: '';
+
 				position: absolute;
-				left: -5px;
 				top: 3px;
+				left: -5px;
+
 				width: 10px;
 				height: 10px;
-				border-top: 1px solid #f68235;
-				border-right: 1px solid #f68235;
+				border-top: 1px solid $active-arrow-color;
+				border-right: 1px solid $active-arrow-color;
+
 				transform: rotate(135deg);
 			}
 		}
@@ -184,50 +214,60 @@
 
 .price {
 	margin-top: 15px;
-	font-size: 25px;
 	margin-bottom: 30px;
+
+	font-size: $product-price-font-size;
 	&--old {
-		text-decoration: line-through;
-		color: #999;
-		margin-right: 15px;
 		@include respond-to(tablets) {
-			margin: 0;
 			display: block;
-			font-size: 14px;
+			margin: 0;
+
+			font-size: $product-price-font-size-tab;
 		}
+
+		margin-right: 15px;
+
+		color: $old-price-color;
+		text-decoration: line-through;
 	}
 	&--new {
-		color: #f68235;
 		@include respond-to(tablets) {
 			display: block;
-			font-size: 24px;
+
+			font-size: $product-new-price-font-size-tab;
 		}
+
+		color: $new-price-color;
 	}
 }
 
 .color {
-	border-top: 1px solid #dedede;
-	padding: 14px 0;
-	font-size: 14px;
 	@include respond-to(tablets) {
-		font-size: 12px;
+		font-size: $pick-color-font-size-tab;
 	}
+
+	padding: 14px 0;
+	border-top: 1px solid $border-color;
+
+	font-size: $pick-color-font-size;
 	&__text {
-		font-weight: 600;
 		display: inline-block;
-		margin-bottom: 10px;
 		margin-right: 5px;
+		margin-bottom: 10px;
+
+		font-weight: 600;
 	}
 	&__pic {
-		width: 35px;
-		height: 35px;
 		display: inline-block;
+		width: $pick-color-width;
+		height: $pick-color-height;
 		margin-right: 10px;
 		&.active {
-			border: 2px solid #f68235;
+			border: 2px solid $active-item-color;
 		}
 		&:hover {
-			border: 2px solid #fff;
+			border: 2px solid $white;
+
 			cursor: pointer;
 		}
 	}
@@ -249,283 +289,346 @@
 }
 
 .size {
-	border-top: 1px solid #dedede;
-	padding: 14px 0;
-	font-size: 14px;
 	@include respond-to(tablets) {
-		font-size: 12px;
+		font-size: $pick-size-font-size-tab;
 	}
+
+	padding: 14px 0;
+	border-top: 1px solid $border-color;
+
+	font-size: $pick-size-font-size;
 	&__info {
 		display: flex;
 		justify-content: space-between;
 	}
 	&__text {
-		font-weight: 600;
 		margin-bottom: 10px;
+
+		font-weight: 600;
 	}
 	&__table {
-		color: #999;
+		color: $link-color;
 		&:hover {
-			color: #000;
+			color: $primary-text-color;
 		}
 	}
 	&__pic {
-		width: 35px;
-		height: 35px;
-		display: inline-block;
-		margin-right: 10px;
-		border: 1px solid #ccc;
-		color: #000;
-		text-align: center;
-		padding: 8px;
 		@include respond-to(tablets) {
 			padding: 9px;
 		}
+
+		display: inline-block;
+		width: $pick-size-width;
+		height: $pick-size-height;
+		margin-right: 10px;
+		padding: 8px;
+		border: 1px solid $pick-size-border-color;
+
+		color: $primary-text-color;
+		text-align: center;
 		&.active {
-			border: 2px solid #f68235;
+			border: 2px solid $active-item-color;
 		}
 		&.disabled {
-			color: #6d6d6d;
-			background-color: #dedede;
+			background-color: $disabled-background-color;
+
+			color: $disabled-text-color;
+
 			pointer-events: none;
 		}
 		&:hover {
-			border: 2px solid #000;
+			border: 2px solid $black;
+
 			cursor: pointer;
 		}
 	}
 	&__fit {
-		margin-top: 15px;
-		color: #999;
 		display: inline-block;
+		margin-top: 15px;
+
+		color: $link-color;
 		&:hover {
-			color: #000;
+			color: $primary-text-color;
 		}
 		span {
-			font-family: 'OpenSans', sans-serif;
-			font-size: 14px;
 			@include respond-to(tablets) {
-				font-size: 12px;
+				font-size: $product-size-fit-font-size-tab;
 			}
+
+			font-family: $font-stack-OpenSans;
+			font-size: $product-size-fit-font-size;
 		}
 		&.icon--hanger {
 			position: relative;
 			&::before {
-				position: absolute;
-				font-size: 13px;
-				background-color: #487eba;
-				width: 14px;
-				height: 14px;
-				border-radius: 100%;
-				color: #fff;
-				left: 100%;
-				margin-left: 10px;
-				top: 50%;
-				transform: translateY(-50%);
-				padding: 5px;
-				text-align: center;
 				@include respond-to(tablets) {
-					font-size: 10px;
 					width: 12px;
 					height: 12px;
 					padding: 3px;
+
+					font-size: $hanger-size-tab;
 				}
+
+				position: absolute;
+				top: 50%;
+				left: 100%;
+
+				width: 14px;
+				height: 14px;
+				margin-left: 10px;
+				padding: 5px;
+
+				border-radius: 100%;
+				background-color: $hanger-background-color;
+
+				color: $hanger-color;
+				font-size: $hanger-size;
+				text-align: center;
+
+				transform: translateY(-50%);
 			}
 		}
 	}
 }
 
 .quantity {
-	border-top: 1px solid #dedede;
 	padding: 14px 0;
-	font-size: 14px;
+	border-top: 1px solid $border-color;
+
+	font-size: $quantity-font-size;
 	&__text {
 		font-weight: 600;
 	}
 	&__count {
 		margin-top: 10px;
 		&-less {
-			display: inline-block;
 			position: relative;
-			&::before {
-				content: "";
-				position: absolute;
-				top: 50%;
-				transform: translate(-50%);
-				width: 9px;
-				height: 2px;
-				background-color: #000;
-			}
+
+			display: inline-block;
 			margin-right: 8px;
 			margin-bottom: 4px;
+
 			cursor: pointer;
-		}
-		&-number {
-			border: 1px solid #dedede;
-			text-align: center;
-			color: #000;
-			font-family: 'OpenSans', sans-serif;
-			font-weight: 600;
-			display: inline-block;
-			outline: none;
-			width: 76px;
-			height: 35px;
-			@include respond-to(tablets) {
-				padding: 9px;
-				width: 35px;
-				height: 35px;
-			}
-		}
-		&-more {
-			display: inline-block;
-			margin-left: 8px;
 			&::before {
-				position: absolute;
 				content: "";
+
+				position: absolute;
 				top: 50%;
-				transform: translate(-50%);
+
 				width: 9px;
 				height: 2px;
-				background-color: #000;
+
+				background-color: $black;
+
+				transform: translate(-50%);
 			}
+		}
+		&-number {
+			@include respond-to(tablets) {
+				width: 35px;
+				height: 35px;
+				padding: 9px;
+			}
+
+			display: inline-block;
+			width: 76px;
+			height: 35px;
+			border: 1px solid $border-color;
+
+			outline: none;
+
+			color: $primary-text-color;
+			font-family: $font-stack-OpenSans;
+			font-weight: 600;
+			text-align: center;
+		}
+		&-more {
 			position: relative;
+
+			display: inline-block;
 			margin-bottom: 4px;
+			margin-left: 8px;
+
 			cursor: pointer;
+			&::before {
+				content: "";
+
+				position: absolute;
+				top: 50%;
+
+				width: 9px;
+				height: 2px;
+
+				background-color: $black;
+
+				transform: translate(-50%);
+			}
 			&::after {
 				content: "";
+
 				position: absolute;
-				width: 2px;
-				height: 10px;
 				top: -4px;
 				left: 50%;
+
+				width: 2px;
+				height: 10px;
+
+				background-color: $black;
+
 				transform: translateX(-50%);
-				background-color: #000;
 			}
 		}
 	}
 	&__left {
+		@include respond-to(tablets) {
+			left: 10%;
+
+			width: 90%;
+
+			font-size: $quantity-left-font-size-tab;
+		}
+
 		position: absolute;
 		top: -54px;
 		left: 0;
-		background-color: #eaeaea;
+
 		padding: 7px;
+
+		background-color: $item-left-background-color;
+
+		color: $primary-text-color;
 		text-align: center;
-		color: #000;
-		@include respond-to(tablets) {
-			font-size: 12px;
-			width: 90%;
-			left: 10%;
-		}
 		&-number {
 			margin-right: 5px;
 		}
 		&::after {
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			transform: translateX(-50%);
-			border: 11px solid transparent;
-			border-top: 11px solid #eaeaea;
 			@include respond-to(tablets) {
 				left: 75%;
 			}
+
+			content: "";
+
+			position: absolute;
+			top: 100%;
+			left: 50%;
+
+			border: 11px solid transparent;
+			border-top: 11px solid $item-left-background-color;
+
+			transform: translateX(-50%);
 		}
 	}
 }
 
 .like {
-	border: 1px solid #dedede;
-	display: inline-block;
-	padding: 10px 30px;
-	padding-left: 50px;
-	font-size: 12px;
-	font-weight: 200;
-	margin-top: 14px;
-	margin-bottom: 14px;
-	vertical-align: bottom;
-	text-decoration: none;
 	@include respond-to(tablets) {
 		padding: 18px;
 	}
+
+	display: inline-block;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	padding: 10px 30px;
+	padding-left: 50px;
+	border: 1px solid $border-color;
+
+	font-weight: 200;
+	font-size: $like-font-size;
+	text-decoration: none;
+	vertical-align: bottom;
 	&:hover {
-		border-color: #000;
+		border-color: $black;
 	}
 	&.icon--heart {
 		position: relative;
 		&::before {
-			font-size: 13px;
-			color: #000;
-			position: absolute;
-			left: 28px;
-			top: 50%;
-			transform: translateY(-50%);
 			@include respond-to(tablets) {
 				left: 50%;
+
 				transform: translate(-50%, -50%);
 			}
+
+			position: absolute;
+			top: 50%;
+			left: 28px;
+
+			color: $black;
+			font-size: $like-icon-size;
+
+			transform: translateY(-50%);
 		}
 	}
 	span {
-		text-transform: uppercase;
-		color: #000;
-		font-family: 'HelveticaNeue', Arial, sans-serif;
 		@include respond-to(tablets) {
 			display: none;
 		}
+
+		color: $primary-text-color;
+		font-family: $font-stack-Helvetica;
+		text-transform: uppercase;
 	}
 }
 
 .add-to-cart {
-	display: inline-block;
-	padding-left: 30px;
-	font-size: 13px;
-	font-weight: 200;
-	margin-top: 14px;
-	margin-left: 19px;
-	background-color: #f68235;
-	vertical-align: bottom;
-	position: relative;
-	margin-bottom: 14px;
-	text-decoration: none;
 	@include respond-to(tablets) {
-		padding-left: 15px;
-		margin-left: 0;
 		float: right;
+
+		margin-left: 0;
+		padding-left: 15px;
 	}
+
+	position: relative;
+
+	display: inline-block;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	margin-left: 19px;
+	padding-left: 30px;
+
+	background-color: $add-to-cart-background-color;
+
+	font-weight: 200;
+	font-size: $add-to-cart-font-size;
+	text-decoration: none;
+	vertical-align: bottom;
 	&:hover {
-		background-color: #ef590e;
+		background-color: $dark-orange;
 	}
 	&:visited {
-		color: #000;
+		color: $black;
 	}
 	&__text {
-		text-transform: uppercase;
-		color: #fff;
-		background: url('../images/shop-bag-min.png') no-repeat;
-		background-position: 0 9px;
-		padding: 12px 25px;
-		display: inline-block;
 		@include respond-to(tablets) {
 			padding: 12px 15px;
 			padding-left: 20px;
 		}
+
+		display: inline-block;
+		padding: 12px 25px;
+
+		background: url('../images/shop-bag-min.png') no-repeat;
+		background-position: 0 9px;
+
+		color: $white;
+		text-transform: uppercase;
 	}
 }
 
 .shop-bag-img {
-	height: 19px;
 	width: 15px;
+	height: 19px;
 	margin-right: 12px;
 }
 
 .make-order {
-	border-top: 1px solid #dedede;
-	padding: 14px 0;
-	font-size: 14px;
 	@include respond-to(tablets) {
-		font-size: 12px;
+		font-size: $make-order-font-size-tab;
 	}
+
+	padding: 14px 0;
+	border-top: 1px solid $border-color;
+
+	font-size: $make-order-font-size;
 }
 
 .call {
@@ -534,33 +637,36 @@
 		position: relative;
 		&::before {
 			position: absolute;
-			font-size: 22px;
-			color: #7c7c7c;
-			left: 0;
 			top: 0;
+			left: 0;
+
+			color: $phone-color;
+			font-size: $phone-size;
 		}
 	}
 	&__text {
 		display: block;
-		color: #000;
-		padding-left: 30px;
-		font-family: 'HelveticaNeue', Arial, sans-serif;
 		margin-bottom: 10px;
+		padding-left: 30px;
+
+		color: $primary-text-color;
+		font-family: $font-stack-Helvetica;
 	}
 	&__number {
+		margin-right: 10px;
+		margin-left: 10px;
+
+		color: $link-color;
+		font-family: $font-stack-Helvetica;
 		&:nth-child(2) {
 			padding-left: 25px;
 		}
-		color: #999;
-		margin-left: 10px;
-		margin-right: 10px;
-		font-family: 'HelveticaNeue', Arial, sans-serif;
 		&-text {
-			color: #999;
-			font-family: 'HelveticaNeue', Arial, sans-serif;
+			color: $link-color;
+			font-family: $font-stack-Helvetica;
 		}
 		&:hover {
-			color: #000;
+			color: $primary-text-color;
 		}
 	}
 }
@@ -570,41 +676,48 @@
 		position: relative;
 		&::before {
 			position: absolute;
-			font-size: 22px;
-			color: #7c7c7c;
-			left: 0;
 			top: 50%;
+			left: 0;
+
+			color: $location-color;
+			font-size: $location-size;
+
 			transform: translateY(-50%);
 		}
 	}
 	&__text {
 		display: block;
-		color: #000;
-		padding-left: 30px;
-		font-family: 'HelveticaNeue', Arial, sans-serif;
 		margin-bottom: 10px;
+		padding-left: 30px;
+
+		color: $primary-text-color;
+		font-family: $font-stack-Helvetica;
 	}
 }
 
 .details {
-	border-top: 1px solid #dedede;
 	padding: 20px 0;
+	border-top: 1px solid $border-color;
 	&__title {
-		margin: 0;
-		font-weight: 300;
-		font-size: 25px;
-		margin-bottom: 25px;
+		@include respond-to(tablets) {
+			margin-bottom: 18px;
+
+			font-size: $details-title-font-size-tab;
+		}
+
 		position: relative;
+
+		margin: 0;
+		margin-bottom: 25px;
+
+		font-weight: 300;
+		font-size: $details-title-font-size;
 		&:hover {
 			cursor: pointer;
 		}
-		@include respond-to(tablets) {
-			font-size: 18px;
-			margin-bottom: 18px;
-		}
 		&.icon--plus {
-			& ~ .details__item, 
-			& ~ .details__code, 
+			& ~ .details__item,
+			& ~ .details__code,
 			& ~ .details__info,
 			& ~ .details__text {
 				display: none;
@@ -612,23 +725,26 @@
 		}
 		&::before {
 			position: absolute;
-			right: 0;
 			top: 50%;
+			right: 0;
+
 			transform: translateY(-50%);
 		}
 		span {
-			font-family: 'HelveticaNeue', Arial, sans-serif;
+			font-family: $font-stack-Helvetica;
 		}
 	}
 	&__item {
-		font-size: 14px;
 		@include respond-to(tablets) {
-			font-size: 12px;
+			font-size: $details-item-font-size-tab;
 		}
+
+		font-size: $details-item-font-size;
 		&-title {
-			font-weight: 600;
-			margin-right: 5px;
 			display: inline-block;
+			margin-right: 5px;
+
+			font-weight: 600;
 			vertical-align: top;
 		}
 		&-value {
@@ -637,46 +753,56 @@
 			margin: 0;
 		}
 		b {
-			font-weight: bold;
 			margin-right: 5px;
+
+			font-weight: bold;
 		}
 	}
 	&__code {
-		margin-top: 25px;
-		font-size: 14px;
 		@include respond-to(tablets) {
-			font-size: 12px;
 			margin-top: 14px;
+
+			font-size: $details-item-font-size-tab;
 		}
+
+		margin-top: 25px;
+
+		font-size: $details-item-font-size;
 		&-title {
-			font-weight: 600;
-			margin-right: 5px;
 			display: inline-block;
+			margin-right: 5px;
+
+			font-weight: 600;
 			vertical-align: top;
 		}
 		&-number {
-			color: #a7a7a7;
 			display: inline-block;
 			width: 75%;
 			margin: 0;
+
+			color: $item-code-color;
 		}
 	}
 	&__info {
 		margin-top: 20px;
 	}
 	&__text {
-		margin: 0;
-		font-size: 14px;
 		@include respond-to(tablets) {
-			font-size: 12px;
 			margin: 0;
+
+			font-size: $details-item-font-size-tab;
 		}
+
+		margin: 0;
+
+		font-size: $details-item-font-size;
 		b {
-			font-weight: bold;
 			display: inline-block;
 			margin-top: 20px;
+
+			font-weight: bold;
 			a {
-				color: #000;
+				color: $primary-text-color;
 			}
 		}
 		&-item {
@@ -687,27 +813,34 @@
 }
 
 .social {
-	border-top: 1px solid #dedede;
-	padding: 24px 0;
-	display: flex;
-	justify-content: flex-end;
 	@include respond-to(tablets) {
 		justify-content: space-between;
 	}
+
+	display: flex;
+	justify-content: flex-end;
+	padding: 24px 0;
+	border-top: 1px solid $border-color;
 	&__text {
-		font-size: 14px;
+		@include respond-to(tablets) {
+			font-size: $social-font-size-tab;
+		}
+
 		font-weight: 600;
+		font-size: $social-font-size;
 	}
 	&__item {
 		margin-left: 20px;
-		color: #3a3a3a;
-		text-decoration: none;
 		padding: 5px;
 		border: 1px solid transparent;
+
+		color: $social-item-color;
+		text-decoration: none;
 		&:hover {
-			border: 1px solid #3a3a3a;
-			border-radius: 100%;
 			padding: 5px;
+			border: 1px solid $social-item-color;
+
+			border-radius: 100%;
 		}
 	}
 }

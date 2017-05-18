@@ -1,17 +1,21 @@
 .header {
-	background-color: $header-background-color;
 	display: flex;
-	justify-content: space-between;
 	flex-flow: wrap;
+	justify-content: space-between;
+
+	background-color: $header-background-color;
 	&-logo {
-		margin: 30px 50px;
-		width: 325px;
-		background: url('../images/logo-min.png') no-repeat;
 		@include respond-to(tablets) {
 			order: 1;
 			margin: 18px;
+
 			background: url('../images/logo-tab-min.png') no-repeat;
 		}
+
+		width: 325px;
+		margin: 30px 50px;
+
+		background: url('../images/logo-min.png') no-repeat;
 		a {
 			color: transparent;
 			font-size: 50px;
@@ -27,115 +31,135 @@
 }
 
 .switcher {
-	margin-top: 88px;
 	@include respond-to(tablets) {
 		order: 3;
 		margin-top: -48px;
 		margin-left: 20px;
 	}
+
+	margin-top: 88px;
 	&__item {
 		display: inline-block;
-		background-color: #e5e5e5;
 		padding: 10px;
-		font-weight: 300;
-		vertical-align: bottom;
-		text-decoration: none;
-		color: #000;
 		padding-right: 35px;
+
+		background-color: $switcher-background-color;
+
+		color: $primary-text-color;
+		font-weight: 300;
+		text-decoration: none;
+		vertical-align: bottom;
 		&:hover {
 			text-decoration: underline;
 		}
 		&:last-child {
 			position: relative;
+
 			padding: 15px 30px;
-			background-color: #f68235;
-			color: #fff;
+
+			background-color: $switcher-contrast-background-color;
+
+			color: $white;
 			&::before {
 				content: "";
+
 				position: absolute;
-				right: 100%;
 				top: 0;
-				width: 0; 
-				height: 0; 
-				border-bottom: 48px solid #f68235; 
+				right: 100%;
+
+				width: 0;
+				height: 0;
+				border-bottom: 48px solid $switcher-contrast-background-color;
 				border-left: 27px solid transparent;
 			}
 		}
 		span {
-			font-size: 14px;
+			font-size: $switcher-font-size;
 			text-transform: uppercase;
 		}
 	}
 	.icon--clock {
 		position: relative;
+
 		padding-left: 55px;
 		&::before {
-			font-size: 20px;
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
 			left: 0;
 			left: 16px;
+
+			font-size: $switcher-clock-size;
+
+			transform: translateY(-50%);
 		}
 	}
 }
 
 .contact-search {
+	@include respond-to(tablets) {
+		order: 2;
+		margin-top: 10px;
+		margin-right: 18px;
+	}
+
 	display: flex;
 	flex-direction: column;
 	margin-top: 20px;
 	margin-right: 48px;
-	@include respond-to(tablets) {
-		order: 2;
-		margin-right: 18px;
-		margin-top: 10px;
-	}
 }
 
 .contact {
-	font-weight: 400;
-	font-size: 15px;
-	color: #f68235;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
+
+	color: $contact-icon-color;
+	font-weight: 400;
+	font-size: $contact-font-size;
 	span {
-		color: #fff;
 		display: block;
 		padding-left: 34px;
-		font-family: 'OpenSans', sans-serif;
+
+		color: $contact-text-color;
+		font-family: $font-stack-OpenSans;
 		&:not(:first-child) {
 			@include respond-to(tablets) {
-				font-size: 12px;
+				font-size: $contact-font-size-tab;
 			}
 		}
 	}
 	&__link {
-		color: #fff;
-		text-decoration: none;
 		position: relative;
-		padding-bottom: 10px;
-		font-family: 'OpenSans', sans-serif;
+
 		display: inline-block;
-		font-size: 15px;
+		padding-bottom: 10px;
+
+		color: $contact-text-color;
+		font-family: $font-stack-OpenSans;
+		font-size: $contact-font-size;
+		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
 		}
 	}
 	.icon--contact {
-		vertical-align: top;
-		text-decoration: none;
-		color: #f68235;
 		position: relative;
+
+		color: $contact-icon-color;
+		text-decoration: none;
+		vertical-align: top;
 		&:not(:last-child) {
 			margin-right: 20px;
 		}
 		&::before {
-			border-radius: 999rem;
-			border: 1px solid #f68235;
-			padding: 5px;
-			font-size: 10px;
 			position: absolute;
+
+			padding: 5px;
+			border: 1px solid $orange;
+
+			border-radius: 100%;
+
+			font-size: 10px;
 		}
 	}
 }
@@ -144,89 +168,104 @@
 	position: relative;
 	&::after {
 		content: "2";
-		color: #000;
-		background-color: #FFF;
-		border-radius: 999rem;
-		font-size: 10px;
-		width: 13px;
-		height: 13px;
+
 		position: absolute;
-		text-align: center;
 		top: 0;
 		left: 14px;
+
+		width: 13px;
+		height: 13px;
+
+		border-radius: 100%;
+		background-color: $white;
+
+		color: $primary-text-color;
+		font-size: 10px;
+		text-align: center;
 	}
 }
 
 .search {
-	width: 221px;
 	position: relative;
+
 	align-self: flex-end;
+	width: 221px;
 	margin-bottom: 11px;
 	&__input {
 		width: 100%;
-		border: 1px solid #606060;
 		padding: 8px;
 		padding-right: 24px;
-		font-size: 12px;
-		font-family: 'OpenSans', sans-serif;
-		color: #fff;
-		font-weight: 600;
+		border: 1px solid $header-border-color;
+
+		background-color: $black;
 		outline: none;
-		background-color: #000;
+
+		color: $white;
+		font-family: $font-stack-OpenSans;
+		font-weight: 600;
+		font-size: $search-font-size;
 		&::placeholder {
+			color: $white;
 			font-weight: 600;
-			color: #fff;
 		}
 		&:focus {
-			border-color: #fff;
+			border-color: $white;
 		}
 	}
 	&-icon {
 		position: absolute;
 		top: 50%;
 		right: 9px;
+
 		height: 16px;
-		border: 2px solid #f68235;
+		border: 2px solid $search-icon-color;
+
 		border-radius: 100%;
-		transform: translateY(-50%) rotate(-45deg);
+		background-color: $black;
 		outline: none;
-		background-color: #000;
+
+		transform: translateY(-50%) rotate(-45deg);
 		&:hover {
 			cursor: pointer;
 		}
 		&::before {
 			content: '';
+
 			position: absolute;
 			top: 12px;
 			left: 5px;
-			height: 8px;
+
 			width: 2px;
-			background-color: #f68235;
+			height: 8px;
+
+			background-color: $search-icon-color;
 		}
 	}
 }
 
 .main-menu {
-	flex-basis: 100%;
-	border-top: 1px solid #606060;
-	display: flex;
-	justify-content: space-between;
-	padding-left: 50px;
-	padding-right: 50px;
 	@include respond-to(tablets) {
 		order: 4;
-		padding-left: 20px;
 		padding-right: 20px;
+		padding-left: 20px;
 	}
+
+	display: flex;
+	justify-content: space-between;
+	flex-basis: 100%;
+	padding-right: 50px;
+	padding-left: 50px;
+	border-top: 1px solid $header-border-color;
 	&__item {
 		display: block;
-		text-decoration: none;
 		padding: 18px;
-		text-transform: uppercase;
-		color: #fff;
-		font-size: 14px;
-		font-family: 'OpenSans', sans-serif;
+
+		color: $menu-item-color;
+		font-family: $font-stack-OpenSans;
 		font-weight: 300;
+		font-size: $menu-item-font-size;
+		text-transform: uppercase;
+		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
 		}
