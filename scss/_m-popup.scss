@@ -5,10 +5,11 @@
 	overflow: hidden;
 	position: fixed;
 	top: 0px;
+	z-index: 2000;
 	&__content {
-		margin: 100px auto;
-		width: 635px;
-		height: 358px;
+		margin: 20px auto;
+		width: 260px;
+		height: 675px;
 	}
 }
 
@@ -16,28 +17,29 @@
 	font-family: 'HelveticaNeue', Arial, sans-serif;
 	&__header {
 		background-color: #dbdbdb;
-		padding: 12px 36px 10px;
+		padding: 10px 100px 9px 8px;
 		position: relative;
-		font-size: 18px;
+		font-size: 14px;
 	}
 	&__title {
 		text-transform: uppercase;
-		font-size: 18px;
+		font-size: 14px;
 	}
 	&-close {
 		text-decoration: none;
 		position: absolute;
 		top: 50%;
-		right: 7px;
+		right: 8px;
 		color: #727272;
 		transform: translateY(-50%);
+		&::before {
+			font-size: 20px;
+		}
 	}
 	&__main {
-		padding: 0 37px;
-		padding-bottom: 58px;
 		background-color: #FFF;
 		&-title {
-			padding: 40px 0;
+			padding: 20px;
 			text-align: center;
 			display: block;
 			font-size: 14px;
@@ -46,16 +48,16 @@
 			}
 		}
 		&-locations {
-			border-top: 1px solid #dedede;
-			border-bottom: 1px solid #dedede;
 			display: flex;
 			justify-content: space-between;
+			flex-direction: column;
 			&-item {
-				margin-top: 50px;
-				padding-bottom: 40px;
-				margin-bottom: 15px;
+				padding-top: 25px;
+				padding-bottom: 23px;
+				margin-bottom: 25px;
 				position: relative;
 				font-size: 13px;
+				border-top: 1px solid #dedede;
 			}
 		}
 	}

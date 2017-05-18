@@ -45,3 +45,13 @@ $('.photo__nav-item').on("click", function(){
 function l_image (a) {
     document.example_img.src=a
 }
+
+$(document).ready(function(){
+    PopUpHide();
+});
+function PopUpShow(){
+    $(".location-popup").show();
+}
+function PopUpHide(){
+    $(".location-popup").hide();
+}
