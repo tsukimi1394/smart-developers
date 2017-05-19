@@ -1,11 +1,55 @@
 .similar-goods {
+	@include respond-to(handhelds) {
+		padding: 20px 0;
+	}
+
 	border-top: 1px solid $border-color;
 	&__title {
+		@include respond-to(handhelds) {
+			position: relative;
+
+			margin: 0;
+			margin-bottom: 18px;
+
+			font-size: $similar-goods-title-font-size-mob;
+			text-align: left;
+		}
+
 		font-weight: 300;
 		font-size: $similar-goods-title-font-size;
 		text-align: center;
+		span {
+			font-family: $font-stack-Helvetica;
+		}
+		&.icon--plus {
+			& ~ .similar-goods__block {
+				display: none;
+			}
+		}
+		&.icon--minus::before {
+			@include respond-to(wide-screens) {
+				display: none;
+			}
+			@include respond-to(medium-screens) {
+				display: none;
+			}
+			@include respond-to(tablets) {
+				display: none;
+			}
+			@include respond-to(handhelds) {
+				position: absolute;
+				top: 50%;
+				right: 0;
+
+				transform: translateY(-50%);
+			}
+		}
 	}
 	&__block {
+		@include respond-to(handhelds) {
+			flex-flow: wrap;
+		}
+
 		display: flex;
 		justify-content: space-between;
 	}
@@ -18,17 +62,60 @@
 			width: 149px;
 			height: 223px;
 		}
+		@include respond-to(handhelds) {
+			width: 119px;
+			height: 179px;
+		}
 
 		width: 205px;
 		height: 273px;
 		margin-bottom: 10px;
-		&-image {
-			@include image-fit;
+
+		background: url('../images/item-min.jpg') no-repeat;
+		background-size: 100%;
+		&.item--1 {
+			@include respond-to(handhelds) {
+				background: url('../images/item1-min.jpg') no-repeat;
+			}
+		}
+		&.item--2 {
+			@include respond-to(handhelds) {
+				background: url('../images/item2-min.jpg') no-repeat;
+			}
+		}
+		&.item--3 {
+			@include respond-to(handhelds) {
+				background: url('../images/item3-min.jpg') no-repeat;
+			}
+		}
+		&.item--4 {
+			@include respond-to(handhelds) {
+				background: url('../images/item4-min.jpg') no-repeat;
+			}
+		}
+		a {
+			@include respond-to(handhelds) {
+				font-size: 40px;
+			}
+			@include respond-to(tablets) {
+				font-size: 44px;
+			}
+			@include respond-to(medium-screens) {
+				font-size: 60px;
+			}
+			@include respond-to(wide-screens) {
+				font-size: 60px;
+			}
+
+			color: transparent;
 		}
 	}
 	&__title {
 		@include respond-to(tablets) {
 			font-size: $similar-good-title-font-size-tab;
+		}
+		@include respond-to(handhelds) {
+			font-size: $similar-good-title-font-size-mob;
 		}
 
 		margin: 0;
@@ -39,6 +126,9 @@
 	&__subtitle {
 		@include respond-to(tablets) {
 			font-size: $similar-good-subtitle-font-size-tab;
+		}
+		@include respond-to(handhelds) {
+			font-size: $similar-good-subtitle-font-size-mob;
 		}
 
 		margin: 0;
@@ -52,12 +142,20 @@
 
 			font-size: $similar-good-price-font-size-tab;
 		}
+		@include respond-to(handhelds) {
+			margin-top: 5px;
+
+			font-size: $similar-good-price-font-size-mob;
+		}
 
 		margin-top: 13px;
 
 		font-size: $similar-good-price-font-size;
 		&.price--old {
 			@include respond-to(tablets) {
+				display: inline-block;
+			}
+			@include respond-to(handhelds) {
 				display: inline-block;
 			}
 
@@ -68,6 +166,9 @@
 		}
 		&.price--new {
 			@include respond-to(tablets) {
+				display: inline-block;
+			}
+			@include respond-to(handhelds) {
 				display: inline-block;
 			}
 

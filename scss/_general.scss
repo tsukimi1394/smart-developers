@@ -10,6 +10,10 @@ html {
 .header,
 .main,
 .footer {
+	@include respond-to(handhelds) {
+		max-width: $max-width-mob;
+	}
+
 	max-width: $max-width;
 	margin: 0 auto;
 }
@@ -17,6 +21,9 @@ html {
 .main {
 	@include respond-to(tablets) {
 		padding: 27px 20px;
+	}
+	@include respond-to(handhelds) {
+		padding: 20px;
 	}
 
 	position: relative;

@@ -1,4 +1,8 @@
 .location-popup {
+	@include respond-to(handhelds) {
+		z-index: 2000;
+	}
+
 	position: fixed;
 	top: 0;
 
@@ -8,6 +12,12 @@
 
 	background-color: rgba(0, 0, 0, 0.5);
 	&__content {
+		@include respond-to(handhelds) {
+			width: 260px;
+			height: 675px;
+			margin: 20px auto;
+		}
+
 		width: 635px;
 		height: 358px;
 		margin: 100px auto;
@@ -17,6 +27,12 @@
 .popup {
 	font-family: $font-stack-Helvetica;
 	&__header {
+		@include respond-to(handhelds) {
+			padding: 10px 100px 9px 8px;
+
+			font-size: $popup-header-font-size-mob;
+		}
+
 		position: relative;
 
 		padding: 12px 36px 10px;
@@ -26,10 +42,18 @@
 		font-size: $popup-header-font-size;
 	}
 	&__title {
+		@include respond-to(handhelds) {
+			font-size: $popup-header-font-size-mob;
+		}
+
 		font-size: $popup-header-font-size;
 		text-transform: uppercase;
 	}
 	&-close {
+		@include respond-to(handhelds) {
+			right: 8px;
+		}
+
 		position: absolute;
 		top: 50%;
 		right: 7px;
@@ -38,13 +62,26 @@
 		text-decoration: none;
 
 		transform: translateY(-50%);
+		&::before {
+			@include respond-to(handhelds) {
+				font-size: $popup-close-size;
+			}
+		}
 	}
 	&__main {
+		@include respond-to(handhelds) {
+			padding: 0;
+		}
+
 		padding: 0 37px;
 		padding-bottom: 58px;
 
 		background-color: $popup-main-background-color;
 		&-title {
+			@include respond-to(handhelds) {
+				padding: 20px 0;
+			}
+
 			display: block;
 			padding: 40px 0;
 
@@ -55,11 +92,26 @@
 			}
 		}
 		&-locations {
+			@include respond-to(handhelds) {
+				flex-direction: column;
+				border: none;
+			}
+
 			display: flex;
 			justify-content: space-between;
 			border-top: 1px solid $border-color;
 			border-bottom: 1px solid $border-color;
 			&-item {
+				@include respond-to(handhelds) {
+					margin-top: 0;
+					margin-bottom: 25px;
+					padding-top: 25px;
+					padding-bottom: 23px;
+					border-top: 1px solid $border-color;
+
+					font-size: $popup-content-font-size;
+				}
+
 				position: relative;
 
 				margin-top: 50px;

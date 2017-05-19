@@ -1,4 +1,11 @@
 .footer {
+	@include respond-to(handhelds) {
+		flex-direction: column;
+		padding: 5px 25px;
+
+		text-align: center;
+	}
+
 	display: flex;
 	justify-content: space-between;
 	padding: 30px 50px;
@@ -7,6 +14,10 @@
 
 	font-family: $font-stack-OpenSans;
 	&__main-menu {
+		@include respond-to(handhelds) {
+			display: none;
+		}
+
 		font-size: $footer-main-menu-font-size;
 		&-item {
 			display: block;
@@ -29,6 +40,10 @@
 	}
 	&__buyer-menu,
 	&__about-menu {
+		@include respond-to(handhelds) {
+			display: none;
+		}
+
 		font-size: $footer-submenu-font-size;
 		&-item {
 			display: block;
@@ -50,6 +65,16 @@
 		}
 	}
 	&-logo {
+		@include respond-to(handhelds) {
+			float: none;
+
+			width: 164px;
+			height: 25px;
+			margin: 20px auto;
+
+			background: url('../images/logo-mob-footer-min.png') no-repeat;
+		}
+
 		float: right;
 
 		width: 240px;
@@ -58,16 +83,30 @@
 
 		background: url('../images/logo-footer-min.png') no-repeat;
 		a {
+			@include respond-to(handhelds) {
+				font-size: 13px;
+				letter-spacing: 36px;
+			}
+
 			color: transparent;
 			font-size: 36px;
 			letter-spacing: 42px;
 		}
 	}
 	&-social-credit {
+		@include respond-to(handhelds) {
+			align-content: flex-end;
+		}
+
 		display: flex;
 		flex-direction: column;
 	}
 	&-social {
+		@include respond-to(handhelds) {
+			justify-content: center;
+			margin-top: 5px;
+		}
+
 		display: flex;
 		justify-content: flex-end;
 		margin-top: 20px;
@@ -93,6 +132,12 @@
 .copy {
 	text-align: right;
 	&-text {
+		@include respond-to(handhelds) {
+			margin-bottom: 10px;
+
+			text-align: center;
+		}
+
 		clear: both;
 
 		display: block;
@@ -104,6 +149,10 @@
 }
 
 .credit {
+	@include respond-to(handhelds) {
+		margin: 20px auto;
+	}
+
 	width: 131px;
 	height: 24px;
 	margin-top: 10px;
