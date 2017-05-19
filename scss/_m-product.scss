@@ -1,5 +1,15 @@
 .product {
 	margin-top: 30px;
+	&__sale {
+		position: absolute;
+		top: 0;
+		left: 27px;
+		z-index: 100;
+		&::before {
+			font-size: 27px;
+			color: $clock-color2;
+		}
+	}
 	&__title {
 		margin: 0;
 
@@ -18,7 +28,7 @@
 	}
 }
 
-.photo {
+/*.photo {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -51,7 +61,7 @@
 			}
 		}
 	}
-}
+}*/
 
 .price {
 	display: flex;

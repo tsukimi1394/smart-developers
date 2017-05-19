@@ -43,6 +43,16 @@
 .product {
 	display: flex;
 	margin-top: 40px;
+	&__sale {
+		position: absolute;
+		top: 0;
+		left: 27px;
+		z-index: 100;
+		&::before {
+			font-size: 27px;
+			color: $clock-color2;
+		}
+	}
 	&__title {
 		@include respond-to(tablets) {
 			font-size: $product-title-font-size-tab;
@@ -71,6 +81,10 @@
 }
 
 .photo {
+	width: 60%;
+}
+
+/*.photo {
 	@include respond-to(tablets) {
 		flex-direction: column;
 		justify-content: flex-start;
@@ -206,7 +220,7 @@
 			}
 		}
 	}
-}
+}*/
 
 .description {
 	width: 40%;

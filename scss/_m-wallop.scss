@@ -1,0 +1,40 @@
+.Wallop { 
+  display: flex;
+  flex-direction: column;
+  &-list {
+    margin: 15px;
+    position: relative;
+  }
+  &-item {
+    width: 260px;
+    height: 347px;
+    margin: 0 auto;
+    &-img {
+      @include image-fit;
+    }
+  }
+  &-pagination {
+    display: flex;
+    flex-direction: row;
+    width: 62px;
+    justify-content: space-between;
+    align-self: center;
+  }
+  &-dot {
+    width: 8px;
+    height: 8px;
+    outline: none;
+    border-radius: 100%;
+    background-color: $slider-dots-inactive-color;
+    &.Wallop-dot--current {
+      background-color: $slider-dots-active-color;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.Wallop-buttonPrevious, .Wallop-buttonNext {
+  display: none;
+}
