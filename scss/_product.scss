@@ -227,31 +227,47 @@
 }
 
 .price {
-	margin-top: 15px;
-	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
 
 	font-size: $product-price-font-size;
-	&--old {
-		@include respond-to(tablets) {
-			display: block;
-			margin: 0;
+	&__number {
+		&.price--old {
+			@include respond-to(tablets) {
+				display: block;
+				margin: 0;
 
-			font-size: $product-price-font-size-tab;
+				font-size: $product-price-font-size-tab;
+			}
+
+			margin-right: 15px;
+
+			color: $old-price-color;
+			text-decoration: line-through;
 		}
+		&.price--new {
+			@include respond-to(tablets) {
+				display: block;
 
-		margin-right: 15px;
+				font-size: $product-new-price-font-size-tab;
+			}
 
-		color: $old-price-color;
-		text-decoration: line-through;
+			color: $new-price-color;
+		}
 	}
-	&--new {
-		@include respond-to(tablets) {
-			display: block;
+	&__sale {
+		width: $sale-width;
+		height: $sale-height;
+		padding: 14px 0;
 
-			font-size: $product-new-price-font-size-tab;
-		}
+		border-radius: 100%;
+		background-color: $sale-background-color;
 
-		color: $new-price-color;
+		color: $sale-color;
+		font-size: $sale-font-size;
+		text-align: center;
 	}
 }
 
