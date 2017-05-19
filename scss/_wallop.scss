@@ -1,14 +1,24 @@
-.Wallop { 
-  display: flex;
-  flex-direction: row-reverse;
+.Wallop {
+  @include respond-to(handhelds) {
+    flex-direction: column;
+  }
   @include respond-to(tablets) {
     flex-direction: column;
   }
+
+  display: flex;
+  flex-direction: row-reverse;
   &-list {
-    margin: 15px;
     position: relative;
+
+    margin: 15px;
   }
   &-item {
+    @include respond-to(handhelds) {
+      width: 260px;
+      height: 347px;
+    }
+
     width: 481px;
     height: 641px;
     &-img {
@@ -16,37 +26,76 @@
     }
   }
   &-pagination {
-    display: flex;
-    flex-direction: column;
-    width: 75px;
     @include respond-to(tablets) {
       flex-direction: row;
       width: 100%;
     }
+    @include respond-to(handhelds) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-self: center;
+      width: 62px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    width: 75px;
   }
   &-dot {
+    @include respond-to(handhelds) {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 100%;
+    }
+
     width: 62px;
     height: 91px;
     margin: 10px auto;
     border: 2px solid transparent;
+
     outline: none;
     &.Wallop-dot--1 {
+      @include respond-to(handhelds) {
+        background: none;
+        background-color: $slider-dots-inactive-color;
+      }
+
       background: url('../images/photo1-min.jpg') no-repeat;
       background-size: 100%;
     }
     &.Wallop-dot--2 {
+      @include respond-to(handhelds) {
+        background: none;
+        background-color: $slider-dots-inactive-color;
+      }
+
       background: url('../images/photo2-min.jpg') no-repeat;
       background-size: 100%;
     }
     &.Wallop-dot--3 {
+      @include respond-to(handhelds) {
+        background: none;
+        background-color: $slider-dots-inactive-color;
+      }
+
       background: url('../images/photo3-min.jpg') no-repeat;
       background-size: 100%;
     }
     &.Wallop-dot--4 {
+      @include respond-to(handhelds) {
+        background: none;
+        background-color: $slider-dots-inactive-color;
+      }
+
       background: url('../images/photo4-min.jpg') no-repeat;
       background-size: 100%;
     }
     &.Wallop-dot--current {
+      @include respond-to(handhelds) {
+        background-color: $slider-dots-active-color;
+      }
+
       border: 2px solid $orange;
     }
     &:hover {
@@ -55,52 +104,70 @@
   }
 }
 
-.Wallop-buttonPrevious, .Wallop-buttonNext {
-  background-color: transparent;
-  border-color: transparent;
-  outline: none;
+.Wallop-buttonPrevious,
+.Wallop-buttonNext {
+  @include respond-to(handhelds) {
+    display: none;
+  }
+
   position: relative;
+
   display: block;
   margin: 20px auto;
+  border-color: transparent;
+
+  background-color: transparent;
+  outline: none;
 }
 
 .Wallop-buttonNext {
   &::after {
-    content: '';
-    position: absolute;
-    height: 16px;
-    width: 1px;
-    background-color: $inactive-arrow-color;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     @include respond-to(tablets) {
       width: 16px;
       height: 1px;
     }
-  }
-  &::before {
+
     content: '';
+
     position: absolute;
     top: 50%;
     left: 50%;
+
+    width: 1px;
+    height: 16px;
+
+    background-color: $inactive-arrow-color;
+
+    transform: translate(-50%, -50%);
+  }
+  &::before {
+    @include respond-to(tablets) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
     width: 10px;
     height: 10px;
     border-top: solid 1px $inactive-arrow-color;
     border-right: solid 1px $inactive-arrow-color;
+
     transform: translate(-50%, -50%) rotate(135deg);
-    @include respond-to(tablets) {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
   }
   &:hover {
     cursor: pointer;
     &::before {
       border-color: $active-arrow-color;
+
       cursor: pointer;
     }
     &::after {
       background-color: $active-arrow-color;
+
       cursor: pointer;
     }
   }
@@ -108,41 +175,52 @@
 
 .Wallop-buttonPrevious {
   &::after {
-    content: '';
-    position: absolute;
-    height: 16px;
-    width: 1px;
-    background-color: $inactive-arrow-color;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
     @include respond-to(tablets) {
       width: 16px;
       height: 1px;
     }
-  }
-  &::before {
+
     content: '';
+
     position: absolute;
     top: 50%;
     right: 50%;
+
+    width: 1px;
+    height: 16px;
+
+    background-color: $inactive-arrow-color;
+
+    transform: translate(50%, -50%);
+  }
+  &::before {
+    @include respond-to(tablets) {
+      transform: translate(50%, -50%) rotate(-135deg);
+    }
+
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+
     width: 10px;
     height: 10px;
     border-top: solid 1px $inactive-arrow-color;
     border-right: solid 1px $inactive-arrow-color;
+
     transform: translate(50%, -50%) rotate(-45deg);
-    @include respond-to(tablets) {
-      transform: translate(50%, -50%) rotate(-135deg);
-    }
   }
   &:hover {
     cursor: pointer;
     &::before {
       border-color: $active-arrow-color;
+
       cursor: pointer;
     }
     &::after {
       background-color: $active-arrow-color;
+
       cursor: pointer;
     }
   }

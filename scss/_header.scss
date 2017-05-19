@@ -11,12 +11,27 @@
 
 			background: url('../images/logo-tab-min.png') no-repeat;
 		}
+		@include respond-to(handhelds) {
+			order: 2;
+			width: 168px;
+			margin: 0;
+			margin-top: 20px;
+			padding-bottom: 20px;
+
+			background: url('../images/m-logo-min.png') no-repeat;
+		}
 
 		width: 325px;
 		margin: 30px 50px;
 
 		background: url('../images/logo-min.png') no-repeat;
 		a {
+			@include respond-to(handhelds) {
+				font-size: 10px;
+				letter-spacing: 37px;
+				word-spacing: 0;
+			}
+
 			color: transparent;
 			font-size: 50px;
 			letter-spacing: 12px;
@@ -25,20 +40,26 @@
 	}
 }
 
-.logo-img {
-	width: 100%;
-	height: auto;
-}
-
 .switcher {
 	@include respond-to(tablets) {
 		order: 3;
 		margin-top: -48px;
 		margin-left: 20px;
 	}
+	@include respond-to(handhelds) {
+		flex-basis: 100%;
+		order: 4;
+		margin-top: -10px;
+	}
 
 	margin-top: 88px;
 	&__item {
+		@include respond-to(handhelds) {
+			width: 50%;
+
+			text-align: center;
+		}
+
 		display: inline-block;
 		padding: 10px;
 		padding-right: 35px;
@@ -100,6 +121,9 @@
 		order: 2;
 		margin-top: 10px;
 		margin-right: 18px;
+	}
+	@include respond-to(handhelds) {
+		display: none;
 	}
 
 	display: flex;
@@ -243,22 +267,36 @@
 	}
 }
 
-.main-menu {
+[role="navigation"] {
 	@include respond-to(tablets) {
 		order: 4;
+	}
+	@include respond-to(handhelds) {
+		flex-basis: auto;
+		order: 1;
+	}
+
+	flex-basis: 100%;
+}
+
+.main-menu {
+	@include respond-to(tablets) {
 		padding-right: 20px;
 		padding-left: 20px;
+	}
+	@include respond-to(handhelds) {
+		display: none;
 	}
 
 	display: flex;
 	justify-content: space-between;
-	flex-basis: 100%;
+	margin: 0;
 	padding-right: 50px;
 	padding-left: 50px;
 	border-top: 1px solid $header-border-color;
 	&__item {
 		display: block;
-		padding: 18px;
+		padding: 18px 0;
 
 		color: $menu-item-color;
 		font-family: $font-stack-OpenSans;
@@ -269,5 +307,96 @@
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+}
+
+.menu-icon {
+	@include respond-to(handhelds) {
+		position: relative;
+		z-index: 1000;
+
+		display: inline-block;
+		width: 23px;
+		height: 3px;
+		margin-top: 30px;
+		margin-left: 20px;
+
+		background-color: $menu-icon-color;
+
+		cursor: pointer;
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: -8px;
+			left: 0;
+
+			width: 23px;
+			height: 3px;
+
+			background-color: $menu-icon-color;
+		}
+		&::after {
+			content: "";
+
+			position: absolute;
+			top: 8px;
+			left: 0;
+
+			width: 23px;
+			height: 3px;
+
+			background-color: $menu-icon-color;
+		}
+		&.is-open {
+			position: fixed;
+			top: 0;
+			& ~ .main-menu {
+				position: fixed;
+				top: -16px;
+				right: 0;
+				bottom: -16px;
+				left: 0;
+				z-index: 200;
+
+				display: block;
+				padding: 0;
+				padding-top: 15px;
+				padding-left: 60px;
+
+				background-color: rgba(0,0,0,.9);
+
+				color: $menu-item-color;
+				list-style: none;
+				li {
+					display: block;
+					padding: 7px;
+				}
+				a {
+					color: $menu-item-color;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.shop {
+	@include respond-to(wide-screens) {
+		display: none;
+	}
+	@include respond-to(medium-screens) {
+		display: none;
+	}
+	@include respond-to(tablets) {
+		display: none;
+	}
+	@include respond-to(handhelds) {
+		order: 3;
+		padding-top: 20px;
+		padding-right: 20px;
 	}
 }

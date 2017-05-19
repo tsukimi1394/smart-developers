@@ -4,6 +4,12 @@
 
 		font-size: $recommendation-font-size-tab;
 	}
+	@include respond-to(handhelds) {
+		padding: 20px 0;
+
+		font-size: $recommendation-font-siz-mob;
+		text-align: left;
+	}
 
 	padding: 50px 0;
 	border-top: 1px solid $border-color;
@@ -11,12 +17,24 @@
 	font-size: $recommendation-font-size;
 	text-align: center;
 	&__text {
+		@include respond-to(handhelds) {
+			display: block;
+			margin-bottom: 20px;
+		}
+
 		margin-right: 20px;
 
 		color: $primary-text-color;
 		font-weight: 600;
 	}
 	&__link {
+		@include respond-to(handhelds) {
+			display: block;
+			margin-right: 0;
+
+			line-height: 24px;
+		}
+
 		color: $link-color;
 		&:not(:last-child) {
 			margin-right: 20px;

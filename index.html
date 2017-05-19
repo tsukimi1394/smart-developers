@@ -11,6 +11,7 @@
   <body>
     <header class="header">
       <div class="header-logo" id="logo"><a href="#">One CLub</a></div>
+      <div class="shop"><a href="#"><img class="shop-img" src="images/mob-shop-bag.png" alt="go shop"></a></div>
       <div class="switcher"><a class="switcher__item icon icon--clock" href="#"><span>Акции</span></a><a class="switcher__item" href="#"><span>Каталог</span></a></div>
       <div class="contact-search">
         <div class="contact"><a class="phone icon icon--phone icon--contact" href="tel: +380443590899"><span class="contact__link">+380 44 359-08-99</span><span>Пн-Вс: 9:00-21:00</span></a><a class="login icon icon--avatar icon--contact" href="#"><span class="contact__link">Войти</span></a><a class="basket icon icon--shopping-cart icon--contact" href="#"><span class="contact__link">Корзина</span></a></div>
@@ -19,7 +20,17 @@
           <button class="search-icon" type="submit"></button>
         </form>
       </div>
-      <nav class="main-menu"><a class="main-menu__item" href="#">Женщинам</a><a class="main-menu__item" href="#">Мужчинам</a><a class="main-menu__item" href="#">Детям</a><a class="main-menu__item" href="#">Косметика</a><a class="main-menu__item" href="#">Для дома</a><a class="main-menu__item" href="#">Бренды</a></nav>
+      <nav role="navigation">
+        <div class="menu-icon" data-toggle-menu></div>
+        <ul class="main-menu">
+          <li><a class="main-menu__item" href="#">Женщинам</a></li>
+          <li><a class="main-menu__item" href="#">Мужчинам</a></li>
+          <li><a class="main-menu__item" href="#">Детям</a></li>
+          <li><a class="main-menu__item" href="#">Косметика</a></li>
+          <li><a class="main-menu__item" href="#">Для дома</a></li>
+          <li><a class="main-menu__item" href="#">Бренды</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
       <nav class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная страница</a><span>/</span><a class="breadcrumbs__item" href="#">Каталог</a><span>/</span><a class="breadcrumbs__item" href="#">Категория 1</a><span>/</span><span class="breadcrumbs__item">Costa Patch Pocket Denim Top</span></nav>
@@ -113,38 +124,41 @@
             <p class="details__text"><span class="details__text-item">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) - бесплатно.</span><span class="details__text-item">2. Курьером по Киеву.</span><span class="details__text-item">3. Сервисом доставки "Нова пошта" по всей Украине.</span></p>
             <p class="details__text"> <b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.</b></p>
           </div>
-          <div class="social"><span class="social__text">Поделиться</span>
+          <div class="social social--before"><span class="social__text">Поделиться</span>
             <div class="social-links"><a class="social__item icon icon--facebook" href="#"></a><a class="social__item icon icon--vk" href="#"></a><a class="social__item icon icon--google-plus" href="#"></a><a class="social__item icon icon--twitter" href="#"></a></div>
           </div>
         </div>
       </section>
       <section class="similar-goods">
-        <h2 class="similar-goods__title">Похожие товары</h2>
+        <h2 class="similar-goods__title icon icon--minus"> <span>Похожие товары</span></h2>
         <div class="similar-goods__block">
           <div class="item">
-            <div class="item__img"><a href="#"><img class="item__img-image" src="images/item-min.jpg" alt="item-img"></a></div>
+            <div class="item__img item--1"><a href="#">Andy Striped Mini Skirt</a></div>
             <h3 class="item__title">Tanya Taylor</h3>
             <h4 class="item__subtitle">Andy Striped Mini Skirt</h4>
             <div class="item__price"><span class="item__price price--old">30 000 грн</span><span class="item__price price--new">15 000 грн</span></div>
           </div>
           <div class="item">
-            <div class="item__img"><a href="#"><img class="item__img-image" src="images/item-min.jpg" alt="item-img"></a></div>
+            <div class="item__img item--2"><a href="#">Andy Striped Mini Skirt</a></div>
             <h3 class="item__title">Tanya Taylor</h3>
             <h4 class="item__subtitle">Andy Striped Mini Skirt</h4>
             <div class="item__price"><span class="item__price price--old">30 000 грн</span><span class="item__price price--new">15 000 грн</span></div>
           </div>
           <div class="item">
-            <div class="item__img"><a href="#"><img class="item__img-image" src="images/item-min.jpg" alt="item-img"></a></div>
+            <div class="item__img item--3"><a href="#">Andy Striped Mini Skirt</a></div>
             <h3 class="item__title">Tanya Taylor</h3>
             <h4 class="item__subtitle">Andy Striped Mini Skirt</h4>
             <div class="item__price"><span class="item__price price--old">30 000 грн</span><span class="item__price price--new">15 000 грн</span></div>
           </div>
           <div class="item">
-            <div class="item__img"><a href="#"><img class="item__img-image" src="images/item-min.jpg" alt="item-img"></a></div>
+            <div class="item__img item--4"><a href="#">Andy Striped Mini Skirt</a></div>
             <h3 class="item__title">Tanya Taylor</h3>
             <h4 class="item__subtitle">Andy Striped Mini Skirt</h4>
             <div class="item__price"><span class="item__price price--old">30 000 грн</span><span class="item__price price--new">15 000 грн</span></div>
           </div>
+        </div>
+        <div class="social social--after"><span class="social__text">Поделиться</span>
+          <div class="social-links"><a class="social__item icon icon--facebook" href="#"></a><a class="social__item icon icon--vk" href="#"></a><a class="social__item icon icon--google-plus" href="#"></a><a class="social__item icon icon--twitter" href="#"></a></div>
         </div>
       </section>
       <section class="recommendation"><span class="recommendation__text">Смотрите также:</span><a class="recommendation__link" href="#">Одежда</a><a class="recommendation__link" href="#">Трикотаж</a><a class="recommendation__link" href="#">Шелк</a><a class="recommendation__link" href="#">Все товары бренда Philipp Plein</a></section>

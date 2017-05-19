@@ -132,7 +132,7 @@ html {
 
 .header-logo {
   width: 168px;
-  background: url(../images/m-logo-min.png) no-repeat;
+  background: url("../images/m-logo-min.png") no-repeat;
 }
 
 .header-logo a {
@@ -1027,7 +1027,7 @@ html {
 }
 
 .popup {
-  font-family: 'HelveticaNeue', Arial, sans-serif;
+  font-family: "HelveticaNeue", Arial, sans-serif;
 }
 
 .popup__header {
