@@ -1,9 +1,12 @@
 .Wallop { 
-  max-width: 480px; 
   display: flex;
   flex-direction: row-reverse;
+  @include respond-to(tablets) {
+    flex-direction: column;
+  }
   &-list {
     margin: 15px;
+    position: relative;
   }
   &-item {
     width: 481px;
@@ -13,8 +16,13 @@
     }
   }
   &-pagination {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     width: 75px;
+    @include respond-to(tablets) {
+      flex-direction: row;
+      width: 100%;
+    }
   }
   &-dot {
     width: 62px;
@@ -66,6 +74,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include respond-to(tablets) {
+      width: 16px;
+      height: 1px;
+    }
   }
   &::before {
     content: '';
@@ -77,6 +89,9 @@
     border-top: solid 1px $inactive-arrow-color;
     border-right: solid 1px $inactive-arrow-color;
     transform: translate(-50%, -50%) rotate(135deg);
+    @include respond-to(tablets) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
   }
   &:hover {
     cursor: pointer;
@@ -101,6 +116,10 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+    @include respond-to(tablets) {
+      width: 16px;
+      height: 1px;
+    }
   }
   &::before {
     content: '';
@@ -112,6 +131,9 @@
     border-top: solid 1px $inactive-arrow-color;
     border-right: solid 1px $inactive-arrow-color;
     transform: translate(50%, -50%) rotate(-45deg);
+    @include respond-to(tablets) {
+      transform: translate(50%, -50%) rotate(-135deg);
+    }
   }
   &:hover {
     cursor: pointer;
