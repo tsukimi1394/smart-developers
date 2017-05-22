@@ -5,10 +5,13 @@
 
 		text-align: center;
 	}
+	@include respond-to(tablets) {
+		padding: 27px 22px;
+	}
 
 	display: flex;
 	justify-content: space-between;
-	padding: 30px 50px;
+	padding: 27px 50px;
 
 	background-color: $footer-background-color;
 
@@ -25,11 +28,12 @@
 			color: $footer-menu-item-color;
 			text-transform: uppercase;
 			text-decoration: none;
+			letter-spacing: -1px;
 			&:first-child {
 				font-weight: 600;
 			}
 			&:not(:last-child) {
-				margin-bottom: 20px;
+				margin-bottom: 15px;
 			}
 			&:not(:first-child) {
 				&:hover {
@@ -55,7 +59,7 @@
 				text-transform: uppercase;
 			}
 			&:not(:last-child) {
-				margin-bottom: 20px;
+				margin-bottom: 17px;
 			}
 			&:not(:first-child) {
 				&:hover {
@@ -70,16 +74,17 @@
 
 			width: 164px;
 			height: 25px;
-			margin: 20px auto;
+			margin: 20px auto 18px;
 
 			background: url('../images/logo-mob-footer-min.png') no-repeat;
 		}
-
-		float: right;
+		@include respond-to(tablets) {
+			width: 237px;
+		}
 
 		width: 240px;
 		height: 37px;
-		margin-bottom: 20px;
+		margin-bottom: 27px;
 
 		background: url('../images/logo-footer-min.png') no-repeat;
 		a {
@@ -106,19 +111,22 @@
 			justify-content: center;
 			margin-top: 5px;
 		}
+		@include respond-to(tablets) {
+			margin-right: -3px;
+		}
 
 		display: flex;
 		justify-content: flex-end;
-		margin-top: 20px;
+		margin-top: 12px;
 		&__item {
-			padding: 8px;
+			padding: 7px;
 			border: 1px solid $footer-social-item-color;
 
 			color: $footer-social-item-color;
 			font-size: $footer-social-font-size;
 			text-decoration: none;
 			&:not(:last-child) {
-				margin-right: 20px;
+				margin-right: 15px;
 			}
 			&:hover {
 				border-color: $white;
@@ -137,6 +145,9 @@
 
 			text-align: center;
 		}
+		@include respond-to(tablets) {
+			letter-spacing: -0.3px;
+		}
 
 		clear: both;
 
@@ -145,6 +156,8 @@
 		color: $footer-text-color;
 		font-size: $footer-text-font-size;
 		text-align: right;
+		letter-spacing: -0.2px;
+		margin-bottom: 7px;
 	}
 }
 
@@ -156,7 +169,7 @@
 	width: 131px;
 	height: 24px;
 	margin-top: 10px;
-	margin-left: 48px;
+	margin-left: 71px;
 	&__img {
 		@include image-fit;
 	}

@@ -392,7 +392,7 @@ html {
   border-radius: 100%;
   background-color: #828282;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -663,7 +663,7 @@ html {
   top: 50%;
   left: 50%;
   color: #000;
-  font-size: 13px;
+  font-size: 14px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -725,7 +725,7 @@ html {
   top: 0;
   left: 0;
   color: #7c7c7c;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .call__text {
@@ -761,7 +761,7 @@ html {
   top: 50%;
   left: 0;
   color: #7c7c7c;
-  font-size: 22px;
+  font-size: 25px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }

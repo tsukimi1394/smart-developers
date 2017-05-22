@@ -1,17 +1,18 @@
 .recommendation {
 	@include respond-to(tablets) {
-		padding: 35px 0;
+		padding: 37px 0;
 
 		font-size: $recommendation-font-size-tab;
+		letter-spacing: -0.5px;
 	}
 	@include respond-to(handhelds) {
-		padding: 20px 0;
+		padding: 20px 17px;
 
 		font-size: $recommendation-font-siz-mob;
 		text-align: left;
 	}
 
-	padding: 50px 0;
+	padding: 49px 0;
 	border-top: 1px solid $border-color;
 
 	font-size: $recommendation-font-size;
@@ -19,10 +20,8 @@
 	&__text {
 		@include respond-to(handhelds) {
 			display: block;
-			margin-bottom: 20px;
+			margin-bottom: 18px;
 		}
-
-		margin-right: 20px;
 
 		color: $primary-text-color;
 		font-weight: 600;
@@ -31,14 +30,15 @@
 		@include respond-to(handhelds) {
 			display: block;
 			margin-right: 0;
+			margin-top: -1px;
+			margin-left: 2px;
 
 			line-height: 24px;
 		}
 
+		margin-left: 20px;
+
 		color: $link-color;
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
 		&:hover {
 			color: $primary-text-color;
 		}

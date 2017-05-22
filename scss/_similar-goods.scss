@@ -1,6 +1,6 @@
 .similar-goods {
 	@include respond-to(handhelds) {
-		padding: 20px 0;
+		padding: 17px 19px;
 	}
 
 	border-top: 1px solid $border-color;
@@ -14,6 +14,13 @@
 			font-size: $similar-goods-title-font-size-mob;
 			text-align: left;
 		}
+		@include respond-to(tablets) {
+			margin-top: 30px;
+			letter-spacing: -1.5px;
+			margin-bottom: 17px;
+		}
+
+		margin-bottom: 56px;
 
 		font-weight: 300;
 		font-size: $similar-goods-title-font-size;
@@ -48,6 +55,10 @@
 	&__block {
 		@include respond-to(handhelds) {
 			flex-flow: wrap;
+			margin-bottom: 11px;
+		}
+		@include respond-to(tablets) {
+			padding: 0 20px;
 		}
 
 		display: flex;
@@ -56,20 +67,41 @@
 }
 
 .item {
-	margin-bottom: 26px;
+	margin: 0 4px;
+	margin-bottom: 24px;
+	&:nth-child(2n) {
+		.item__title, .item__subtitle {
+			margin-left: -13px;
+		}
+		.item__price {
+			margin-left: -6px;
+		}
+		.item__price.price--old {
+			margin-right: 18px;
+		}
+	}
+	@include respond-to(tablets) {
+		margin: 0;
+		margin-bottom: 19px;
+	}
+	@include respond-to(handhelds) {
+		margin: 0 1px;
+		margin-bottom: 13px;
+	}
 	&__img {
 		@include respond-to(tablets) {
-			width: 149px;
-			height: 223px;
+			width: 154px;
+			height: 205px;
 		}
 		@include respond-to(handhelds) {
 			width: 119px;
 			height: 179px;
+			margin-bottom: 7px;
 		}
 
 		width: 205px;
 		height: 273px;
-		margin-bottom: 10px;
+		margin-bottom: 9px;
 
 		background: url('../images/item-min.jpg') no-repeat;
 		background-size: 100%;
@@ -116,63 +148,78 @@
 		}
 		@include respond-to(handhelds) {
 			font-size: $similar-good-title-font-size-mob;
+			margin-left: -1px;
+			letter-spacing: -0.6px;
+			margin-bottom: 3px;		
 		}
 
 		margin: 0;
+		margin-bottom: 1px;
 
 		font-weight: 400;
 		font-size: $similar-good-title-font-size;
+		letter-spacing: -0.5px;
 	}
 	&__subtitle {
 		@include respond-to(tablets) {
 			font-size: $similar-good-subtitle-font-size-tab;
+			letter-spacing: -0.1px;
 		}
 		@include respond-to(handhelds) {
 			font-size: $similar-good-subtitle-font-size-mob;
+			letter-spacing: 0;
 		}
 
 		margin: 0;
 
 		font-weight: 200;
 		font-size: $similar-good-subtitle-font-size;
+		letter-spacing: 0.1px;
 	}
 	&__price {
 		@include respond-to(tablets) {
-			margin-top: 5px;
+			margin-top: 4px;
 
 			font-size: $similar-good-price-font-size-tab;
 		}
 		@include respond-to(handhelds) {
-			margin-top: 5px;
+			margin-top: 3px;
 
 			font-size: $similar-good-price-font-size-mob;
 		}
 
-		margin-top: 13px;
+		margin-top: 11px;
 
 		font-size: $similar-good-price-font-size;
 		&.price--old {
 			@include respond-to(tablets) {
 				display: inline-block;
+				letter-spacing: -0.1px;
+				margin-right: 12px;
 			}
 			@include respond-to(handhelds) {
 				display: inline-block;
+				letter-spacing: 0;
+				margin-right: 10px;
 			}
 
-			margin-right: 5px;
+			margin-right: 7px;
 
 			color: $old-price-color;
+			letter-spacing: 0.4px;
 			text-decoration: line-through;
 		}
 		&.price--new {
 			@include respond-to(tablets) {
 				display: inline-block;
+				letter-spacing: 0.1px;
 			}
 			@include respond-to(handhelds) {
 				display: inline-block;
 			}
 
 			color: $new-price-color;
+			letter-spacing: 0.2px;
 		}
 	}
 }

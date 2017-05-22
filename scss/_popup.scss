@@ -9,18 +9,22 @@
 	overflow: hidden;
 	min-width: 100%;
 	min-height: 100%;
+	display: none;
 
 	background-color: rgba(0, 0, 0, 0.5);
 	&__content {
 		@include respond-to(handhelds) {
 			width: 260px;
 			height: 675px;
-			margin: 20px auto;
+			margin: 10px auto;
+		}
+		@include respond-to(tablets) {
+			margin: 87px auto;
 		}
 
 		width: 635px;
 		height: 358px;
-		margin: 100px auto;
+		margin: 128px auto;
 	}
 }
 
@@ -28,14 +32,14 @@
 	font-family: $font-stack-Helvetica;
 	&__header {
 		@include respond-to(handhelds) {
-			padding: 10px 100px 9px 8px;
+			padding: 6px 122px 7px 8px;
 
 			font-size: $popup-header-font-size-mob;
 		}
 
 		position: relative;
 
-		padding: 12px 36px 10px;
+		padding: 9px 36px 7px;
 
 		background-color: $popup-header-background-color;
 
@@ -44,10 +48,12 @@
 	&__title {
 		@include respond-to(handhelds) {
 			font-size: $popup-header-font-size-mob;
+			letter-spacing: -0.6px;
 		}
 
 		font-size: $popup-header-font-size;
 		text-transform: uppercase;
+		letter-spacing: -0.7px;
 	}
 	&-close {
 		@include respond-to(handhelds) {
@@ -79,14 +85,15 @@
 		background-color: $popup-main-background-color;
 		&-title {
 			@include respond-to(handhelds) {
-				padding: 20px 0;
+				padding: 27px 0;
 			}
 
 			display: block;
-			padding: 40px 0;
+			padding: 38px 0 35px;
 
 			font-size: $popup-title-font-size;
 			text-align: center;
+			letter-spacing: -0.2px;
 			b {
 				margin: 5px;
 			}
@@ -104,9 +111,9 @@
 			&-item {
 				@include respond-to(handhelds) {
 					margin-top: 0;
-					margin-bottom: 25px;
-					padding-top: 25px;
-					padding-bottom: 23px;
+					margin-bottom: 36px;
+					padding-top: 33px;
+					padding-bottom: 44px;
 					border-top: 1px solid $border-color;
 
 					font-size: $popup-content-font-size;
@@ -114,9 +121,9 @@
 
 				position: relative;
 
-				margin-top: 50px;
-				margin-bottom: 15px;
-				padding-bottom: 40px;
+				margin-top: 48px;
+				margin-bottom: 14px;
+				padding-bottom: 29px;
 
 				font-size: $popup-content-font-size;
 			}
@@ -131,11 +138,16 @@
 
 		font-size: $popup-title-font-size;
 		text-align: center;
+		letter-spacing: -0.6px;
+		@include respond-to(handhelds) {
+			letter-spacing: -0.7px;
+		}
 	}
 	&-text {
 		display: block;
 
 		text-align: center;
+		letter-spacing: -0.5px;
 		a {
 			color: $primary-text-color;
 			text-decoration: none;
@@ -153,5 +165,6 @@
 		text-align: center;
 
 		transform: translateX(-50%);
+		letter-spacing: -0.5px;
 	}
 }

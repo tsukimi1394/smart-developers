@@ -11,16 +11,21 @@
   &-list {
     position: relative;
 
-    margin: 15px;
+    margin: 4px 30px;
   }
   &-item {
     @include respond-to(handhelds) {
-      width: 260px;
-      height: 347px;
+      width: 228px;
+      height: 342px;
+    }
+    @include respond-to(tablets) {
+      height: 547px;
+      width: 430px;
     }
 
+    overflow: hidden;
     width: 481px;
-    height: 641px;
+    height: 633px;
     &-img {
       @include image-fit;
     }
@@ -29,12 +34,14 @@
     @include respond-to(tablets) {
       flex-direction: row;
       width: 100%;
+      margin-top: 13px;
     }
     @include respond-to(handhelds) {
       flex-direction: row;
       justify-content: space-between;
       align-self: center;
-      width: 62px;
+      width: 70px;
+      margin-top: 15px;
     }
 
     display: flex;
@@ -48,10 +55,14 @@
 
       border-radius: 100%;
     }
+    @include respond-to(tablets) {
+      width: 64px;
+      height: 83px;
+    }
 
-    width: 62px;
-    height: 91px;
-    margin: 10px auto;
+    width: 73px;
+    height: 97px;
+    margin: 4px auto;
     border: 2px solid transparent;
 
     outline: none;
@@ -60,6 +71,14 @@
         background: none;
         background-color: $slider-dots-inactive-color;
       }
+      @include respond-to(tablets) {
+        margin-top: 4px;
+      }
+      @include respond-to(handhelds) {
+        margin-top: 4px;
+      }
+
+      margin-top: 7px;
 
       background: url('../images/photo1-min.jpg') no-repeat;
       background-size: 100%;
@@ -87,6 +106,14 @@
         background: none;
         background-color: $slider-dots-inactive-color;
       }
+      @include respond-to(tablets) {
+        margin-bottom: 4px;
+      }
+      @include respond-to(handhelds) {
+        margin-bottom: 4px;
+      }
+
+      margin-bottom: 7px;
 
       background: url('../images/photo4-min.jpg') no-repeat;
       background-size: 100%;
@@ -113,7 +140,7 @@
   position: relative;
 
   display: block;
-  margin: 20px auto;
+  margin: 15px auto;
   border-color: transparent;
 
   background-color: transparent;
@@ -123,7 +150,7 @@
 .Wallop-buttonNext {
   &::after {
     @include respond-to(tablets) {
-      width: 16px;
+      width: 24px;
       height: 1px;
     }
 
@@ -134,7 +161,7 @@
     left: 50%;
 
     width: 1px;
-    height: 16px;
+    height: 24px;
 
     background-color: $inactive-arrow-color;
 
@@ -151,8 +178,8 @@
     top: 50%;
     left: 50%;
 
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border-top: solid 1px $inactive-arrow-color;
     border-right: solid 1px $inactive-arrow-color;
 
@@ -176,7 +203,7 @@
 .Wallop-buttonPrevious {
   &::after {
     @include respond-to(tablets) {
-      width: 16px;
+      width: 24px;
       height: 1px;
     }
 
@@ -187,7 +214,7 @@
     right: 50%;
 
     width: 1px;
-    height: 16px;
+    height: 24px;
 
     background-color: $inactive-arrow-color;
 
@@ -204,8 +231,8 @@
     top: 50%;
     right: 50%;
 
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border-top: solid 1px $inactive-arrow-color;
     border-right: solid 1px $inactive-arrow-color;
 

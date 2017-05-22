@@ -20,13 +20,13 @@ html {
 
 .main {
 	@include respond-to(tablets) {
-		padding: 27px 20px;
+		padding: 26px 15px;
 	}
 	@include respond-to(handhelds) {
-		padding: 20px;
+		padding: 0;
 	}
 
 	position: relative;
 
-	padding: 20px 120px;
+	padding: 28px 124px;
 }
