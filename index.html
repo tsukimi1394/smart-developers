@@ -15,10 +15,12 @@
       <div class="switcher"><a class="switcher__item icon icon--clock" href="#"><span>Акции</span></a><a class="switcher__item" href="#"><span>Каталог</span></a></div>
       <div class="contact-search">
         <div class="contact"><a class="phone icon icon--phone icon--contact" href="tel: +380443590899"><span class="contact__link">+380 44 359-08-99</span><span>Пн-Вс: 9:00-21:00</span></a><a class="login icon icon--avatar icon--contact" href="#"><span class="contact__link">Войти</span></a><a class="basket icon icon--shopping-cart icon--contact" href="#"><span class="contact__link">Корзина</span><span class="contact__number">2</span></a></div>
-        <form class="search" action="#">
-          <input class="search__input" type="search" placeholder="Поиск...">
-          <button class="search-icon" type="submit"></button>
-        </form>
+        <div class="search-wrapper">
+          <form class="search" action="#">
+            <input class="search__input" type="search" placeholder="Поиск...">
+            <button class="search-icon" type="submit"></button>
+          </form>
+        </div>
       </div>
       <nav role="navigation">
         <div class="menu-icon" data-toggle-menu></div>
@@ -84,39 +86,39 @@
             <div class="call icon icon--phone"><span class="call__text">Оформить заказ по телефону</span><a class="call__number" href="tel: +380954589846">+38 095 458-98-46</a><span class="call__number-text">или</span><a class="call__number" href="tel: +380443590899">+38 044 359-08-99</a></div>
             <div class="location icon icon--location-pin"><a class="location__text" href="javascript:PopUpShow()">Наличие в бутиках ONE CLUB</a></div>
           </div>
-          <div class="details">
-            <h3 class="details__title icon icon--minus"> <span>Описание и детали</span></h3>
-            <dl class="details__item">
-              <dt class="details__item-title">Состав:</dt>
-              <dd class="details__item-value">100% трикотаж</dd>
-              <dt class="details__item-title">Сезон:</dt>
-              <dd class="details__item-value">демисезон</dd>
-              <dt class="details__item-title">Детали:</dt>
-              <dd class="details__item-value">Облегающая модель выполнена из гладкого трикотажа.</dd>
+          <div class="accordion">
+            <h3 class="accordion__title icon icon--minus"> <span>Описание и детали</span></h3>
+            <dl class="accordion__item">
+              <dt class="accordion__item-title">Состав:</dt>
+              <dd class="accordion__item-value">100% трикотаж</dd>
+              <dt class="accordion__item-title">Сезон:</dt>
+              <dd class="accordion__item-value">демисезон</dd>
+              <dt class="accordion__item-title">Детали:</dt>
+              <dd class="accordion__item-value">Облегающая модель выполнена из гладкого трикотажа.</dd>
             </dl>
-            <dl class="details__code">
-              <dt class="details__code-title">Код товара:</dt>
-              <dd class="details__code-number">1234-5678-8765-4321</dd>
+            <dl class="accordion__code">
+              <dt class="accordion__code-title">Код товара:</dt>
+              <dd class="accordion__code-number">1234-5678-8765-4321</dd>
             </dl>
           </div>
-          <div class="details">
-            <h3 class="details__title icon icon--minus"> <span>Измерения</span></h3>
-            <div class="details__item"><b>Размер вещи на фото:</b>S</div>
-            <div class="details__info">
-              <p class="details__text">Обхват груди: 85 см</p>
-              <p class="details__text">Обхват талии: 61 см</p>
-              <p class="details__text">Обхват бедер: 89 см</p>
-              <p class="details__text">Рост: 175 см</p>
+          <div class="accordion">
+            <h3 class="accordion__title icon icon--minus"> <span>Измерения</span></h3>
+            <div class="accordion__item"><b>Размер вещи на фото:</b>S</div>
+            <div class="accordion__info">
+              <p class="accordion__text">Обхват груди: 85 см</p>
+              <p class="accordion__text">Обхват талии: 61 см</p>
+              <p class="accordion__text">Обхват бедер: 89 см</p>
+              <p class="accordion__text">Рост: 175 см</p>
             </div>
-            <p class="details__text"> <b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <a href="#">таблицей размеров</a>, или обратитесь к нашему консультанту</b></p>
+            <p class="accordion__text"> <b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <a href="#">таблицей размеров</a>, или обратитесь к нашему консультанту</b></p>
           </div>
-          <div class="details">
-            <h3 class="details__title icon icon--minus"> <span>Доставка и возврат</span></h3>
-            <div class="details__item"><b>Ожидаемая дата доставки:</b>21.09.2016 - 23.09.2016</div>
-            <p class="details__text"> <b>Бесплатная доставка при заказе от 2000 грн, а также при оплате банковской картой.</b></p>
-            <p class="details__text"> <b>Вы можете выбрать любой удобный способ доставки:</b></p>
-            <p class="details__text"><span class="details__text-item">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) - бесплатно.</span><span class="details__text-item">2. Курьером по Киеву.</span><span class="details__text-item">3. Сервисом доставки "Нова пошта" по всей Украине.</span></p>
-            <p class="details__text"> <b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.</b></p>
+          <div class="accordion">
+            <h3 class="accordion__title icon icon--minus"> <span>Доставка и возврат</span></h3>
+            <div class="accordion__item"><b>Ожидаемая дата доставки:</b>21.09.2016 - 23.09.2016</div>
+            <p class="accordion__text"> <b>Бесплатная доставка при заказе от 2000 грн, а также при оплате банковской картой.</b></p>
+            <p class="accordion__text"> <b>Вы можете выбрать любой удобный способ доставки:</b></p>
+            <p class="accordion__text"><span class="accordion__text-item">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) - бесплатно.</span><span class="accordion__text-item">2. Курьером по Киеву.</span><span class="accordion__text-item">3. Сервисом доставки "Нова пошта" по всей Украине.</span></p>
+            <p class="accordion__text"> <b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.</b></p>
           </div>
           <div class="social social--before"><span class="social__text">Поделиться</span>
             <div class="social-links"><a class="social__item icon icon--facebook" href="#"></a><a class="social__item icon icon--vk" href="#"></a><a class="social__item icon icon--google-plus" href="#"></a><a class="social__item icon icon--twitter" href="#"></a></div>

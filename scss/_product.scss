@@ -834,7 +834,7 @@
 	}
 }
 
-.details {
+.accordion {
 	padding: 16px 0;
 	border-top: 1px solid $border-color;
 	@include respond-to(tablets) {
@@ -848,12 +848,12 @@
 		@include respond-to(tablets) {
 			margin-bottom: 18px;
 
-			font-size: $details-title-font-size-tab;
+			font-size: $accordion-title-font-size-tab;
 		}
 		@include respond-to(handhelds) {
 			margin-bottom: 19px;
 
-			font-size: $details-title-font-size-mob;
+			font-size: $accordion-title-font-size-mob;
 		}
 
 		position: relative;
@@ -863,16 +863,16 @@
 		padding-left: 3px;
 
 		font-weight: 300;
-		font-size: $details-title-font-size;
+		font-size: $accordion-title-font-size;
 		letter-spacing: -0.3px;
 		&:hover {
 			cursor: pointer;
 		}
 		&.icon--plus {
-			& ~ .details__item,
-			& ~ .details__code,
-			& ~ .details__info,
-			& ~ .details__text {
+			& ~ .accordion__item,
+			& ~ .accordion__code,
+			& ~ .accordion__info,
+			& ~ .accordion__text {
 				display: none;
 			}
 		}
@@ -890,7 +890,7 @@
 			font-family: $font-stack-Helvetica;
 		}
 	}
-	dl.details__item {
+	dl.accordion__item {
 		margin: 0;
 		margin-top: -5px;
 		@include respond-to(tablets) {
@@ -905,16 +905,16 @@
 	}
 	&__item {
 		@include respond-to(tablets) {
-			font-size: $details-item-font-size-tab;
+			font-size: $accordion-item-font-size-tab;
 			margin-left: 5px;
 			margin-top: -1px;
 		}
 		@include respond-to(handhelds) {
-			font-size: $details-item-font-size-mob;
+			font-size: $accordion-item-font-size-mob;
 			margin-left: 5px;
 		}
 
-		font-size: $details-item-font-size;
+		font-size: $accordion-item-font-size;
 		&-title {
 			display: inline-block;
 
@@ -944,19 +944,19 @@
 			margin-top: 16px;
 			margin-left: 5px;
 
-			font-size: $details-item-font-size-tab;
+			font-size: $accordion-item-font-size-tab;
 		}
 		@include respond-to(handhelds) {
 			margin-top: 16px;
 			margin-left: 5px;
 
-			font-size: $details-item-font-size-mob;
+			font-size: $accordion-item-font-size-mob;
 		}
 
 		margin-top: 20px;
 		margin-bottom: 5px;
 
-		font-size: $details-item-font-size;
+		font-size: $accordion-item-font-size;
 		&-title {
 			display: inline-block;
 
@@ -996,19 +996,19 @@
 			margin-left: 5px;
 			line-height: 14px;
 
-			font-size: $details-item-font-size-tab;
+			font-size: $accordion-item-font-size-tab;
 		}
 		@include respond-to(handhelds) {
 			margin: 0;
 
-			font-size: $details-item-font-size-mob;
+			font-size: $accordion-item-font-size-mob;
 			line-height: 14px;
 		}
 
 		margin: 0;
 		margin-bottom: 1px;
 
-		font-size: $details-item-font-size;
+		font-size: $accordion-item-font-size;
 		line-height: 16px;
 		letter-spacing: -0.2px;
 		b {
@@ -1055,29 +1055,29 @@
 	}
 	&:nth-last-child(2) {
 		@include respond-to(tablets) {
-			.details__item {
+			.accordion__item {
 				b {
 					display: block;
 				}
 			}
-			.details__text {
+			.accordion__text {
 				b { 
 					padding-right: 10px;
 				}
 			}
 		}
 		@include respond-to(handhelds) {
-			.details__title {
+			.accordion__title {
 				letter-spacing: 0.1px;
 				margin-bottom: 21px;
 			}
-			.details__item {
+			.accordion__item {
 				b {
 					display: block;
 				}
 				margin-bottom: 8px;
 			}
-			.details__text {
+			.accordion__text {
 				b { 
 					padding-right: 9px;
 					margin-top: 8px;

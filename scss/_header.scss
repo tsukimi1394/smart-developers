@@ -314,10 +314,11 @@
 
 .search {
 	position: relative;
-
-	align-self: flex-end;
-	width: 221px;
-	margin-bottom: 11px;
+	&-wrapper {
+		width: 221px;
+		align-self: flex-end;
+		margin-bottom: 11px;
+	}
 	@include respond-to(tablets) {
 		margin-bottom: 9px;
 	}

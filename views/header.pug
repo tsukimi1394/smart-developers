@@ -19,9 +19,10 @@ header(class="header")
 			a(href="#", class="basket icon icon--shopping-cart icon--contact")
 				span(class="contact__link") Корзина
 				span(class="contact__number") 2
-		form(action="#", class="search")
-			input(type="search", placeholder="Поиск...", class="search__input")
-			button(type="submit", class="search-icon")
+		div(class="search-wrapper")
+			form(action="#", class="search")
+				input(type="search", placeholder="Поиск...", class="search__input")
+				button(type="submit", class="search-icon")
 	nav(role="navigation")
 		div(class="menu-icon", data-toggle-menu)
 		ul(class="main-menu")

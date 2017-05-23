@@ -478,7 +478,7 @@
 	}
 }
 
-.details {
+.accordion {
 	padding: 20px 0;
 	border-top: 1px solid $border-color;
 	&__title {
@@ -488,7 +488,7 @@
 		margin-bottom: 18px;
 
 		font-weight: 300;
-		font-size: $details-title-font-size-mob;
+		font-size: $accordion-title-font-size-mob;
 		&:hover {
 			cursor: pointer;
 		}
@@ -503,16 +503,16 @@
 			font-family: $font-stack-Helvetica
 		}
 		&.icon--plus {
-			& ~ .details__item,
-			& ~ .details__code,
-			& ~ .details__info,
-			& ~ .details__text {
+			& ~ .accordion__item,
+			& ~ .accordion__code,
+			& ~ .accordion__info,
+			& ~ .accordion__text {
 				display: none;
 			}
 		}
 	}
 	&__item {
-		font-size: $details-item-font-size-mob;
+		font-size: $accordion-item-font-size-mob;
 		&-title {
 			display: inline-block;
 			margin-right: 5px;
@@ -534,7 +534,7 @@
 	&__code {
 		margin-top: 14px;
 
-		font-size: $details-item-font-size-mob;
+		font-size: $accordion-item-font-size-mob;
 		&-title {
 			display: inline-block;
 			margin-right: 5px;
@@ -556,7 +556,7 @@
 	&__text {
 		margin: 0;
 
-		font-size: $details-item-font-size-mob;
+		font-size: $accordion-item-font-size-mob;
 		b {
 			display: inline-block;
 			margin-top: 20px;

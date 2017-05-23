@@ -774,12 +774,12 @@ html {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-.details {
+.accordion {
   padding: 20px 0;
   border-top: 1px solid #dedede;
 }
 
-.details__title {
+.accordion__title {
   position: relative;
   margin: 0;
   margin-bottom: 18px;
@@ -787,11 +787,11 @@ html {
   font-size: 18px;
 }
 
-.details__title:hover {
+.accordion__title:hover {
   cursor: pointer;
 }
 
-.details__title::before {
+.accordion__title::before {
   position: absolute;
   top: 50%;
   right: 0;
@@ -799,78 +799,78 @@ html {
   transform: translateY(-50%);
 }
 
-.details__title span {
+.accordion__title span {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-.details__title.icon--plus ~ .details__item,
-.details__title.icon--plus ~ .details__code,
-.details__title.icon--plus ~ .details__info,
-.details__title.icon--plus ~ .details__text {
+.accordion__title.icon--plus ~ .accordion__item,
+.accordion__title.icon--plus ~ .accordion__code,
+.accordion__title.icon--plus ~ .accordion__info,
+.accordion__title.icon--plus ~ .accordion__text {
   display: none;
 }
 
-.details__item {
+.accordion__item {
   font-size: 12px;
 }
 
-.details__item-title {
+.accordion__item-title {
   display: inline-block;
   margin-right: 5px;
   font-weight: 600;
   vertical-align: top;
 }
 
-.details__item-value {
+.accordion__item-value {
   display: inline-block;
   width: 80%;
   margin: 0;
 }
 
-.details__item b {
+.accordion__item b {
   margin-right: 5px;
   font-weight: bold;
 }
 
-.details__code {
+.accordion__code {
   margin-top: 14px;
   font-size: 12px;
 }
 
-.details__code-title {
+.accordion__code-title {
   display: inline-block;
   margin-right: 5px;
   font-weight: 600;
   vertical-align: top;
 }
 
-.details__code-number {
+.accordion__code-number {
   display: inline-block;
   width: 70%;
   margin: 0;
   color: #a7a7a7;
 }
 
-.details__info {
+.accordion__info {
   margin-top: 20px;
 }
 
-.details__text {
+.accordion__text {
   margin: 0;
   font-size: 12px;
 }
 
-.details__text b {
+.accordion__text b {
   display: inline-block;
   margin-top: 20px;
   font-weight: bold;
 }
 
-.details__text b a {
+.accordion__text b a {
   color: #000;
 }
 
-.details__text-item {
+.accordion__text-item {
   display: block;
   padding-right: 30px;
 }

@@ -29,7 +29,7 @@ $(document).ready(function() {
 	});
 });
 
-$('.details__title').on("click", function(){
+$('.accordion__title').on("click", function(){
 	$(this).toggleClass("icon--plus");
 });
 
