@@ -70,8 +70,6 @@
 	}
 	&-logo {
 		@include respond-to(handhelds) {
-			float: none;
-
 			width: 164px;
 			height: 25px;
 			margin: 20px auto 18px;
