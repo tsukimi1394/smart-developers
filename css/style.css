@@ -80,34 +80,13 @@
   content: "";
 }
 
-@font-face {
-  font-family: 'HelveticaNeue';
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/helveticaneue_light-webfont.woff") format("woff"), url("../fonts/helveticaneue_light-webfont.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'HelveticaNeue';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/helveticaneue_medium-webfont.woff") format("woff"), url("../fonts/helveticaneue_medium-webfont.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'HelveticaNeue';
-  font-style: normal;
-  font-weight: 200;
-  src: url("../fonts/helveticaneue_thin-webfont.woff") format("woff"), url("../fonts/helveticaneue_thin-webfont.woff2") format("woff2");
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 html {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
@@ -143,7 +122,7 @@ html {
 
 .header-logo a {
   color: transparent;
-  font-size: 50px;
+  font-size: 48px;
   letter-spacing: 12px;
   word-spacing: 7px;
 }
@@ -187,7 +166,7 @@ html {
 }
 
 .switcher__item span {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   vertical-align: top;
@@ -237,7 +216,7 @@ html {
   display: block;
   padding-left: 34px;
   color: #fff;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
 }
 
 .contact__link {
@@ -245,7 +224,7 @@ html {
   display: inline-block;
   padding-bottom: 6px;
   color: #fff;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   font-size: 15px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -346,7 +325,7 @@ html {
   background-color: #000;
   outline: none;
   color: #fff;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 1px;
@@ -420,7 +399,7 @@ html {
   display: block;
   padding: 13px 0;
   color: #fff;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
   letter-spacing: -0.5px;
@@ -465,7 +444,7 @@ html {
 .time-left__text {
   display: block;
   color: #000;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   letter-spacing: -0.4px;
 }
@@ -473,7 +452,7 @@ html {
 .time-left__time {
   display: block;
   color: #f68235;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -636,7 +615,7 @@ html {
   width: 35px;
   height: 35px;
   margin-right: 7px;
-  padding: 8px 10px;
+  padding: 8px 9px;
   border: 1px solid #ccc;
   color: #000;
   text-align: center;
@@ -654,6 +633,7 @@ html {
 
 .size__pic:hover {
   border: 2px solid #000;
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -669,7 +649,7 @@ html {
 }
 
 .size__fit span {
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -736,7 +716,7 @@ html {
   border: 1px solid #dedede;
   outline: none;
   color: #000;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   font-weight: 600;
   text-align: center;
 }
@@ -834,7 +814,7 @@ html {
 
 .like span {
   color: #000;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   letter-spacing: -0.5px;
   text-transform: uppercase;
 }
@@ -902,7 +882,7 @@ html {
   margin-bottom: 8px;
   padding-left: 30px;
   color: #000;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.1px;
 }
 
@@ -910,7 +890,7 @@ html {
   margin-right: 10px;
   margin-left: 10px;
   color: #999;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.1px;
 }
 
@@ -920,7 +900,7 @@ html {
 
 .call__number-text {
   color: #999;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .call__number:hover {
@@ -946,7 +926,7 @@ html {
   margin-bottom: 3px;
   padding-left: 32px;
   color: #000;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.1px;
 }
 
@@ -987,7 +967,7 @@ html {
 }
 
 .details__title span {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .details dl.details__item {
@@ -1117,7 +1097,7 @@ html {
 }
 
 .similar-goods__title span {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .similar-goods__title.icon--plus ~ .similar-goods__block {
@@ -1291,7 +1271,7 @@ html {
 }
 
 .popup {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .popup__header {
@@ -1395,7 +1375,7 @@ html {
   justify-content: space-between;
   padding: 27px 50px;
   background-color: #000;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
 }
 
 .footer__main-menu {

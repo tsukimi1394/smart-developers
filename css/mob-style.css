@@ -108,7 +108,7 @@
 
 html {
   max-width: 620px;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
@@ -509,7 +509,7 @@ html {
 }
 
 .size__fit span {
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   font-size: 12px;
 }
 
@@ -575,7 +575,7 @@ html {
   border: 1px solid #dedede;
   outline: none;
   color: #000;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   font-weight: 600;
   text-align: center;
 }
@@ -733,7 +733,7 @@ html {
   margin-bottom: 10px;
   padding-left: 30px;
   color: #000;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .call__number {
@@ -741,7 +741,7 @@ html {
   margin-bottom: 10px;
   padding-left: 30px;
   color: #999;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .call__number:hover {
@@ -771,7 +771,7 @@ html {
   margin-bottom: 10px;
   padding-left: 30px;
   color: #000;
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .details {
@@ -800,7 +800,7 @@ html {
 }
 
 .details__title span {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .details__title.icon--plus ~ .details__item,
@@ -897,7 +897,7 @@ html {
 }
 
 .similar-goods__title span {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .similar-goods__title.icon--plus ~ .similar-goods__block,
@@ -1027,7 +1027,7 @@ html {
 }
 
 .popup {
-  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .popup__header {
@@ -1135,7 +1135,7 @@ html {
   justify-content: space-between;
   padding: 25px;
   background-color: #000;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
   text-align: center;
 }
 
