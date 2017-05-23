@@ -254,24 +254,23 @@ html {
   font-size: 15px;
 }
 
-.basket {
-  position: relative;
-}
-
-.basket::after {
-  content: "2";
+.contact span.contact__number {
   position: absolute;
   top: -13px;
   left: 17px;
   width: 14px;
   height: 14px;
-  padding: 1px;
+  padding: 2px;
   border-radius: 100%;
   background-color: #fff;
   color: #000;
   font-weight: bold;
   font-size: 12px;
   text-align: center;
+}
+
+.basket {
+  position: relative;
 }
 
 .phone {

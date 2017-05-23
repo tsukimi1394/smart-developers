@@ -240,20 +240,14 @@
 			}
 		}
 	}
-}
-
-.basket {
-	position: relative;
-	&::after {
-		content: "2";
-
+	span.contact__number {
 		position: absolute;
 		top: -13px;
 		left: 17px;
 
 		width: 14px;
 		height: 14px;
-		padding: 1px;
+		padding: 2px;
 
 		border-radius: 100%;
 		background-color: $white;
@@ -263,6 +257,10 @@
 		font-size: 12px;
 		text-align: center;
 	}
+}
+
+.basket {
+	position: relative;
 }
 
 .phone {
