@@ -29,8 +29,8 @@
 	&__link {
 		@include respond-to(handhelds) {
 			display: block;
-			margin-right: 0;
 			margin-top: -1px;
+			margin-right: 0;
 			margin-left: 2px;
 
 			line-height: 24px;

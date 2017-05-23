@@ -26,9 +26,9 @@
 			display: block;
 
 			color: $footer-menu-item-color;
+			letter-spacing: -1px;
 			text-transform: uppercase;
 			text-decoration: none;
-			letter-spacing: -1px;
 			&:first-child {
 				font-weight: 600;
 			}
@@ -150,12 +150,12 @@
 		clear: both;
 
 		display: block;
+		margin-bottom: 7px;
 
 		color: $footer-text-color;
 		font-size: $footer-text-font-size;
-		text-align: right;
 		letter-spacing: -0.2px;
-		margin-bottom: 7px;
+		text-align: right;
 	}
 }
 

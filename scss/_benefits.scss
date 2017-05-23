@@ -2,13 +2,13 @@
 	@include respond-to(handhelds) {
 		display: none;
 	}
+	@include respond-to(tablets) {
+		padding-top: 27px;
+	}
 
 	display: flex;
 	padding-top: 25px;
 	border-top: 1px solid $border-color;
-	@include respond-to(tablets) {
-		padding-top: 27px;
-	}
 	&__item {
 		flex: 1;
 
@@ -18,8 +18,9 @@
 		}
 		&-title {
 			@include respond-to(tablets) {
-				font-size: $benefits-title-font-size-tab;
 				margin-bottom: 7px;
+
+				font-size: $benefits-title-font-size-tab;
 			}
 
 			margin-top: 8px;
@@ -56,10 +57,11 @@
 		}
 		&:last-child {
 			.benefits__item-text {
-				padding: 0 37px;
 				@include respond-to(tablets) {
 					padding: 0 25px;
 				}
+
+				padding: 0 37px;
 			}
 		}
 	}

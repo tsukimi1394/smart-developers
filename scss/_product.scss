@@ -32,6 +32,10 @@
 	}
 	&.icon--clock {
 		&::before {
+			@include respond-to(tablets) {
+				font-size: $clock-size-tab;
+			}
+
 			position: absolute;
 			top: 50%;
 			left: 10px;
@@ -40,9 +44,6 @@
 			font-size: $clock-size;
 
 			transform: translateY(-50%);
-			@include respond-to(tablets) {
-				font-size: $clock-size-tab;
-			}
 		}
 	}
 }
@@ -67,16 +68,18 @@
 	}
 	&__title {
 		@include respond-to(tablets) {
+			margin-bottom: 9px;
+
 			font-size: $product-title-font-size-tab;
 			letter-spacing: -0.2px;
-			margin-bottom: 9px;
 		}
 		@include respond-to(handhelds) {
+			margin-left: 20px;
+
 			color: $primary-text-color;
 			font-weight: 400;
 			font-size: $product-title-font-size-mob;
 			letter-spacing: -0.3px;
-			margin-left: 20px;
 		}
 
 		margin: 0;
@@ -87,18 +90,18 @@
 	}
 	&__subtitle {
 		@include respond-to(tablets) {
+			margin-top: 9px;
 			padding-right: 141px;
 
 			font-size: $product-subtitle-font-size-tab;
-			margin-top: 9px;
 		}
 		@include respond-to(handhelds) {
-			padding-right: 140px;
 			margin-top: 10px;
-			letter-spacing: 0.1px;
+			padding-right: 140px;
 
 			font-weight: 300;
 			font-size: $product-subtitle-font-size-mob;
+			letter-spacing: 0.1px;
 		}
 
 		display: block;
@@ -141,6 +144,9 @@
 
 		background-color: $price-background-color-mob;
 	}
+	@include respond-to(tablets) {
+		margin-bottom: 18px;
+	}
 
 	display: flex;
 	justify-content: space-between;
@@ -148,9 +154,6 @@
 	margin-top: -3px;
 	margin-right: 7px;
 	margin-bottom: 17px;
-	@include respond-to(tablets) {
-		margin-bottom: 18px;
-	}
 
 	font-size: $product-price-font-size;
 	&__number {
@@ -200,9 +203,10 @@
 		@include respond-to(tablets) {
 			width: $sale-width-tab;
 			height: $sale-height-tab;
-			padding: 9px 0;
-			font-size: $sale-font-size-tab;
 			margin-top: 18px;
+			padding: 9px 0;
+
+			font-size: $sale-font-size-tab;
 		}
 
 		width: $sale-width;
@@ -220,8 +224,9 @@
 
 .swatch {
 	@include respond-to(tablets) {
-		font-size: $pick-color-font-size-tab;
 		padding: 18px 0 19px;
+
+		font-size: $pick-color-font-size-tab;
 	}
 	@include respond-to(handhelds) {
 		padding: 21px 20px;
@@ -235,17 +240,18 @@
 
 	font-size: $pick-color-font-size;
 	&__text {
-		display: inline-block;
-		margin-right: 4px;
-		margin-bottom: 12px;
-
-		font-weight: 600;
 		@include respond-to(tablets) {
 			letter-spacing: -0.6px;
 		}
 		@include respond-to(handhelds) {
 			margin-right: 2px;
 		}
+
+		display: inline-block;
+		margin-right: 4px;
+		margin-bottom: 12px;
+
+		font-weight: 600;
 	}
 	&__name {
 		letter-spacing: -1px;
@@ -268,9 +274,10 @@
 
 .size {
 	@include respond-to(tablets) {
-		font-size: $pick-size-font-size-tab;
-		padding: 18px 0;
 		margin-left: -3px;
+		padding: 18px 0;
+
+		font-size: $pick-size-font-size-tab;
 	}
 	@include respond-to(handhelds) {
 		padding: 26px 20px;
@@ -283,27 +290,31 @@
 
 	font-size: $pick-size-font-size;
 	&__info {
-		display: flex;
-		justify-content: space-between;
-		padding-right: 5px;
 		@include respond-to(handhelds) {
 			padding-right: 0;
 		}
+
+		display: flex;
+		justify-content: space-between;
+		padding-right: 5px;
 	}
 	&__text {
+		@include respond-to(tablets) {
+			margin-bottom: 14px;
+
+			letter-spacing: -0.6px;
+		}
+
 		margin-bottom: 10px;
 
 		font-weight: 600;
-		@include respond-to(tablets) {
-			letter-spacing: -0.6px;
-			margin-bottom: 14px;
-		}
 	}
 	&__table {
-		color: $link-color;
 		@include respond-to(handhelds) {
 			letter-spacing: -0.1px;
 		}
+
+		color: $link-color;
 		&:hover {
 			color: $primary-text-color;
 		}
@@ -336,8 +347,8 @@
 			pointer-events: none;
 		}
 		&:hover {
-			border: 2px solid $black;
 			padding: 8px;
+			border: 2px solid $black;
 
 			cursor: pointer;
 		}
@@ -375,8 +386,8 @@
 				@include respond-to(handhelds) {
 					width: 12px;
 					height: 12px;
-					padding: 3px;
 					margin-left: 7px;
+					padding: 3px;
 
 					font-size: $hanger-size-mob;
 				}
@@ -410,9 +421,9 @@
 		font-size: $quantity-font-size-mob;
 	}
 	@include respond-to(tablets) {
-		padding: 16px 0 4px;
-		margin-left: -3px;
 		margin-right: 5px;
+		margin-left: -3px;
+		padding: 16px 0 4px;
 	}
 
 	padding: 11px 0;
@@ -420,18 +431,24 @@
 
 	font-size: $quantity-font-size;
 	&__text {
-		font-weight: 600;
-		letter-spacing: -0.6px;
 		@include respond-to(handhelds) {
 			letter-spacing: 0.6px;
 		}
+
+		font-weight: 600;
+		letter-spacing: -0.6px;
 	}
 	&__count {
-		margin-top: 10px;
 		@include respond-to(handhelds) {
 			margin-top: 18px;
 		}
+
+		margin-top: 10px;
 		&-less {
+			@include respond-to(handhelds) {
+				margin-right: 16px;
+			}
+
 			position: relative;
 
 			display: inline-block;
@@ -439,10 +456,11 @@
 			margin-bottom: 6px;
 
 			cursor: pointer;
-			@include respond-to(handhelds) {
-				margin-right: 16px;
-			}
 			&::before {
+				@include respond-to(handhelds) {
+					width: 10px;
+				}
+
 				content: "";
 
 				position: absolute;
@@ -455,9 +473,6 @@
 				background-color: $black;
 
 				transform: translate(-50%);
-				@include respond-to(handhelds) {
-					width: 10px;
-				}
 			}
 		}
 		&-number {
@@ -523,16 +538,17 @@
 	}
 	&__left {
 		@include respond-to(tablets) {
-			left: 61%;
 			top: -50px;
+			left: 61%;
 
 			font-size: $quantity-left-font-size-tab;
 		}
 		@include respond-to(handhelds) {
-			left: 59%;
 			top: -65px;
-			padding: 8px 0;
+			left: 59%;
+
 			width: 80%;
+			padding: 8px 0;
 
 			font-size: $quantity-left-font-size-mob;
 		}
@@ -557,10 +573,12 @@
 		&::after {
 			@include respond-to(tablets) {
 				left: 71%;
+
 				border-width: 6px;
 			}
 			@include respond-to(handhelds) {
 				left: 71%;
+
 				border-width: 6px;
 			}
 
@@ -580,13 +598,13 @@
 
 .like {
 	@include respond-to(tablets) {
-		padding: 17px;
-		margin-left: 16px;
 		margin-top: 18px;
+		margin-left: 16px;
+		padding: 17px;
 	}
 	@include respond-to(handhelds) {
-		padding: 20px;
 		margin-top: 23px;
+		padding: 20px;
 	}
 
 	display: inline-block;
@@ -646,16 +664,16 @@
 	@include respond-to(tablets) {
 		float: right;
 
+		margin-top: 16px;
 		margin-left: 0;
 		padding-left: 15px;
-		margin-top: 16px;
 	}
 	@include respond-to(handhelds) {
 		float: right;
 
+		margin-top: 23px;
 		margin-left: 0;
 		padding-left: 15px;
-		margin-top: 23px;
 	}
 
 	position: relative;
@@ -680,13 +698,16 @@
 		@include respond-to(tablets) {
 			padding: 11px 24px;
 			padding-left: 38px;
+
 			background-position: 10px 9px;
 		}
 		@include respond-to(handhelds) {
 			padding: 13px 22px;
 			padding-left: 23px;
-			letter-spacing: -0.1px;
+
 			background-position: 5px 11px;
+
+			letter-spacing: -0.1px;
 		}
 
 		display: inline-block;
@@ -709,8 +730,9 @@
 
 .make-order {
 	@include respond-to(tablets) {
-		font-size: $make-order-font-size-tab;
 		padding: 15px 0 18px;
+
+		font-size: $make-order-font-size-tab;
 	}
 	@include respond-to(handhelds) {
 		padding: 26px 18px;
@@ -725,10 +747,11 @@
 }
 
 .call {
-	margin-bottom: 20px;
 	@include respond-to(tablets) {
 		margin-bottom: 22px;
 	}
+
+	margin-bottom: 20px;
 	&.icon--phone {
 		position: relative;
 		&::before {
@@ -741,6 +764,15 @@
 		}
 	}
 	&__text {
+		@include respond-to(tablets) {
+			letter-spacing: -0.1px;
+		}
+		@include respond-to(handhelds) {
+			margin-bottom: 12px;
+
+			letter-spacing: 0;
+		}
+
 		display: block;
 		margin-bottom: 8px;
 		padding-left: 30px;
@@ -748,13 +780,6 @@
 		color: $primary-text-color;
 		font-family: $font-stack-Helvetica;
 		letter-spacing: 0.1px;
-		@include respond-to(tablets) {
-			letter-spacing: -0.1px;
-		}
-		@include respond-to(handhelds) {
-			letter-spacing: 0;
-			margin-bottom: 12px;
-		}
 	}
 	&__number {
 		@include respond-to(handhelds) {
@@ -762,6 +787,7 @@
 			margin: 0;
 			margin-bottom: 10px;
 			padding-left: 30px;
+
 			letter-spacing: 0.5px;
 		}
 		@include respond-to(tablets) {
@@ -803,6 +829,10 @@
 	&.icon--location-pin {
 		position: relative;
 		&::before {
+			@include respond-to(tablets) {
+				left: -4px;
+			}
+
 			position: absolute;
 			top: 50%;
 			left: 0;
@@ -811,19 +841,18 @@
 			font-size: $location-size;
 
 			transform: translateY(-50%);
-			@include respond-to(tablets) {
-				left: -4px;
-			}
 		}
 	}
 	&__text {
 		@include respond-to(tablets) {
 			padding-left: 29px;
+
 			letter-spacing: -0.1px;
 		}
 		@include respond-to(handhelds) {
 			letter-spacing: 0;
 		}
+
 		display: block;
 		margin-bottom: 3px;
 		padding-left: 32px;
@@ -835,15 +864,16 @@
 }
 
 .accordion {
-	padding: 16px 0;
-	border-top: 1px solid $border-color;
 	@include respond-to(tablets) {
-		padding: 14px 0;
 		margin-left: -7px;
+		padding: 14px 0;
 	}
 	@include respond-to(handhelds) {
 		padding: 17px 15px 16px;
 	}
+
+	padding: 16px 0;
+	border-top: 1px solid $border-color;
 	&__title {
 		@include respond-to(tablets) {
 			margin-bottom: 18px;
@@ -891,27 +921,32 @@
 		}
 	}
 	dl.accordion__item {
-		margin: 0;
-		margin-top: -5px;
 		@include respond-to(tablets) {
 			margin-top: -3px;
 			margin-left: 5px;
+
 			line-height: 14px;
 		}
 		@include respond-to(handhelds) {
 			margin-left: 5px;
+
 			line-height: 14px;
 		}
+
+		margin: 0;
+		margin-top: -5px;
 	}
 	&__item {
 		@include respond-to(tablets) {
-			font-size: $accordion-item-font-size-tab;
-			margin-left: 5px;
 			margin-top: -1px;
+			margin-left: 5px;
+
+			font-size: $accordion-item-font-size-tab;
 		}
 		@include respond-to(handhelds) {
-			font-size: $accordion-item-font-size-mob;
 			margin-left: 5px;
+
+			font-size: $accordion-item-font-size-mob;
 		}
 
 		font-size: $accordion-item-font-size;
@@ -923,14 +958,15 @@
 			vertical-align: top;
 		}
 		&-value {
+			@include respond-to(handhelds) {
+				letter-spacing: -0.1px;
+			}
+
 			display: inline-block;
 			width: 80%;
 			margin: 0;
 
 			letter-spacing: -0.6px;
-			@include respond-to(handhelds) {
-				letter-spacing: -0.1px;
-			}
 		}
 		b {
 			margin-right: 5px;
@@ -958,18 +994,20 @@
 
 		font-size: $accordion-item-font-size;
 		&-title {
+			@include respond-to(handhelds) {
+				letter-spacing: 0.1px;
+			}
+
 			display: inline-block;
 
 			font-weight: 600;
 			letter-spacing: -0.4px;
 			vertical-align: top;
-			@include respond-to(handhelds) {
-				letter-spacing: 0.1px;
-			}
 		}
 		&-number {
 			@include respond-to(handhelds) {
 				width: 70%;
+
 				letter-spacing: -0.4px;
 			}
 
@@ -981,22 +1019,23 @@
 		}
 	}
 	&__info {
-		margin-top: 17px;
 		@include respond-to(tablets) {
 			margin-top: 15px;
 		}
 		@include respond-to(handhelds) {
-			margin-left: 5px;
 			margin-top: 14px;
+			margin-left: 5px;
 		}
+
+		margin-top: 17px;
 	}
 	&__text {
 		@include respond-to(tablets) {
 			margin: 0;
 			margin-left: 5px;
-			line-height: 14px;
 
 			font-size: $accordion-item-font-size-tab;
+			line-height: 14px;
 		}
 		@include respond-to(handhelds) {
 			margin: 0;
@@ -1012,20 +1051,23 @@
 		line-height: 16px;
 		letter-spacing: -0.2px;
 		b {
+			@include respond-to(tablets) {
+				margin-bottom: 5px;
+				padding-right: 0;
+
+				letter-spacing: -0.5px;
+			}
+			@include respond-to(handhelds) {
+				margin-bottom: 5px;
+				padding-right: 5px;
+
+				letter-spacing: -0.3px;
+			}
+
 			display: inline-block;
 			margin-top: 17px;
 			margin-bottom: 7px;
 			padding-right: 10px;
-			@include respond-to(tablets) {
-				margin-bottom: 5px;
-				padding-right: 0;
-				letter-spacing: -0.5px;
-			}
-			@include respond-to(handhelds) {
-				padding-right: 5px;
-				margin-bottom: 5px;
-				letter-spacing: -0.3px;
-			}
 
 			font-weight: bold;
 			letter-spacing: -0.7px;
@@ -1034,16 +1076,14 @@
 			}
 		}
 		&-item {
-			display: block;
-
-			line-height: 17px;
 			@include respond-to(tablets) {
 				line-height: 12px;
 			}
 			@include respond-to(handhelds) {
-				line-height: 14px;
-				margin-left: 5px;
 				margin-top: 1px;
+				margin-left: 5px;
+
+				line-height: 14px;
 				&:first-child {
 					margin-top: 9px;
 				}
@@ -1051,6 +1091,10 @@
 					margin-bottom: 9px;
 				}
 			}
+
+			display: block;
+
+			line-height: 17px;
 		}
 	}
 	&:nth-last-child(2) {
@@ -1061,27 +1105,28 @@
 				}
 			}
 			.accordion__text {
-				b { 
+				b {
 					padding-right: 10px;
 				}
 			}
 		}
 		@include respond-to(handhelds) {
 			.accordion__title {
-				letter-spacing: 0.1px;
 				margin-bottom: 21px;
+
+				letter-spacing: 0.1px;
 			}
 			.accordion__item {
+				margin-bottom: 8px;
 				b {
 					display: block;
 				}
-				margin-bottom: 8px;
 			}
 			.accordion__text {
-				b { 
-					padding-right: 9px;
+				b {
 					margin-top: 8px;
 					margin-left: 5px;
+					padding-right: 9px;
 				}
 			}
 		}
@@ -1100,8 +1145,9 @@
 	border-top: 1px solid $border-color;
 	&__text {
 		@include respond-to(tablets) {
-			font-size: $social-font-size-tab;
 			margin-top: 3px;
+
+			font-size: $social-font-size-tab;
 		}
 
 		font-weight: 600;

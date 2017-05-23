@@ -16,8 +16,9 @@
 		}
 		@include respond-to(tablets) {
 			margin-top: 30px;
-			letter-spacing: -1.5px;
 			margin-bottom: 17px;
+
+			letter-spacing: -1.5px;
 		}
 
 		margin-bottom: 56px;
@@ -67,10 +68,20 @@
 }
 
 .item {
+	@include respond-to(tablets) {
+		margin: 0;
+		margin-bottom: 19px;
+	}
+	@include respond-to(handhelds) {
+		margin: 0 1px;
+		margin-bottom: 13px;
+	}
+
 	margin: 0 4px;
 	margin-bottom: 24px;
 	&:nth-child(2n) {
-		.item__title, .item__subtitle {
+		.item__title,
+		.item__subtitle {
 			margin-left: -13px;
 		}
 		.item__price {
@@ -79,14 +90,6 @@
 		.item__price.price--old {
 			margin-right: 18px;
 		}
-	}
-	@include respond-to(tablets) {
-		margin: 0;
-		margin-bottom: 19px;
-	}
-	@include respond-to(handhelds) {
-		margin: 0 1px;
-		margin-bottom: 13px;
 	}
 	&__img {
 		@include respond-to(tablets) {
@@ -147,10 +150,11 @@
 			font-size: $similar-good-title-font-size-tab;
 		}
 		@include respond-to(handhelds) {
-			font-size: $similar-good-title-font-size-mob;
+			margin-bottom: 3px;
 			margin-left: -1px;
+
+			font-size: $similar-good-title-font-size-mob;
 			letter-spacing: -0.6px;
-			margin-bottom: 3px;		
 		}
 
 		margin: 0;
@@ -194,13 +198,15 @@
 		&.price--old {
 			@include respond-to(tablets) {
 				display: inline-block;
-				letter-spacing: -0.1px;
 				margin-right: 12px;
+
+				letter-spacing: -0.1px;
 			}
 			@include respond-to(handhelds) {
 				display: inline-block;
-				letter-spacing: 0;
 				margin-right: 10px;
+
+				letter-spacing: 0;
 			}
 
 			margin-right: 7px;
@@ -212,6 +218,7 @@
 		&.price--new {
 			@include respond-to(tablets) {
 				display: inline-block;
+
 				letter-spacing: 0.1px;
 			}
 			@include respond-to(handhelds) {

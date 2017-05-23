@@ -19,8 +19,8 @@
       height: 342px;
     }
     @include respond-to(tablets) {
-      height: 547px;
       width: 430px;
+      height: 547px;
     }
 
     overflow: hidden;

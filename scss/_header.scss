@@ -7,8 +7,8 @@
 	&-logo {
 		@include respond-to(tablets) {
 			order: 1;
-			margin: 18px;
 			width: 230px;
+			margin: 18px;
 
 			background: url('../images/logo-tab-min.png') no-repeat;
 		}
@@ -47,10 +47,10 @@
 
 .switcher {
 	@include respond-to(tablets) {
+		flex-basis: 100%;
 		order: 3;
 		margin-top: -46px;
 		margin-left: 20px;
-		flex-basis: 100%;
 	}
 	@include respond-to(handhelds) {
 		flex-basis: 100%;
@@ -64,9 +64,9 @@
 	&__item {
 		@include respond-to(handhelds) {
 			width: 54%;
+			padding: 7px;
 
 			text-align: center;
-			padding: 7px;
 		}
 		@include respond-to(tablets) {
 			padding: 9px;
@@ -87,13 +87,6 @@
 			text-decoration: underline;
 		}
 		&:last-child {
-			position: relative;
-
-			padding: 11px 30px;
-
-			background-color: $switcher-contrast-background-color;
-
-			color: $white;
 			@include respond-to(tablets) {
 				padding: 14px 32px;
 			}
@@ -101,7 +94,22 @@
 				width: 46%;
 				padding: 14px 30px;
 			}
+
+			position: relative;
+
+			padding: 11px 30px;
+
+			background-color: $switcher-contrast-background-color;
+
+			color: $white;
 			&::before {
+				@include respond-to(tablets) {
+					border-bottom-width: 46px;
+				}
+				@include respond-to(handhelds) {
+					border-bottom-width: 46px;
+				}
+
 				content: "";
 
 				position: absolute;
@@ -112,38 +120,41 @@
 				height: 0;
 				border-bottom: 40px solid $switcher-contrast-background-color;
 				border-left: 27px solid transparent;
-				@include respond-to(tablets) {
-					border-bottom-width: 46px;
-				}
-				@include respond-to(handhelds) {
-					border-bottom-width: 46px;
-				}
 			}
 		}
 		span {
-			font-family: $font-stack-Helvetica;
-			font-size: $switcher-font-size;
-			text-transform: uppercase;
-			vertical-align: top;
 			@include respond-to(tablets) {
 				vertical-align: bottom;
 			}
 			@include respond-to(handhelds) {
 				vertical-align: middle;
 			}
+
+			font-family: $font-stack-Helvetica;
+			font-size: $switcher-font-size;
+			text-transform: uppercase;
+			vertical-align: top;
 		}
 	}
 	.icon--clock {
-		position: relative;
-
-		padding-left: 55px;
 		@include respond-to(tablets) {
 			padding-left: 41px;
 		}
 		@include respond-to(handhelds) {
 			padding-left: 11px;
 		}
+
+		position: relative;
+
+		padding-left: 55px;
 		&::before {
+			@include respond-to(tablets) {
+				left: 10px;
+			}
+			@include respond-to(handhelds) {
+				left: 29px;
+			}
+
 			position: absolute;
 			top: 50%;
 			left: 0;
@@ -152,12 +163,6 @@
 			font-size: $switcher-clock-size;
 
 			transform: translateY(-50%);
-			@include respond-to(tablets) {
-				left: 10px;
-			}
-			@include respond-to(handhelds) {
-				left: 29px;
-			}
 		}
 	}
 }
@@ -219,12 +224,17 @@
 		color: $contact-icon-color;
 		text-decoration: none;
 		&:not(:last-child) {
-			margin-right: 27px;
 			@include respond-to(tablets) {
 				margin-right: 36px;
 			}
+
+			margin-right: 27px;
 		}
 		&::before {
+			@include respond-to(tablets) {
+				top: -7px;
+			}
+
 			position: absolute;
 			top: -6px;
 			left: -1px;
@@ -235,9 +245,6 @@
 			border-radius: 100%;
 
 			font-size: 15px;
-			@include respond-to(tablets) {
-				top: -7px;
-			}
 		}
 	}
 	span.contact__number {
@@ -266,6 +273,11 @@
 .phone {
 	position: relative;
 	span {
+		@include respond-to(tablets) {
+			padding-right: 25px;
+			padding-left: 38px;
+		}
+
 		padding-right: 34px;
 		padding-left: 37px;
 
@@ -275,12 +287,12 @@
 			font-size: 12px;
 			letter-spacing: 0.4px;
 		}
-		@include respond-to(tablets) {
-			padding-right: 25px;
-			padding-left: 38px;
-		}
 	}
 	&::after {
+		@include respond-to(tablets) {
+			right: 7px;
+		}
+
 		content: "";
 
 		position: absolute;
@@ -293,36 +305,39 @@
 		border-right: 2px solid $orange;
 
 		transform: rotate(135deg);
-		@include respond-to(tablets) {
-			right: 7px;
-		}
 	}
 }
 
 .login.icon--contact {
 	&::before {
+		@include respond-to(tablets) {
+			padding: 7px;
+		}
+
 		left: 1px;
 
 		padding: 8px;
 
 		font-size: 12px;
-		@include respond-to(tablets) {
-			padding: 7px;
-		}
 	}
 }
 
 .search {
-	position: relative;
-	&-wrapper {
-		width: 221px;
-		align-self: flex-end;
-		margin-bottom: 11px;
-	}
 	@include respond-to(tablets) {
 		margin-bottom: 9px;
 	}
+
+	position: relative;
+	&-wrapper {
+		align-self: flex-end;
+		width: 221px;
+		margin-bottom: 11px;
+	}
 	&__input {
+		@include respond-to(tablets) {
+			padding-left: 10px;
+		}
+
 		width: 100%;
 		padding: 8px;
 		padding-right: 24px;
@@ -342,9 +357,6 @@
 		}
 		&:focus {
 			border-color: $white;
-		}
-		@include respond-to(tablets) {
-			padding-left: 10px;
 		}
 	}
 	&-icon {
@@ -431,8 +443,8 @@
 		width: 23px;
 		height: 3px;
 		margin-top: 38px;
-		margin-left: 20px;
 		margin-right: -3px;
+		margin-left: 20px;
 
 		background-color: $menu-icon-color;
 

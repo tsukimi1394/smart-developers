@@ -6,10 +6,10 @@
 	position: fixed;
 	top: 0;
 
+	display: none;
 	overflow: hidden;
 	min-width: 100%;
 	min-height: 100%;
-	display: none;
 
 	background-color: rgba(0, 0, 0, 0.5);
 	&__content {
@@ -52,8 +52,8 @@
 		}
 
 		font-size: $popup-header-font-size;
-		text-transform: uppercase;
 		letter-spacing: -0.7px;
+		text-transform: uppercase;
 	}
 	&-close {
 		@include respond-to(handhelds) {
@@ -92,8 +92,8 @@
 			padding: 38px 0 35px;
 
 			font-size: $popup-title-font-size;
-			text-align: center;
 			letter-spacing: -0.2px;
+			text-align: center;
 			b {
 				margin: 5px;
 			}
@@ -133,21 +133,22 @@
 
 .location {
 	&-title {
+		@include respond-to(handhelds) {
+			letter-spacing: -0.7px;
+		}
+
 		display: block;
 		margin-bottom: 10px;
 
 		font-size: $popup-title-font-size;
-		text-align: center;
 		letter-spacing: -0.6px;
-		@include respond-to(handhelds) {
-			letter-spacing: -0.7px;
-		}
+		text-align: center;
 	}
 	&-text {
 		display: block;
 
-		text-align: center;
 		letter-spacing: -0.5px;
+		text-align: center;
 		a {
 			color: $primary-text-color;
 			text-decoration: none;
@@ -161,10 +162,10 @@
 		display: block;
 
 		color: $primary-text-color;
+		letter-spacing: -0.5px;
 		white-space: nowrap;
 		text-align: center;
 
 		transform: translateX(-50%);
-		letter-spacing: -0.5px;
 	}
 }

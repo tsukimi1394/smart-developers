@@ -1,12 +1,14 @@
 .breadcrumbs {
-	font-weight: 300;
-	font-size: $breadcrumbs-font-size;
 	@include respond-to(handhelds) {
 		padding: 19px 16px;
 	}
+
+	font-weight: 300;
+	font-size: $breadcrumbs-font-size;
 	&__item {
 		@include respond-to(handhelds) {
 			padding: 3px;
+
 			letter-spacing: 0;
 		}
 		@include respond-to(tablets) {
@@ -16,14 +18,15 @@
 		padding: 5px;
 
 		color: $breadcrums-link-color;
-		text-decoration: none;
 		letter-spacing: -0.4px;
+		text-decoration: none;
 		&:last-child {
-			color: $breadcrums-item-color;
-			letter-spacing: -0.1px;
 			@include respond-to(tablets) {
 				letter-spacing: 0.2px;
 			}
+
+			color: $breadcrums-item-color;
+			letter-spacing: -0.1px;
 		}
 		&:not(:last-child) {
 			&:hover {

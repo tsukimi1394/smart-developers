@@ -313,9 +313,9 @@ html {
 }
 
 .search-wrapper {
-  width: 221px;
   -ms-flex-item-align: end;
   align-self: flex-end;
+  width: 221px;
   margin-bottom: 11px;
 }
 
@@ -421,8 +421,8 @@ html {
 .breadcrumbs__item {
   padding: 5px;
   color: #f68235;
-  text-decoration: none;
   letter-spacing: -0.4px;
+  text-decoration: none;
 }
 
 .breadcrumbs__item:last-child {
@@ -634,8 +634,8 @@ html {
 }
 
 .size__pic:hover {
-  border: 2px solid #000;
   padding: 8px;
+  border: 2px solid #000;
   cursor: pointer;
 }
 
@@ -1259,10 +1259,10 @@ html {
 .location-popup {
   position: fixed;
   top: 0;
+  display: none;
   overflow: hidden;
   min-width: 100%;
   min-height: 100%;
-  display: none;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -1285,8 +1285,8 @@ html {
 
 .popup__title {
   font-size: 18px;
-  text-transform: uppercase;
   letter-spacing: -0.7px;
+  text-transform: uppercase;
 }
 
 .popup-close {
@@ -1309,8 +1309,8 @@ html {
   display: block;
   padding: 38px 0 35px;
   font-size: 14px;
-  text-align: center;
   letter-spacing: -0.2px;
+  text-align: center;
 }
 
 .popup__main-title b {
@@ -1340,14 +1340,14 @@ html {
   display: block;
   margin-bottom: 10px;
   font-size: 14px;
-  text-align: center;
   letter-spacing: -0.6px;
+  text-align: center;
 }
 
 .location-text {
   display: block;
-  text-align: center;
   letter-spacing: -0.5px;
+  text-align: center;
 }
 
 .location-text a {
@@ -1361,11 +1361,11 @@ html {
   left: 50%;
   display: block;
   color: #000;
+  letter-spacing: -0.5px;
   white-space: nowrap;
   text-align: center;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  letter-spacing: -0.5px;
 }
 
 .footer {
@@ -1387,9 +1387,9 @@ html {
 .footer__main-menu-item {
   display: block;
   color: #fff;
+  letter-spacing: -1px;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: -1px;
 }
 
 .footer__main-menu-item:first-child {
@@ -1489,11 +1489,11 @@ html {
 .copy-text {
   clear: both;
   display: block;
+  margin-bottom: 7px;
   color: #626262;
   font-size: 13px;
-  text-align: right;
   letter-spacing: -0.2px;
-  margin-bottom: 7px;
+  text-align: right;
 }
 
 .credit {
@@ -1723,8 +1723,8 @@ html {
 
   .switcher__item {
     width: 54%;
-    text-align: center;
     padding: 7px;
+    text-align: center;
   }
 
   .switcher__item:last-child {
@@ -1771,8 +1771,8 @@ html {
     width: 23px;
     height: 3px;
     margin-top: 38px;
-    margin-left: 20px;
     margin-right: -3px;
+    margin-left: 20px;
     background-color: #f68235;
     cursor: pointer;
   }
@@ -1862,19 +1862,19 @@ html {
   }
 
   .product__title {
+    margin-left: 20px;
     color: #000;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: -0.3px;
-    margin-left: 20px;
   }
 
   .product__subtitle {
-    padding-right: 140px;
     margin-top: 10px;
-    letter-spacing: 0.1px;
+    padding-right: 140px;
     font-weight: 300;
     font-size: 14px;
+    letter-spacing: 0.1px;
   }
 
   .photo {
@@ -1944,8 +1944,8 @@ html {
   .size__fit.icon--hanger::before {
     width: 12px;
     height: 12px;
-    padding: 3px;
     margin-left: 7px;
+    padding: 3px;
     font-size: 10px;
   }
 
@@ -1977,10 +1977,10 @@ html {
   }
 
   .quantity__left {
-    left: 59%;
     top: -65px;
-    padding: 8px 0;
+    left: 59%;
     width: 80%;
+    padding: 8px 0;
     font-size: 12px;
   }
 
@@ -1990,8 +1990,8 @@ html {
   }
 
   .like {
-    padding: 20px;
     margin-top: 23px;
+    padding: 20px;
   }
 
   .like.icon--heart::before {
@@ -2006,16 +2006,16 @@ html {
 
   .add-to-cart {
     float: right;
+    margin-top: 23px;
     margin-left: 0;
     padding-left: 15px;
-    margin-top: 23px;
   }
 
   .add-to-cart__text {
     padding: 13px 22px;
     padding-left: 23px;
-    letter-spacing: -0.1px;
     background-position: 5px 11px;
+    letter-spacing: -0.1px;
   }
 
   .make-order {
@@ -2024,8 +2024,8 @@ html {
   }
 
   .call__text {
-    letter-spacing: 0;
     margin-bottom: 12px;
+    letter-spacing: 0;
   }
 
   .call__number {
@@ -2067,8 +2067,8 @@ html {
   }
 
   .accordion__item {
-    font-size: 12px;
     margin-left: 5px;
+    font-size: 12px;
   }
 
   .accordion__item-value {
@@ -2091,8 +2091,8 @@ html {
   }
 
   .accordion__info {
-    margin-left: 5px;
     margin-top: 14px;
+    margin-left: 5px;
   }
 
   .accordion__text {
@@ -2102,15 +2102,15 @@ html {
   }
 
   .accordion__text b {
-    padding-right: 5px;
     margin-bottom: 5px;
+    padding-right: 5px;
     letter-spacing: -0.3px;
   }
 
   .accordion__text-item {
-    line-height: 14px;
-    margin-left: 5px;
     margin-top: 1px;
+    margin-left: 5px;
+    line-height: 14px;
   }
 
   .accordion__text-item:first-child {
@@ -2122,8 +2122,8 @@ html {
   }
 
   .accordion:nth-last-child(2) .accordion__title {
-    letter-spacing: 0.1px;
     margin-bottom: 21px;
+    letter-spacing: 0.1px;
   }
 
   .accordion:nth-last-child(2) .accordion__item {
@@ -2135,9 +2135,9 @@ html {
   }
 
   .accordion:nth-last-child(2) .accordion__text b {
-    padding-right: 9px;
     margin-top: 8px;
     margin-left: 5px;
+    padding-right: 9px;
   }
 
   .social.social--after {
@@ -2209,10 +2209,10 @@ html {
   }
 
   .item__title {
-    font-size: 12px;
-    margin-left: -1px;
-    letter-spacing: -0.6px;
     margin-bottom: 3px;
+    margin-left: -1px;
+    font-size: 12px;
+    letter-spacing: -0.6px;
   }
 
   .item__subtitle {
@@ -2227,8 +2227,8 @@ html {
 
   .item__price.price--old {
     display: inline-block;
-    letter-spacing: 0;
     margin-right: 10px;
+    letter-spacing: 0;
   }
 
   .item__price.price--new {
@@ -2248,8 +2248,8 @@ html {
 
   .recommendation__link {
     display: block;
-    margin-right: 0;
     margin-top: -1px;
+    margin-right: 0;
     margin-left: 2px;
     line-height: 24px;
   }
@@ -2449,8 +2449,8 @@ html {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    margin: 18px;
     width: 230px;
+    margin: 18px;
     background: url("../images/logo-tab-min.png") no-repeat;
   }
 
@@ -2460,13 +2460,13 @@ html {
   }
 
   .switcher {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
     margin-top: -46px;
     margin-left: 20px;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
   }
 
   .switcher__item {
@@ -2568,15 +2568,15 @@ html {
   }
 
   .product__title {
+    margin-bottom: 9px;
     font-size: 18px;
     letter-spacing: -0.2px;
-    margin-bottom: 9px;
   }
 
   .product__subtitle {
+    margin-top: 9px;
     padding-right: 141px;
     font-size: 14px;
-    margin-top: 9px;
   }
 
   .description {
@@ -2603,14 +2603,14 @@ html {
   .price__sale {
     width: 30px;
     height: 30px;
+    margin-top: 18px;
     padding: 9px 0;
     font-size: 12px;
-    margin-top: 18px;
   }
 
   .swatch {
-    font-size: 12px;
     padding: 18px 0 19px;
+    font-size: 12px;
   }
 
   .swatch__text {
@@ -2618,14 +2618,14 @@ html {
   }
 
   .size {
-    font-size: 12px;
-    padding: 18px 0;
     margin-left: -3px;
+    padding: 18px 0;
+    font-size: 12px;
   }
 
   .size__text {
-    letter-spacing: -0.6px;
     margin-bottom: 14px;
+    letter-spacing: -0.6px;
   }
 
   .size__pic {
@@ -2644,9 +2644,9 @@ html {
   }
 
   .quantity {
-    padding: 16px 0 4px;
-    margin-left: -3px;
     margin-right: 5px;
+    margin-left: -3px;
+    padding: 16px 0 4px;
   }
 
   .quantity__count-number {
@@ -2656,8 +2656,8 @@ html {
   }
 
   .quantity__left {
-    left: 61%;
     top: -50px;
+    left: 61%;
     font-size: 12px;
   }
 
@@ -2667,9 +2667,9 @@ html {
   }
 
   .like {
-    padding: 17px;
-    margin-left: 16px;
     margin-top: 18px;
+    margin-left: 16px;
+    padding: 17px;
   }
 
   .like.icon--heart::before {
@@ -2684,9 +2684,9 @@ html {
 
   .add-to-cart {
     float: right;
+    margin-top: 16px;
     margin-left: 0;
     padding-left: 15px;
-    margin-top: 16px;
   }
 
   .add-to-cart__text {
@@ -2696,8 +2696,8 @@ html {
   }
 
   .make-order {
-    font-size: 12px;
     padding: 15px 0 18px;
+    font-size: 12px;
   }
 
   .call {
@@ -2723,8 +2723,8 @@ html {
   }
 
   .accordion {
-    padding: 14px 0;
     margin-left: -7px;
+    padding: 14px 0;
   }
 
   .accordion__title {
@@ -2739,9 +2739,9 @@ html {
   }
 
   .accordion__item {
-    font-size: 12px;
-    margin-left: 5px;
     margin-top: -1px;
+    margin-left: 5px;
+    font-size: 12px;
   }
 
   .accordion__code {
@@ -2757,8 +2757,8 @@ html {
   .accordion__text {
     margin: 0;
     margin-left: 5px;
-    line-height: 14px;
     font-size: 12px;
+    line-height: 14px;
   }
 
   .accordion__text b {
@@ -2787,14 +2787,14 @@ html {
   }
 
   .social__text {
-    font-size: 12px;
     margin-top: 3px;
+    font-size: 12px;
   }
 
   .similar-goods__title {
     margin-top: 30px;
-    letter-spacing: -1.5px;
     margin-bottom: 17px;
+    letter-spacing: -1.5px;
   }
 
   .similar-goods__title.icon--minus::before {
@@ -2835,8 +2835,8 @@ html {
 
   .item__price.price--old {
     display: inline-block;
-    letter-spacing: -0.1px;
     margin-right: 12px;
+    letter-spacing: -0.1px;
   }
 
   .item__price.price--new {
@@ -2855,8 +2855,8 @@ html {
   }
 
   .benefits__item-title {
-    font-size: 14px;
     margin-bottom: 7px;
+    font-size: 14px;
   }
 
   .benefits__item-text {
@@ -2902,8 +2902,8 @@ html {
   }
 
   .Wallop-item {
-    height: 547px;
     width: 430px;
+    height: 547px;
   }
 
   .Wallop-pagination {
